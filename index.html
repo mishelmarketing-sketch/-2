@@ -1739,51 +1739,57 @@ window.addEventListener('click', function(event) {
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const forms = document.querySelectorAll('form[action^="https://formspree.io"]');
+        const forms = document.querySelectorAll('form');
         
         forms.forEach(form => {
             form.onsubmit = async (e) => {
                 e.preventDefault();
                 
                 const formData = new FormData(form);
+                const dataObj = Object.fromEntries(formData.entries());
                 const submitBtn = form.querySelector('button[type="submit"]');
-                const formMessage = form.querySelector('.form-message');
                 const originalBtnText = submitBtn.innerText;
                 
                 submitBtn.disabled = true;
-                submitBtn.innerText = 'שולח...';
+                submitBtn.innerText = 'שולח... ⏳';
 
                 try {
-                    // Send to Formspree for email notification
-                    const response = await fetch(form.action, {
+                    // 1. Send to Formspree (Sends Email to Liat)
+                    const targetAction = form.action.includes('formspree') ? form.action : 'https://formspree.io/f/xvznavql';
+                    const emailRes = await fetch(targetAction, {
                         method: 'POST',
                         body: formData,
                         headers: { 'Accept': 'application/json' }
                     });
 
-                    if (response.ok) {
-                        // Background submission to Google Sheets (Base44 backend function)
-                        const rawData = Object.fromEntries(formData.entries());
-                        fetch('https://superagent-6a25515e659bfc7a4f34bba2.base44.app/functions/saveLead', {
-                            method: 'POST',
-                            body: JSON.stringify(rawData),
-                            headers: { 'Content-Type': 'application/json' }
-                        }).catch(console.error);
+                    if (!emailRes.ok) throw new Error('Email failed');
 
-                        formMessage.innerText = 'הפרטים נשלחו בהצלחה! ניצור קשר בקרוב.';
-                        formMessage.className = 'form-message success';
-                        formMessage.style.display = 'block';
-                        form.reset();
-                    } else {
-                        throw new Error('שגיאה בשליחה ל-Formspree');
-                    }
+                    // 2. Background Sync to Google Sheets (Base44)
+                    fetch('https://superagent-6a25515e659bfc7a4f34bba2.base44.app/functions/saveLead', {
+                        method: 'POST',
+                        body: JSON.stringify(dataObj),
+                        headers: { 'Content-Type': 'application/json' }
+                    }).catch(err => console.error("Sheet sync error", err));
+
+                    // 3. Redirect to Professional Thank You Page
+                    window.location.href = 'thank-you.html';
                 } catch (error) {
+                    let formMessage = form.querySelector('.form-message');
+                    if (!formMessage) {
+                        formMessage = document.createElement('div');
+                        formMessage.className = 'form-message';
+                        form.appendChild(formMessage);
+                    }
                     formMessage.innerText = 'אופס! הייתה שגיאה בשליחה. נסו שוב מאוחר יותר.';
                     formMessage.className = 'form-message error';
                     formMessage.style.display = 'block';
-                } finally {
+                    formMessage.style.color = '#ef4444';
+                    formMessage.style.marginTop = '10px';
+                    formMessage.style.fontWeight = 'bold';
+                    
                     submitBtn.disabled = false;
                     submitBtn.innerText = originalBtnText;
+                    setTimeout(() => { formMessage.style.display = 'none'; }, 5000);
                 }
             };
         });
