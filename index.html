@@ -1689,12 +1689,8 @@ window.addEventListener('click', function(event) {
 </script>
 
 <!-- ===== ACCESSIBILITY WIDGET ===== -->
-<script src="https://cdn.jsdelivr.net/gh/ranbuch/accessibility/dist/accessibility.min.js"></script>
-<script>
-    window.addEventListener('load', function() {
-        new Accessibility();
-    });
-</script>
+
+
 
 
 <script>
@@ -1742,5 +1738,148 @@ window.addEventListener('click', function(event) {
         });
     });
 </script>
+
+<!-- ===== CUSTOM ACCESSIBILITY WIDGET ===== -->
+<style>
+    #custom-a11y-widget {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 999999;
+        direction: rtl;
+        font-family: Arial, sans-serif;
+    }
+    #a11y-toggle-btn {
+        background-color: #1e3a8a;
+        color: white;
+        border: 2px solid white;
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.2s;
+    }
+    #a11y-toggle-btn:hover {
+        transform: scale(1.1);
+    }
+    #a11y-menu {
+        position: absolute;
+        bottom: 70px;
+        left: 0;
+        background: #ffffff;
+        border: 2px solid #1e3a8a;
+        border-radius: 10px;
+        width: 220px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        display: none;
+        overflow: hidden;
+    }
+    #a11y-menu.show {
+        display: block;
+    }
+    #a11y-menu-header {
+        background: #1e3a8a;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 0;
+    }
+    .a11y-btn {
+        display: block;
+        width: 100%;
+        background: none;
+        border: none;
+        border-bottom: 1px solid #eee;
+        padding: 12px;
+        text-align: right;
+        font-size: 14px;
+        cursor: pointer;
+        color: #333;
+        transition: background 0.2s;
+    }
+    .a11y-btn:hover {
+        background: #f0f4f8;
+    }
+    .a11y-btn:last-child {
+        border-bottom: none;
+        font-weight: bold;
+        color: #d32f2f;
+    }
+    
+    /* A11y Classes */
+    body.a11y-contrast {
+        background-color: #000 !important;
+        color: #ff0 !important;
+    }
+    body.a11y-contrast * {
+        background-color: #000 !important;
+        color: #ff0 !important;
+        border-color: #ff0 !important;
+    }
+    body.a11y-grayscale {
+        filter: grayscale(100%) !important;
+    }
+    body.a11y-links a {
+        text-decoration: underline !important;
+        background-color: yellow !important;
+        color: black !important;
+        font-weight: bold !important;
+    }
+    body.a11y-font * {
+        font-family: Arial, Helvetica, sans-serif !important;
+    }
+</style>
+
+<div id="custom-a11y-widget">
+    <button id="a11y-toggle-btn" aria-label="פתח תפריט נגישות" title="תפריט נגישות">♿</button>
+    <div id="a11y-menu">
+        <h3 id="a11y-menu-header">תפריט נגישות</h3>
+        <button class="a11y-btn" onclick="toggleA11yClass('a11y-contrast')">🌗 ניגודיות גבוהה</button>
+        <button class="a11y-btn" onclick="toggleA11yClass('a11y-grayscale')">🔲 גווני אפור</button>
+        <button class="a11y-btn" onclick="changeA11yFontSize(1)">A+ הגדלת טקסט</button>
+        <button class="a11y-btn" onclick="changeA11yFontSize(-1)">A- הקטנת טקסט</button>
+        <button class="a11y-btn" onclick="toggleA11yClass('a11y-links')">🔗 הדגשת קישורים</button>
+        <button class="a11y-btn" onclick="toggleA11yClass('a11y-font')">📝 גופן קריא</button>
+        <button class="a11y-btn" onclick="resetA11y()">🔄 איפוס הגדרות</button>
+    </div>
+</div>
+
+<script>
+    const a11yBtn = document.getElementById('a11y-toggle-btn');
+    const a11yMenu = document.getElementById('a11y-menu');
+    let currentZoom = 1;
+
+    a11yBtn.addEventListener('click', () => {
+        a11yMenu.classList.toggle('show');
+    });
+
+    function toggleA11yClass(className) {
+        document.body.classList.toggle(className);
+    }
+
+    function changeA11yFontSize(step) {
+        currentZoom += (step * 0.1);
+        if(currentZoom > 1.5) currentZoom = 1.5;
+        if(currentZoom < 0.8) currentZoom = 0.8;
+        document.body.style.transform = `scale(${currentZoom})`;
+        document.body.style.transformOrigin = 'top center';
+    }
+
+    function resetA11y() {
+        document.body.className = '';
+        currentZoom = 1;
+        document.body.style.transform = 'scale(1)';
+        a11yMenu.classList.remove('show');
+    }
+</script>
+<!-- ========================================= -->
+
 </body>
 </html>
