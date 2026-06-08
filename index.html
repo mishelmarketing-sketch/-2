@@ -295,6 +295,7 @@
             position: relative;
         }
 
+        
         .form-input {
             width: 100%;
             padding: 1rem 1.2rem;
@@ -304,7 +305,17 @@
             font-size: 1rem;
             transition: var(--transition);
             background: var(--bg);
+            text-align: right;
+            direction: rtl;
         }
+        input[type="tel"], input[type="email"] {
+            text-align: right;
+            direction: rtl;
+        }
+        input[type="tel"]::placeholder, input[type="email"]::placeholder {
+            text-align: right;
+        }
+
 
         .form-input:focus {
             outline: none;
