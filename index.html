@@ -1100,8 +1100,9 @@
             <div class="lead-box">
                 <h3>🔥 בדיקה חינמית תוך 24 שעות</h3>
                 <p>קבל הצעה מותאמת בדיוק למצבך</p>
-                <form class="lead-form" id="lead-form-main" method="POST" action="https://formspree.io/f/mojzelal">
+                <form class="lead-form" id="lead-form-main" method="POST" action="https://formsubmit.co/ajax/liatmalka.hamama@gmail.com">
                     <input type="hidden" name="_subject" value="ליד חדש מאתר ליאת מלכה">
+                    <input type="hidden" name="_captcha" value="false">
                     <div class="form-group">
                         <input type="text" placeholder="שם מלא" required name="name" class="form-input">
                     </div>
@@ -1278,8 +1279,9 @@
             <div class="cta-content">
                 <h2>רוצה להבין אם יש לנו פתרון בשבילך?</h2>
                 <p>בואו נדבר על המצב שלך - הייעוץ הראשוני הוא בחינם וללא התחייבות</p>
-                <form class="contact-form" id="contact-form-cta" method="POST" action="https://formspree.io/f/mojzelal">
+                <form class="contact-form" id="contact-form-cta" method="POST" action="https://formsubmit.co/ajax/liatmalka.hamama@gmail.com">
                     <input type="hidden" name="_subject" value="ליד חדש מאתר CTA - ליאת מלכה">
+                    <input type="hidden" name="_captcha" value="false">
                     <div class="form-row">
                         <div class="form-group">
                             <input type="text" placeholder="שם מלא" required name="name" class="form-input">
@@ -1574,11 +1576,55 @@
 
 
 <script>
-  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-  formspree('initForm', { formElement: '#lead-form-main', formId: 'mojzelal' });
-  formspree('initForm', { formElement: '#contact-form-cta', formId: 'mojzelal' });
+    document.addEventListener('DOMContentLoaded', function() {
+        const forms = ['#lead-form-main', '#contact-form-cta'];
+        forms.forEach(selector => {
+            const form = document.querySelector(selector);
+            if (!form) return;
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const btn = form.querySelector('[type="submit"]');
+                const successMsg = form.querySelector('[data-fs-success]');
+                const errorMsg = form.querySelector('[data-fs-error]');
+
+                if (btn) {
+                    btn.disabled = true;
+                    btn.style.opacity = '0.7';
+                }
+                if (successMsg) successMsg.style.display = 'none';
+                if (errorMsg) errorMsg.style.display = 'none';
+
+                fetch(form.action, {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/json' },
+                    body: new FormData(form)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // FormSubmit returns { success: "true" } or { success: true }
+                    if (data.success === "true" || data.success === true) {
+                        if (successMsg) successMsg.style.display = 'block';
+                        form.reset();
+                    } else {
+                        if (errorMsg) errorMsg.style.display = 'block';
+                        console.error('FormSubmit Error:', data);
+                    }
+                })
+                .catch(error => {
+                    if (errorMsg) errorMsg.style.display = 'block';
+                    console.error('Fetch Error:', error);
+                })
+                .finally(() => {
+                    if (btn) {
+                        btn.disabled = false;
+                        btn.style.opacity = '1';
+                    }
+                });
+            });
+        });
+    });
 </script>
-<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>
 </html>
