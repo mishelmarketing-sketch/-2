@@ -1422,6 +1422,7 @@
                     </p>
                 </div>
             <div class="footer-bottom">
+                <a class="terms-link" onclick="document.getElementById('termsModal').style.display='block'">תקנון ותנאי שימוש והצהרת נגישות</a>
                 <p>© 2026 ליאת מלכה - פתרון משכנתא מקצועי. כל הזכויות שמורות.<small>Site built by Shapo Digital - Mishel Zvigi</small></p>
             </div>
         </div>
@@ -1576,6 +1577,103 @@
 
 
 
+
+
+<!-- ===== TERMS MODAL & STYLES ===== -->
+<style>
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 10000; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.6); 
+    backdrop-filter: blur(5px);
+}
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; 
+    padding: 30px;
+    border-radius: 12px;
+    width: 80%; 
+    max-width: 600px;
+    color: #333;
+    position: relative;
+    direction: rtl;
+    text-align: right;
+    line-height: 1.6;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.close-modal {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    text-decoration: none;
+}
+.modal-content h2 { margin-top: 0; color: #1e3a8a; }
+.modal-content h3 { margin-top: 20px; font-size: 1.2rem; color: #1e3a8a; }
+.modal-content p { font-size: 0.95rem; }
+.terms-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.95rem;
+    margin-top: 10px;
+    display: block;
+}
+.terms-link:hover { color: white; }
+</style>
+
+<div id="termsModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="document.getElementById('termsModal').style.display='none'">&times;</span>
+    <h2>תקנון ותנאי שימוש</h2>
+    <p>ברוכים הבאים לאתר של ליאת מלכה. השימוש באתר כפוף לתנאים המפורטים להלן:</p>
+    
+    <h3>1. כללי</h3>
+    <p>האתר נועד לספק מידע בנושא ייעוץ משכנתאות ושירותים פיננסיים. מילוי פרטים באתר מהווה הסכמה ליצירת קשר מצד צוות המשרד.</p>
+    
+    <h3>2. פרטיות ומאגר מידע</h3>
+    <p>הפרטים שתמסור/י ישמרו במאגר המידע של המשרד וישמשו לצורך מתן השירות, יצירת קשר ושליחת עדכונים או הצעות מקצועיות. אנו מתחייבים לא להעביר את פרטיך לצד שלישי ללא אישורך מראש.</p>
+    
+    <h3>3. הגבלת אחריות</h3>
+    <p>המידע באתר מוצג כמידע כללי בלבד ואינו מהווה תחליף לייעוץ משכנתא מקצועי ופרטני המותאם אישית למצבך הפיננסי. קבלת החלטה על בסיס המידע הכתוב באתר הינה באחריות המשתמש בלבד.</p>
+    
+    <h3>4. נגישות</h3>
+    <p>אנו פועלים רבות על מנת להנגיש את האתר לכלל האוכלוסייה, כולל אנשים עם מוגבלויות, בהתאם לתקן הנגישות. באתר מותקן תוסף נגישות מתקדם. במקרה שנתקלתם בבעיית נגישות כלשהי, נשמח אם תפנו אלינו לתיקון.</p>
+    
+    <h3>5. יצירת קשר</h3>
+    <p>לכל שאלה או בקשה ניתן לפנות אלינו בכתובת המייל: liatmalka.hamama@gmail.com או בטלפון המופיע באתר.</p>
+  </div>
+</div>
+
+<script>
+window.addEventListener('click', function(event) {
+  var modal = document.getElementById('termsModal');
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
+</script>
+
+<!-- ===== ACCESSIBILITY WIDGET ===== -->
+<script src="https://cdn.jsdelivr.net/gh/ranbuch/accessibility/dist/accessibility.min.js"></script>
+<script>
+    window.addEventListener('load', function() {
+        new Accessibility();
+    });
+</script>
 
 </body>
 </html>
