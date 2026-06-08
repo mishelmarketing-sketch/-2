@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תודה רבה! | ליאת מלכה</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a237e;
+            --accent: #10b981;
+            --bg: #f8fafc;
+            --text: #1e293b;
+        }
+        body {
+            font-family: 'Rubik', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .header {
+            background: white;
+            padding: 1rem 5%;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header img {
+            height: 60px;
+        }
+        .thank-you-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            animation: fadeIn 0.8s ease-out;
+        }
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
+            animation: bounceIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #64748b;
+            max-width: 600px;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        .back-btn {
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(26, 35, 126, 0.2);
+        }
+        .back-btn:hover {
+            background: #11185b;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(26, 35, 126, 0.3);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img src="images/logo_df44473b.png" alt="ליאת מלכה - ייעוץ משכנתאות">
+        </a>
+    </header>
+
+    <main class="thank-you-container">
+        <div class="success-icon">✓</div>
+        <h1>תודה רבה!</h1>
+        <p>קיבלנו את הפרטים שלך בהצלחה. הצוות שלנו יעבור על המידע וניצור איתך קשר בהקדם האפשרי לבניית הפתרון המדויק עבורך.</p>
+        <a href="index.html" class="back-btn">חזרה לעמוד הבית</a>
+    </main>
+</body>
+</html>
