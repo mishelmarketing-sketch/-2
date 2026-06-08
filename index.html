@@ -1061,6 +1061,37 @@
             box-shadow: 0 0 0 3px rgba(26, 35, 126, 0.2) !important;
         }
 
+
+        /* ===== FINAL PREMIUM POLISH ===== */
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            background-color: var(--primary);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Floating buttons pulse */
+        @keyframes pulse-ring {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .floating-social a[href*="wa.me"], .whatsapp-float {
+            animation: pulse-ring 2s infinite;
+            border-radius: 50%;
+        }
+
 </style>
 
     <style>
@@ -1156,7 +1187,7 @@
             <div class="lead-box">
                 <h3>🔥 בדיקה חינמית תוך 24 שעות</h3>
                 <p>קבל הצעה מותאמת בדיוק למצבך</p>
-                <form class="lead-form" id="lead-form-main" method="POST" action="https://formspree.io/f/xvznavql">
+                <form class="lead-form" id="lead-form-main" method="POST" action="https://superagent-4f34bba2.base44.app/functions/saveLead">
                     <input type="hidden" name="_subject" value="ליד חדש מאתר ליאת מלכה">
                                                             <div class="form-group">
                         <input type="text" placeholder="שם מלא" required name="name" class="form-input">
@@ -1335,7 +1366,7 @@
             <div class="cta-content">
                 <h2>רוצה להבין אם יש לנו פתרון בשבילך?</h2>
                 <p>בואו נדבר על המצב שלך - הייעוץ הראשוני הוא בחינם וללא התחייבות</p>
-                <form class="contact-form" id="contact-form-cta" method="POST" action="https://formspree.io/f/xvznavql">
+                <form class="contact-form" id="contact-form-cta" method="POST" action="https://superagent-4f34bba2.base44.app/functions/saveLead">
                     <input type="hidden" name="_subject" value="ליד חדש מאתר CTA - ליאת מלכה">
                                                             <div class="form-row">
                         <div class="form-group">
@@ -1492,29 +1523,6 @@
                 if (item !== faqItem) item.classList.remove('active');
             });
             faqItem.classList.toggle('active');
-        }
-
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            const form = event.target;
-            const formData = new FormData(form);
-            
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                if (response.ok) {
-                    showToast('תודה! נחזור אליך בקרוב', 'success');
-                    form.reset();
-                } else {
-                    showToast('שגיאה בשליחה. אנא נסה שוב', 'error');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                showToast('שגיאה בשליחה. אנא נסה שוב', 'error');
-            });
         }
 
         function showToast(message, type = 'info') {
