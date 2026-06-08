@@ -9,6 +9,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
+        
+        /* ===== SCROLL REVEAL ANIMATIONS ===== */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, transform;
+        }
+        .reveal-on-scroll.is-revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Optional delays for items */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
         /* ===== GLOBAL STYLES ===== */
         :root {
             --primary: #1a237e;
@@ -1037,7 +1054,14 @@
                 font-size: 0.95rem;
             }
         }
-    </style>
+    
+        input:focus, textarea:focus, select:focus {
+            outline: none !important;
+            border-color: var(--primary) !important;
+            box-shadow: 0 0 0 3px rgba(26, 35, 126, 0.2) !important;
+        }
+
+</style>
 
     <style>
         .form-message {
@@ -1159,7 +1183,7 @@
     <!-- ===== REJECTED SECTION ===== -->
     <section id="rejected">
         <div class="container">
-            <h2 class="section-title">
+            <h2 class="section-title" reveal-on-scroll>
                 <span class="highlight">מסורבי בנקים?</span><br>
                 אנחנו כאן בשבילך
             </h2>
@@ -1198,9 +1222,9 @@
     <!-- ===== SERVICES SECTION ===== -->
     <section id="services">
         <div class="container">
-            <h2 class="section-title">השירותים שלנו</h2>
+            <h2 class="section-title" reveal-on-scroll>השירותים שלנו</h2>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" reveal-on-scroll>
                     <div class="service-icon">🏦</div>
                     <h3 class="service-title">איחוד הלוואות</h3>
                     <p class="service-description">איחוד כל ההלוואות שלך לתשלום אחד נמוך יותר. פחות חובות, יותר שקט, יותר כסף בכיס.</p>
@@ -1210,7 +1234,7 @@
                         <li>תהליך מהיר</li>
                     </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card" reveal-on-scroll>
                     <div class="service-icon">🔄</div>
                     <h3 class="service-title">מחזור משכנתא</h3>
                     <p class="service-description">מעבר למשכנתא טובה יותר בתנאים משופרים. אנחנו מנהלים את כל התהליך בשבילך.</p>
@@ -1220,7 +1244,7 @@
                         <li>ליווי מלא</li>
                     </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card" reveal-on-scroll>
                     <div class="service-icon">🏗️</div>
                     <h3 class="service-title">בנייה עצמית</h3>
                     <p class="service-description">ליווי מלא בתהליך בנייה עצמית, מממון ועד לסיום. כל צעד מתוכנן ומוגן.</p>
@@ -1230,7 +1254,7 @@
                         <li>ביטחון משפחתי</li>
                     </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card" reveal-on-scroll>
                     <div class="service-icon">⚡</div>
                     <h3 class="service-title">פתרונות מיוחדים</h3>
                     <p class="service-description">מקרים מורכבים דורשים פתרונות יצירתיים. אנחנו מומחים בזה.</p>
@@ -1247,7 +1271,7 @@
     <!-- ===== WHY LIAT SECTION ===== -->
     <section id="why">
         <div class="container">
-            <h2 class="section-title">
+            <h2 class="section-title" reveal-on-scroll>
                 <span class="highlight">למה כדאי לבחור</span><br>
                 בליאת מלכה
             </h2>
@@ -1336,9 +1360,9 @@
     <!-- ===== FAQ SECTION ===== -->
     <section id="faq">
         <div class="container">
-            <h2 class="section-title">שאלות נפוצות</h2>
+            <h2 class="section-title" reveal-on-scroll>שאלות נפוצות</h2>
             <div class="faq-container">
-                <div class="faq-item">
+                <div class="faq-item" reveal-on-scroll>
                     <button class="faq-question" onclick="toggleFAQ(this)">
                         <span>מה עושים אם הבנק סירב לי?</span>
                         <span class="faq-icon">+</span>
@@ -1347,7 +1371,7 @@
                         <p>אנחנו בודקים את המקרה שלך בעיון. אם הבנק סירב, זה לא אומר שאין פתרון. יש מוסדות פיננסיים חלופיים שמבינים מקרים מורכבים. אנחנו מחפשים את הגוף המתאים ביותר לסיטואציה שלך.</p>
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item" reveal-on-scroll>
                     <button class="faq-question" onclick="toggleFAQ(this)">
                         <span>האם אפשר לאחד הלוואות גם כשיש מינוס גדול?</span>
                         <span class="faq-icon">+</span>
@@ -1356,7 +1380,7 @@
                         <p>כן, זה אפשרי. המינוס בחשבון לא מונע איחוד הלוואות. אנחנו עובדים עם מוסדות שיודעים להתמודד עם מצבים כאלה. בדרך כלל נצטרך לתכנן את התהליך בזהירות, אבל זה בהחלט אפשרי.</p>
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item" reveal-on-scroll>
                     <button class="faq-question" onclick="toggleFAQ(this)">
                         <span>כמה זמן לוקח כל התהליך?</span>
                         <span class="faq-icon">+</span>
@@ -1365,7 +1389,7 @@
                         <p>זה תלוי במורכבות המקרה. בדרך כלל, מ-3 עד 6 שבועות מרגע שאתה מגיש את כל המסמכים. אנחנו עושים הכל כדי להאיץ את התהליך מבלי להקריב איכות.</p>
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item" reveal-on-scroll>
                     <button class="faq-question" onclick="toggleFAQ(this)">
                         <span>מה ההבדל בינכם לבין יועץ משכנתא רגיל?</span>
                         <span class="faq-icon">+</span>
@@ -1374,7 +1398,7 @@
                         <p>יועץ משכנתא רגיל עובד בעיקר עם הבנקים הגדולים. אנחנו מתמחים במקרים שהבנקים דחו. יש לנו קשרים עם מוסדות חלופיים, קרנות, וגופים מיוחדים שיכולים לעזור כשהבנקים לא יכלו.</p>
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item" reveal-on-scroll>
                     <button class="faq-question" onclick="toggleFAQ(this)">
                         <span>האם אני מחויב לעבוד איתכם אחרי ייעוץ ראשוני?</span>
                         <span class="faq-icon">+</span>
@@ -1383,7 +1407,7 @@
                         <p>לא. הייעוץ הראשוני הוא בחינם וללא התחייבות. אנחנו רק רוצים להבין את המקרה שלך ולהציע פתרון. אם אתה מרגיש שזה לא מתאים, אין בעיה.</p>
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item" reveal-on-scroll>
                     <button class="faq-question" onclick="toggleFAQ(this)">
                         <span>איך אתם מרוויחים? מה העמלה?</span>
                         <span class="faq-icon">+</span>
@@ -1399,7 +1423,7 @@
     <!-- ===== TESTIMONIALS SECTION ===== -->
     <section id="testimonials">
         <div class="container">
-            <h2 class="section-title">מה אומרים הלקוחות שלנו</h2>
+            <h2 class="section-title" reveal-on-scroll>מה אומרים הלקוחות שלנו</h2>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
@@ -1891,6 +1915,30 @@ window.addEventListener('click', function(event) {
     }
 </script>
 <!-- ========================================= -->
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
 
 </body>
 </html>
