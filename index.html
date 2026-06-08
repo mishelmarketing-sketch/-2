@@ -1100,7 +1100,7 @@
             <div class="lead-box">
                 <h3>🔥 בדיקה חינמית תוך 24 שעות</h3>
                 <p>קבל הצעה מותאמת בדיוק למצבך</p>
-                <form class="lead-form" id="lead-form-main" method="POST" action="https://formsubmit.co/ajax/liatmalka.hamama@gmail.com">
+                <form class="lead-form" id="lead-form-main" method="POST" action="https://formsubmit.co/liatmalka.hamama@gmail.com">
                     <input type="hidden" name="_subject" value="ליד חדש מאתר ליאת מלכה">
                     <input type="hidden" name="_captcha" value="false">
                     <div class="form-group">
@@ -1115,8 +1115,8 @@
                     <div class="form-group">
                         <input type="text" placeholder="גובה החזר חודשי (אופציונלי)" name="monthly_payment" class="form-input">
                     </div>
-                    <div data-fs-success style="display:none; color:#10b981; font-weight:700; text-align:center; padding:1rem;">✅ תודה! נחזור אליך בהקדם 🙏</div>
-                    <div data-fs-error style="display:none; color:#ef4444; font-weight:600; text-align:center; padding:0.5rem;">שגיאה בשליחה, נסה שוב.</div>
+                    
+                    
                     <button type="submit" class="form-submit" data-fs-submit-btn>שלחו לי בדיקה חינמית</button>
                     <small class="form-security">🔒 המידע נשמר באופן מאובטח</small>
                 </form>
@@ -1279,7 +1279,7 @@
             <div class="cta-content">
                 <h2>רוצה להבין אם יש לנו פתרון בשבילך?</h2>
                 <p>בואו נדבר על המצב שלך - הייעוץ הראשוני הוא בחינם וללא התחייבות</p>
-                <form class="contact-form" id="contact-form-cta" method="POST" action="https://formsubmit.co/ajax/liatmalka.hamama@gmail.com">
+                <form class="contact-form" id="contact-form-cta" method="POST" action="https://formsubmit.co/liatmalka.hamama@gmail.com">
                     <input type="hidden" name="_subject" value="ליד חדש מאתר CTA - ליאת מלכה">
                     <input type="hidden" name="_captcha" value="false">
                     <div class="form-row">
@@ -1294,8 +1294,8 @@
                         </div>
                         <button type="submit" class="cta-btn-submit" data-fs-submit-btn>בואו נדבר</button>
                     </div>
-                    <div data-fs-success style="display:none; color:#10b981; font-weight:700; text-align:center; padding:1rem; margin-top:0.5rem;">✅ תודה! נחזור אליך בהקדם 🙏</div>
-                    <div data-fs-error style="display:none; color:#ef4444; font-weight:600; text-align:center; padding:0.5rem;">שגיאה בשליחה, נסה שוב.</div>
+                    
+                    
                 </form>
             </div>
         </div>
@@ -1575,56 +1575,7 @@
 </div>
 
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const forms = ['#lead-form-main', '#contact-form-cta'];
-        forms.forEach(selector => {
-            const form = document.querySelector(selector);
-            if (!form) return;
 
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const btn = form.querySelector('[type="submit"]');
-                const successMsg = form.querySelector('[data-fs-success]');
-                const errorMsg = form.querySelector('[data-fs-error]');
-
-                if (btn) {
-                    btn.disabled = true;
-                    btn.style.opacity = '0.7';
-                }
-                if (successMsg) successMsg.style.display = 'none';
-                if (errorMsg) errorMsg.style.display = 'none';
-
-                fetch(form.action, {
-                    method: 'POST',
-                    headers: { 'Accept': 'application/json' },
-                    body: new FormData(form)
-                })
-                .then(response => response.json())
-                .then(data => {
-                    // FormSubmit returns { success: "true" } or { success: true }
-                    if (data.success === "true" || data.success === true) {
-                        if (successMsg) successMsg.style.display = 'block';
-                        form.reset();
-                    } else {
-                        if (errorMsg) errorMsg.style.display = 'block';
-                        console.error('FormSubmit Error:', data);
-                    }
-                })
-                .catch(error => {
-                    if (errorMsg) errorMsg.style.display = 'block';
-                    console.error('Fetch Error:', error);
-                })
-                .finally(() => {
-                    if (btn) {
-                        btn.disabled = false;
-                        btn.style.opacity = '1';
-                    }
-                });
-            });
-        });
-    });
-</script>
 
 </body>
 </html>
