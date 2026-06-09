@@ -1062,6 +1062,71 @@
         }
 
 
+        
+        /* ===== SUPERAGENT PREMIUM POLISH ===== */
+        
+        /* 1. Ultra-Glassmorphism Header */
+        .header {
+            background: rgba(255, 255, 255, 0.85) !important;
+            backdrop-filter: blur(16px) !important;
+            -webkit-backdrop-filter: blur(16px) !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05) !important;
+            transition: all 0.4s ease;
+        }
+
+        /* 2. Soft & Deep Shadows for Cards */
+        .service-card, .testimonial-card, .contact-card {
+            border: none !important;
+            box-shadow: 0 10px 40px -10px rgba(26, 35, 126, 0.08) !important;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+            background: #ffffff;
+        }
+        
+        .service-card:hover, .testimonial-card:hover {
+            transform: translateY(-12px) !important;
+            box-shadow: 0 20px 40px -5px rgba(26, 35, 126, 0.15) !important;
+        }
+
+        /* 3. Button Micro-interactions */
+        button, .btn, .cta-button, .submit-btn {
+            transition: all 0.3s ease !important;
+            position: relative;
+            overflow: hidden;
+        }
+        button:hover, .btn:hover, .cta-button:hover, .submit-btn:hover {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 10px 20px -5px rgba(16, 185, 129, 0.4) !important;
+        }
+        button:active, .btn:active {
+            transform: translateY(1px) !important;
+        }
+
+        /* 4. Form Fields Focus Glow */
+        input:focus, select:focus, textarea:focus {
+            box-shadow: 0 0 0 4px rgba(26, 35, 126, 0.1) !important;
+            border-color: var(--primary) !important;
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+        input, select, textarea {
+            transition: all 0.3s ease;
+        }
+
+        /* 5. Section Breathing Room */
+        .services, .about, .contact, .testimonials {
+            padding: 6rem 0 !important;
+        }
+        
+        @media (max-width: 768px) {
+            .services, .about, .contact, .testimonials {
+                padding: 4rem 0 !important;
+            }
+            .header-content {
+                padding: 0.8rem 0;
+            }
+        }
+
         /* ===== FINAL PREMIUM POLISH ===== */
         .nav-link {
             position: relative;
