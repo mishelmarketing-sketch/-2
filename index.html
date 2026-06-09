@@ -97,9 +97,14 @@
         }
 
         .logo img {
-            width: 45px;
-            height: 45px;
-            border-radius: 8px;
+            height: 65px;
+            width: auto;
+            max-width: 250px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        .logo:hover img {
+            transform: scale(1.05);
         }
 
         .nav {
@@ -947,9 +952,15 @@
             }
 
             .logo img {
-                width: 35px;
-                height: 35px;
-            }
+            height: 65px;
+            width: auto;
+            max-width: 250px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        .logo:hover img {
+            transform: scale(1.05);
+        }
 
             .hero {
                 padding: 30px 0 50px;
@@ -1185,9 +1196,8 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo">
-                    <img src="images/document_6e6dd8c5.jpg" alt="ליאת מלכה">
-                    <span>ליאת מלכה</span>
+                <a href="/" class="logo">
+                    <img src="images/logo_df44473b.png" alt="ליאת מלכה - ייעוץ משכנתאות">
                 </a>
                 <nav class="nav">
                     <a href="#hero" class="nav-link">דף הבית</a>
