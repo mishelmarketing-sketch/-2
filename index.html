@@ -2517,6 +2517,62 @@ button {
 }
 </style>
 
+
+<style id="shapo-real-photo-hero-banner-fix">
+.hero-main-html-banner {
+  min-height: 660px !important;
+  padding: 96px 0 88px !important;
+}
+.hero-main-bg {
+  background-image: var(--main-hero-bg) !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+}
+.hero-main-html-banner::before {
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0.12) 42%, rgba(0,0,0,0.52) 62%, rgba(0,0,0,0.92) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.34) 0%, transparent 35%, rgba(0,0,0,0.48) 100%) !important;
+}
+.hero-main-content {
+  margin-right: auto !important;
+  margin-left: 0 !important;
+  width: min(640px, 100%) !important;
+  font-family: 'Rubik', Arial, sans-serif !important;
+}
+.hero-main-content h1 span,
+.hero-main-content h1 strong,
+.hero-main-content p,
+.hero-main-kicker,
+.hero-main-points span {
+  font-family: 'Rubik', Arial, sans-serif !important;
+}
+@media (min-width: 901px) {
+  .hero-main-html-banner .container {
+    display: flex !important;
+    justify-content: flex-end !important;
+  }
+}
+@media (max-width: 900px) {
+  .hero-main-html-banner {
+    min-height: 760px !important;
+    padding: 390px 0 46px !important;
+  }
+  .hero-main-bg {
+    background-size: cover !important;
+    background-position: 32% top !important;
+  }
+  .hero-main-html-banner::before {
+    background: linear-gradient(180deg, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0.18) 32%, rgba(0,0,0,0.82) 61%, rgba(0,0,0,0.98) 100%) !important;
+  }
+}
+@media (max-width: 520px) {
+  .hero-main-bg { background-position: 28% top !important; }
+}
+</style>
+
 </head>
 <body>
  <!-- ===== HEADER ===== -->
@@ -2557,7 +2613,7 @@ button {
 
  <!-- ===== HERO SECTION - FULL WIDTH BANNER ===== -->
  
-<section class="hero hero-main-html-banner" id="hero" style="--main-hero-bg: url('https://base44.app/api/apps/6a25515e659bfc7a4f34bba2/files/mp/public/6a25515e659bfc7a4f34bba2/3ac54f08b_liat_main_center_banner_no_text.jpg');">
+<section class="hero hero-main-html-banner" id="hero" style="--main-hero-bg: url('https://base44.app/api/apps/6a25515e659bfc7a4f34bba2/files/mp/public/6a25515e659bfc7a4f34bba2/f72119624_liat_real_photo_wide_hero_banner.jpg');">
   <div class="hero-main-bg" aria-hidden="true"></div>
   <div class="container">
     <div class="hero-main-content" reveal-on-scroll>
