@@ -1642,6 +1642,112 @@
 }
 </style>
 
+
+<style id="shapo-premium-counter-stats">
+.premium-stats {
+  gap: 1.8rem !important;
+  perspective: 1000px !important;
+}
+.animated-stat {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,215,0,0.16), transparent 42%),
+    linear-gradient(145deg, rgba(10,10,10,0.96), rgba(0,0,0,0.98)) !important;
+  border: 1px solid rgba(201,168,76,0.36) !important;
+  border-top: 1px solid rgba(255,215,0,0.62) !important;
+  border-radius: 22px !important;
+  box-shadow: 0 20px 55px rgba(0,0,0,0.42), 0 0 26px rgba(201,168,76,0.13) !important;
+  transform: translateY(18px) scale(0.96) !important;
+  opacity: 0.72 !important;
+}
+.animated-stat.stats-live {
+  animation: statCardEntrance 0.9s cubic-bezier(.2,.9,.2,1) forwards !important;
+}
+.animated-stat:nth-child(2).stats-live { animation-delay: 0.12s !important; }
+.animated-stat:nth-child(3).stats-live { animation-delay: 0.24s !important; }
+.animated-stat::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,215,0,0.22) 38%, rgba(255,255,255,0.28) 50%, rgba(201,168,76,0.18) 62%, transparent 100%);
+  transform: translateX(120%) skewX(-18deg);
+  opacity: 0;
+  z-index: -1;
+}
+.animated-stat.stats-live::before {
+  animation: statShine 2.8s ease-in-out 0.35s infinite;
+}
+.stat-orbit {
+  position: absolute;
+  width: 118px;
+  height: 118px;
+  left: 50%;
+  top: 26px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  border: 1px solid rgba(201,168,76,0.22);
+  box-shadow: inset 0 0 18px rgba(255,215,0,0.10), 0 0 22px rgba(201,168,76,0.10);
+  opacity: 0.55;
+  pointer-events: none;
+}
+.stat-orbit::after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #FFD700;
+  top: -5px;
+  left: 50%;
+  box-shadow: 0 0 14px #FFD700;
+}
+.stats-live .stat-orbit {
+  animation: statOrbit 5.8s linear infinite;
+}
+.premium-stats .stat-number {
+  position: relative !important;
+  z-index: 2 !important;
+  font-variant-numeric: tabular-nums !important;
+  letter-spacing: -0.04em !important;
+  line-height: 1 !important;
+  text-shadow: 0 0 22px rgba(255,215,0,0.24) !important;
+}
+.premium-stats .stat-label {
+  position: relative !important;
+  z-index: 2 !important;
+  color: rgba(245,240,232,0.82) !important;
+  letter-spacing: 0.01em !important;
+}
+.stat-suffix,
+.stat-separator {
+  -webkit-text-fill-color: #FFD700 !important;
+  color: #FFD700 !important;
+  margin-inline: 0.04em !important;
+}
+@keyframes statCardEntrance {
+  0% { opacity: 0; transform: translateY(26px) scale(0.92) rotateX(8deg); }
+  70% { opacity: 1; transform: translateY(-5px) scale(1.018) rotateX(0deg); }
+  100% { opacity: 1; transform: translateY(0) scale(1) rotateX(0deg); }
+}
+@keyframes statShine {
+  0%, 42% { opacity: 0; transform: translateX(120%) skewX(-18deg); }
+  55% { opacity: 1; }
+  82%, 100% { opacity: 0; transform: translateX(-120%) skewX(-18deg); }
+}
+@keyframes statOrbit {
+  from { transform: translateX(-50%) rotate(0deg); }
+  to { transform: translateX(-50%) rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .animated-stat,
+  .animated-stat.stats-live,
+  .animated-stat.stats-live::before,
+  .stats-live .stat-orbit { animation: none !important; transform: none !important; opacity: 1 !important; }
+}
+</style>
+
 </head>
 <body>
  <!-- ===== HEADER ===== -->
@@ -1779,20 +1885,7 @@
  <strong>לא נוותר עד שנמצא לך פתרון.</strong>
  </div>
  </div>
- <div class="stats-grid">
- <div class="stat-card">
- <div class="stat-number">500+</div>
- <div class="stat-label">תיקים שטופלו בהצלחה</div>
- </div>
- <div class="stat-card">
- <div class="stat-number">98%</div>
- <div class="stat-label">שיעור הצלחה בתיקים מתאימים</div>
- </div>
- <div class="stat-card">
- <div class="stat-number">30-50%</div>
- <div class="stat-label">הפחתה אפשרית בהחזר</div>
- </div>
- </div>
+ <div class="stats-grid premium-stats" data-stats-section>  <div class="stat-card animated-stat" reveal-on-scroll>  <div class="stat-orbit" aria-hidden="true"></div>  <div class="stat-number"><span class="count-up" data-target="500">0</span><span class="stat-suffix">+</span></div>  <div class="stat-label">תיקים שטופלו בהצלחה</div>  </div>  <div class="stat-card animated-stat" reveal-on-scroll>  <div class="stat-orbit" aria-hidden="true"></div>  <div class="stat-number"><span class="count-up" data-target="98">0</span><span class="stat-suffix">%</span></div>  <div class="stat-label">שיעור הצלחה בתיקים מתאימים</div>  </div>  <div class="stat-card animated-stat" reveal-on-scroll>  <div class="stat-orbit" aria-hidden="true"></div>  <div class="stat-number stat-range"><span class="count-up" data-target="30">0</span><span class="stat-separator">-</span><span class="count-up" data-target="50">0</span><span class="stat-suffix">%</span></div>  <div class="stat-label">הפחתה אפשרית בהחזר</div>  </div>  </div>
  </div>
  </div>
  </section>
@@ -2573,6 +2666,65 @@ window.addEventListener('click', function(event) {
 .a11y-btn { color: #F5F0E8 !important; border-bottom: 1px solid rgba(201,168,76,0.18) !important; }
 .a11y-btn:hover { background: rgba(201,168,76,0.12) !important; color: #FFD700 !important; }
 </style>
+
+
+<script id="shapo-premium-counter-stats-js">
+(function () {
+  const section = document.querySelector('[data-stats-section]');
+  if (!section) return;
+
+  const counters = section.querySelectorAll('.count-up');
+  let hasRun = false;
+
+  function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
+  }
+
+  function animateCounter(counter) {
+    const target = Number(counter.dataset.target || 0);
+    const duration = target >= 500 ? 1850 : 1550;
+    const start = performance.now();
+
+    function frame(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = easeOutCubic(progress);
+      const value = Math.round(target * eased);
+      counter.textContent = value.toLocaleString('he-IL');
+
+      if (progress < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        counter.textContent = target.toLocaleString('he-IL');
+      }
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  function startStats() {
+    if (hasRun) return;
+    hasRun = true;
+    section.querySelectorAll('.animated-stat').forEach((card) => card.classList.add('stats-live'));
+    counters.forEach((counter, index) => {
+      setTimeout(() => animateCounter(counter), index * 120);
+    });
+  }
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          startStats();
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.35 });
+    observer.observe(section);
+  } else {
+    startStats();
+  }
+})();
+</script>
 
 </body>
 </html>
