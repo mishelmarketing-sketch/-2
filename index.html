@@ -4827,6 +4827,52 @@ body {
 }
 </style>
 
+
+<style id="shapo-hero-cover-position-final-css">
+/* Final hero cover positioning — keeps the optimized WebP but restores the intended visual crop. */
+.hero-main-html-banner {
+  background-image: none !important;
+  background-color: #000000 !important;
+}
+.hero-main-bg {
+  background-image: var(--main-hero-bg) !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 44% center !important;
+  transform: none !important;
+  animation: none !important;
+}
+@media (min-width: 1200px) {
+  .hero-main-bg {
+    background-position: 46% center !important;
+  }
+}
+@media (max-width: 900px) {
+  .hero-main-html-banner {
+    min-height: 760px !important;
+    padding: 390px 0 46px !important;
+  }
+  .hero-main-bg {
+    background-size: cover !important;
+    background-position: 28% top !important;
+  }
+}
+@media (max-width: 520px) {
+  .hero-main-html-banner {
+    min-height: 780px !important;
+    padding-top: 360px !important;
+  }
+  .hero-main-bg {
+    background-position: 24% top !important;
+  }
+}
+@media (max-width: 390px) {
+  .hero-main-bg {
+    background-position: 21% top !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
