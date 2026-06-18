@@ -901,46 +901,137 @@
  font-size: 1rem;
  }
 
- /* ===== TESTIMONIALS SECTION ===== */
- .testimonials-grid {
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
- gap: 2.5rem;
- }
+ /* ===== TESTIMONIALS SECTION - WHATSAPP SCREENSHOT STYLE ===== */
+        #testimonials {
+            background: radial-gradient(circle at top, rgba(201,168,76,0.08), transparent 45%), #050505;
+            padding: 90px 0;
+        }
 
- .testimonial-card {
- background: #0f0f0f;
- padding: 2.5rem;
- border-radius: 15px;
- box-shadow: 0 8px 32px rgba(201,168,76,0.15);
- transition: var(--transition);
- border-left: 5px solid var(--primary);
- }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            align-items: stretch;
+        }
 
- .testimonial-card:hover {
- transform: translateY(-10px);
- box-shadow: 0 16px 48px rgba(201,168,76,0.3);
- }
+        .testimonial-card {
+            background: #111b21;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid rgba(201,168,76,0.28);
+            box-shadow: 0 18px 45px rgba(0,0,0,0.45), 0 0 24px rgba(201,168,76,0.12);
+            transition: var(--transition);
+            direction: rtl;
+            position: relative;
+        }
 
- .testimonial-rating {
- margin-bottom: 1.5rem;
- font-size: 1.3rem;
- color: var(--warning);
- }
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 60px rgba(0,0,0,0.55), 0 0 34px rgba(201,168,76,0.2);
+        }
 
- .testimonial-text {
- font-size: 1.05rem;
- color: var(--text-light);
- margin-bottom: 1.5rem;
- line-height: 1.8;
- font-style: italic;
- }
+        .wa-topbar {
+            background: #202c33;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
 
- .testimonial-author {
- font-weight: 700;
- color: #C9A84C;
- font-size: 1rem;
- }
+        .wa-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #C9A84C, #FFD700);
+            color: #050505;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .wa-contact strong {
+            display: block;
+            color: #f5f0e8;
+            font-size: 0.98rem;
+            line-height: 1.2;
+        }
+
+        .wa-contact span {
+            color: rgba(245,240,232,0.55);
+            font-size: 0.78rem;
+        }
+
+        .wa-chat-bg {
+            min-height: 255px;
+            padding: 26px 18px 22px;
+            background-color: #0b141a;
+            background-image:
+                radial-gradient(circle at 12px 12px, rgba(255,255,255,0.035) 1px, transparent 1px),
+                radial-gradient(circle at 36px 36px, rgba(201,168,76,0.035) 1px, transparent 1px);
+            background-size: 48px 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .wa-bubble {
+            background: #005c4b;
+            color: #f5f0e8;
+            padding: 14px 16px 22px;
+            border-radius: 16px 16px 4px 16px;
+            max-width: 92%;
+            margin-right: auto;
+            position: relative;
+            line-height: 1.75;
+            font-size: 0.98rem;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+        }
+
+        .wa-bubble::after {
+            content: '';
+            position: absolute;
+            left: -7px;
+            bottom: 0;
+            border-width: 0 0 12px 12px;
+            border-style: solid;
+            border-color: transparent transparent #005c4b transparent;
+        }
+
+        .wa-meta {
+            position: absolute;
+            left: 12px;
+            bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: rgba(245,240,232,0.72);
+            font-size: 0.72rem;
+            direction: ltr;
+        }
+
+        .wa-checks {
+            color: #53bdeb;
+            font-weight: 700;
+            letter-spacing: -3px;
+        }
+
+        .wa-footer-note {
+            text-align: center;
+            color: rgba(245,240,232,0.45);
+            font-size: 0.82rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            #testimonials { padding: 70px 0; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .wa-chat-bg { min-height: 220px; }
+            .wa-bubble { max-width: 96%; font-size: 0.94rem; }
+        }
 
  /* ===== FOOTER ===== */
  .footer {
@@ -1826,30 +1917,63 @@
  </section>
 
  <!-- ===== TESTIMONIALS SECTION ===== -->
- <section id="testimonials">
- <div class="container">
- <h2 class="section-title" reveal-on-scroll>מה אומרים הלקוחות שלנו</h2>
- <div class="testimonials-grid">
- <div class="testimonial-card">
- <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
- <p class="testimonial-text">"הבנק סירב לי פעמיים. חשבתי שזה הסוף. ליאת מצאה לי פתרון בתוך שבועות. היום יש לי משכנתא בתנאים טובים מאוד. תודה!"</p>
- <p class="testimonial-author">— דוד כ., תל אביב</p>
- </div>
- <div class="testimonial-card">
- <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
- <p class="testimonial-text">"כעצמאית, הכנסותיי לא סדירות. בנקים לא רצו לדבר איתי. ליאת הבינה את המצב שלי ומצאה לי מוסד שמבין עצמאיות. אני בבית החדש שלי!"</p>
- <p class="testimonial-author">— רונית ש., ירושלים</p>
- </div>
- <div class="testimonial-card">
- <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
- <p class="testimonial-text">"היה לי מינוס גדול בחשבון וחובות. חשבתי שאני לא זכאי להלוואה. ליאת ודעה את כל המסמכים שלי וגם אחדה לי הלוואות. החיים שלי הרבה יותר קלים עכשיו."</p>
- <p class="testimonial-author">— מיכאל ל., חיפה</p>
- </div>
- </div>
- </div>
- </section>
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="section-title" reveal-on-scroll>מה אומרים הלקוחות שלנו</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" reveal-on-scroll>
+                    <div class="wa-topbar">
+                        <div class="wa-avatar">ד</div>
+                        <div class="wa-contact">
+                            <strong>דוד כ.</strong>
+                            <span>לקוח מרוצה · תל אביב</span>
+                        </div>
+                    </div>
+                    <div class="wa-chat-bg">
+                        <div class="wa-bubble">
+                            הבנק סירב לי פעמיים וכבר חשבתי שזה הסוף. ליאת מצאה לי פתרון בתוך כמה שבועות והיום יש לי משכנתא בתנאים טובים. שירות מקצועי וסבלני מהשיחה הראשונה.
+                            <span class="wa-meta"><span>09:42</span><span class="wa-checks">✓✓</span></span>
+                        </div>
+                    </div>
+                </div>
 
- <!-- ===== FOOTER ===== -->
+                <div class="testimonial-card" reveal-on-scroll>
+                    <div class="wa-topbar">
+                        <div class="wa-avatar">ר</div>
+                        <div class="wa-contact">
+                            <strong>רונית ש.</strong>
+                            <span>לקוחה מרוצה · ירושלים</span>
+                        </div>
+                    </div>
+                    <div class="wa-chat-bg">
+                        <div class="wa-bubble">
+                            כעצמאית היה לי קשה מול הבנקים. ליאת הבינה את המצב שלי, סידרה את המסמכים כמו שצריך ומצאה גוף שמבין עצמאיים. בזכותה התקדמתי לבית החדש שלי.
+                            <span class="wa-meta"><span>13:18</span><span class="wa-checks">✓✓</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" reveal-on-scroll>
+                    <div class="wa-topbar">
+                        <div class="wa-avatar">מ</div>
+                        <div class="wa-contact">
+                            <strong>מיכאל ל.</strong>
+                            <span>לקוח מרוצה · חיפה</span>
+                        </div>
+                    </div>
+                    <div class="wa-chat-bg">
+                        <div class="wa-bubble">
+                            היו לי חובות ומינוס גדול, ולא האמנתי שאפשר לקבל פתרון. ליאת בדקה הכול לעומק, איחדה לי הלוואות וההחזר החודשי ירד משמעותית. מרגיש שנשמתי אוויר.
+                            <span class="wa-meta"><span>18:07</span><span class="wa-checks">✓✓</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="wa-footer-note">ההמלצות מוצגות בעיצוב המדמה צילום מסך של שיחת WhatsApp, תוך שמירה על פרטיות הלקוחות.</p>
+        </div>
+    </section>
+
+<!-- ===== FOOTER ===== -->
  <footer class="footer" id="contact">
  <div class="container">
  <div class="footer-content">
