@@ -3380,6 +3380,52 @@ button {
 }
 </style>
 
+
+<style id="shapo-footer-phone-credit-css">
+.footer-bottom .site-credit,
+.footer-bottom small.site-credit {
+  display: block !important;
+  margin-top: 0.85rem !important;
+  color: rgba(245,240,232,0.52) !important;
+  font-size: 0.84rem !important;
+  line-height: 1.8 !important;
+  letter-spacing: 0.01em !important;
+}
+.footer-bottom .footer-credit-phone {
+  color: #FFD700 !important;
+  -webkit-text-fill-color: #FFD700 !important;
+  text-decoration: none !important;
+  font-weight: 800 !important;
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  padding: 0 4px !important;
+  transition: color 0.2s ease, text-shadow 0.2s ease !important;
+}
+.footer-bottom .footer-credit-phone:hover {
+  color: #C9A84C !important;
+  -webkit-text-fill-color: #C9A84C !important;
+  text-shadow: 0 0 12px rgba(255,215,0,0.35) !important;
+}
+.footer-bottom .footer-phone-sep {
+  color: rgba(201,168,76,0.58) !important;
+  margin: 0 7px !important;
+}
+@media (max-width: 520px) {
+  .footer-bottom .site-credit,
+  .footer-bottom small.site-credit {
+    font-size: 0.78rem !important;
+  }
+  .footer-bottom .footer-phone-sep {
+    display: none !important;
+  }
+  .footer-bottom .footer-credit-phone {
+    display: block !important;
+    margin-top: 5px !important;
+    font-size: 0.92rem !important;
+  }
+}
+</style>
+
 </head>
 <body>
  <!-- ===== HEADER ===== -->
@@ -3799,7 +3845,7 @@ button {
  </div>
  <div class="footer-bottom">
  <a class="terms-link" onclick="document.getElementById('termsModal').style.display='block'">תקנון ותנאי שימוש והצהרת נגישות</a>
- <p>© 2026 ליאת מלכה - פתרון משכנתא מקצועי. כל הזכויות שמורות.<small>Site built by Shapo Digital - Mishel Zvigi</small></p>
+ <p>© 2026 ליאת מלכה - פתרון משכנתא מקצועי. כל הזכויות שמורות.<small class="site-credit">אתר זה נבנה על ידי Shapo Digital - Mishel Zvigi <span class="footer-phone-sep">|</span> <a class="footer-credit-phone" href="tel:0508563777">050-8563777</a></small></p>
  </div>
  </div>
  </footer>
