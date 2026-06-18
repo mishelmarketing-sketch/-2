@@ -4828,8 +4828,9 @@ body {
 </style>
 
 
+
 <style id="shapo-hero-cover-position-final-css">
-/* Final hero cover positioning — keeps the optimized WebP but restores the intended visual crop. */
+/* Final hero cover positioning — removes mobile dead-space while keeping the optimized WebP. */
 .hero-main-html-banner {
   background-image: none !important;
   background-color: #000000 !important;
@@ -4849,26 +4850,46 @@ body {
 }
 @media (max-width: 900px) {
   .hero-main-html-banner {
-    min-height: 760px !important;
-    padding: 390px 0 46px !important;
+    min-height: 640px !important;
+    padding: 245px 0 38px !important;
   }
   .hero-main-bg {
-    background-size: cover !important;
-    background-position: 28% top !important;
+    background-size: auto 640px !important;
+    background-position: 17% -92px !important;
+  }
+  .hero-main-html-banner::before {
+    background:
+      linear-gradient(180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.08) 36%, rgba(0,0,0,0.78) 66%, rgba(0,0,0,0.98) 100%) !important;
   }
 }
 @media (max-width: 520px) {
   .hero-main-html-banner {
-    min-height: 780px !important;
-    padding-top: 360px !important;
+    min-height: 610px !important;
+    padding-top: 230px !important;
   }
   .hero-main-bg {
-    background-position: 24% top !important;
+    background-size: auto 610px !important;
+    background-position: 15% -88px !important;
+  }
+}
+@media (max-width: 430px) {
+  .hero-main-html-banner {
+    min-height: 590px !important;
+    padding-top: 218px !important;
+  }
+  .hero-main-bg {
+    background-size: auto 590px !important;
+    background-position: 13% -82px !important;
   }
 }
 @media (max-width: 390px) {
+  .hero-main-html-banner {
+    min-height: 575px !important;
+    padding-top: 210px !important;
+  }
   .hero-main-bg {
-    background-position: 21% top !important;
+    background-size: auto 575px !important;
+    background-position: 11% -78px !important;
   }
 }
 </style>
