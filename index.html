@@ -4344,8 +4344,170 @@ button {
 }
 </style>
 
+
+<style id="shapo-scroll-progress-css">
+.site-progress-shell {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 5px !important;
+  z-index: 999999 !important;
+  pointer-events: none !important;
+  background: rgba(0,0,0,0.42) !important;
+}
+.site-progress-track {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(90deg, rgba(201,168,76,0.10), rgba(255,215,0,0.06), rgba(201,168,76,0.10)) !important;
+  box-shadow: 0 1px 0 rgba(201,168,76,0.16) !important;
+}
+.site-progress-fill {
+  width: 0% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, #8B6F24 0%, #C9A84C 35%, #FFD700 68%, #FFFFFF 100%) !important;
+  box-shadow: 0 0 18px rgba(255,215,0,0.62), 0 0 34px rgba(201,168,76,0.24) !important;
+  transform-origin: right center !important;
+  transition: width 0.08s linear !important;
+}
+.site-progress-glow {
+  position: absolute !important;
+  top: 50% !important;
+  right: 0% !important;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 50% !important;
+  transform: translate(50%, -50%) !important;
+  background: radial-gradient(circle, #FFFFFF 0%, #FFD700 28%, rgba(201,168,76,0.36) 55%, transparent 72%) !important;
+  filter: blur(0.2px) !important;
+  opacity: 0.95 !important;
+  box-shadow: 0 0 22px rgba(255,215,0,0.80) !important;
+  transition: right 0.08s linear, opacity 0.2s ease !important;
+}
+.section-progress-dots {
+  position: fixed !important;
+  top: 50% !important;
+  left: 18px !important;
+  transform: translateY(-50%) !important;
+  z-index: 99990 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+  padding: 12px 9px !important;
+  border-radius: 999px !important;
+  background: rgba(0,0,0,0.52) !important;
+  border: 1px solid rgba(201,168,76,0.26) !important;
+  backdrop-filter: blur(14px) !important;
+  box-shadow: 0 16px 42px rgba(0,0,0,0.35), 0 0 22px rgba(201,168,76,0.10) !important;
+}
+.progress-dot {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 50% !important;
+  text-decoration: none !important;
+  outline: none !important;
+}
+.progress-dot span {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: rgba(245,240,232,0.32) !important;
+  border: 1px solid rgba(201,168,76,0.28) !important;
+  transition: transform 0.28s ease, background 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease !important;
+}
+.progress-dot::before {
+  content: attr(aria-label) !important;
+  position: absolute !important;
+  left: 28px !important;
+  top: 50% !important;
+  transform: translateY(-50%) translateX(-8px) !important;
+  white-space: nowrap !important;
+  padding: 7px 12px !important;
+  border-radius: 999px !important;
+  background: rgba(0,0,0,0.88) !important;
+  border: 1px solid rgba(201,168,76,0.34) !important;
+  color: #FFD700 !important;
+  -webkit-text-fill-color: #FFD700 !important;
+  font-family: 'Rubik', sans-serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.22s ease, transform 0.22s ease !important;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.30) !important;
+}
+.progress-dot:hover::before,
+.progress-dot:focus-visible::before {
+  opacity: 1 !important;
+  transform: translateY(-50%) translateX(0) !important;
+}
+.progress-dot:hover span,
+.progress-dot.active span {
+  transform: scale(1.65) !important;
+  background: linear-gradient(135deg, #C9A84C, #FFD700) !important;
+  border-color: #FFD700 !important;
+  box-shadow: 0 0 18px rgba(255,215,0,0.56), 0 0 30px rgba(201,168,76,0.22) !important;
+}
+.progress-dot.active::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: -8px !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(255,215,0,0.34) !important;
+  animation: progressDotPulse 1.8s ease-in-out infinite !important;
+}
+@keyframes progressDotPulse {
+  0%, 100% { transform: scale(0.85); opacity: 0.28; }
+  50% { transform: scale(1.18); opacity: 0.72; }
+}
+@media (max-width: 820px) {
+  .site-progress-shell {
+    height: 4px !important;
+  }
+  .site-progress-glow {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  .section-progress-dots {
+    display: none !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-progress-fill,
+  .site-progress-glow,
+  .progress-dot span,
+  .progress-dot::before,
+  .progress-dot.active::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+</style>
+
 </head>
 <body>
+
+<!-- ===== PREMIUM SCROLL PROGRESS ===== -->
+<div class="site-progress-shell" aria-hidden="true">
+  <div class="site-progress-track">
+    <div class="site-progress-fill" id="siteProgressFill"></div>
+  </div>
+  <div class="site-progress-glow" id="siteProgressGlow"></div>
+</div>
+
+<nav class="section-progress-dots" aria-label="התקדמות באתר">
+  <a href="#hero" class="progress-dot active" data-section="hero" aria-label="ראש האתר"><span></span></a>
+  <a href="#services" class="progress-dot" data-section="services" aria-label="שירותים"><span></span></a>
+  <a href="#mortgage-knowledge" class="progress-dot" data-section="mortgage-knowledge" aria-label="מידע על משכנתאות"><span></span></a>
+  <a href="#faq" class="progress-dot" data-section="faq" aria-label="שאלות נפוצות"><span></span></a>
+  <a href="#contact" class="progress-dot" data-section="contact" aria-label="יצירת קשר"><span></span></a>
+</nav>
+<!-- ===== /PREMIUM SCROLL PROGRESS ===== -->
+
  <!-- ===== HEADER ===== -->
  <header class="header">
  <!-- Top Bar -->
@@ -5461,6 +5623,59 @@ window.addEventListener('click', function(event) {
       card.style.transform = '';
     });
   });
+})();
+</script>
+
+
+<script id="shapo-scroll-progress-js">
+(function(){
+  function initProgress(){
+    var fill = document.getElementById('siteProgressFill');
+    var glow = document.getElementById('siteProgressGlow');
+    var dots = Array.prototype.slice.call(document.querySelectorAll('.progress-dot'));
+    if (!fill || !glow) return;
+
+    var sections = dots.map(function(dot){
+      var id = dot.getAttribute('data-section');
+      return { id: id, dot: dot, el: document.getElementById(id) };
+    }).filter(function(item){ return item.el; });
+
+    function update(){
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || 0;
+      var doc = document.documentElement;
+      var max = Math.max(1, doc.scrollHeight - window.innerHeight);
+      var progress = Math.min(100, Math.max(0, (scrollTop / max) * 100));
+      fill.style.width = progress + '%';
+      glow.style.right = progress + '%';
+      glow.style.opacity = progress <= 0 ? '0.72' : '0.95';
+
+      var active = sections[0];
+      var checkpoint = scrollTop + (window.innerHeight * 0.36);
+      sections.forEach(function(item){
+        if (item.el.offsetTop <= checkpoint) active = item;
+      });
+      dots.forEach(function(dot){ dot.classList.remove('active'); });
+      if (active && active.dot) active.dot.classList.add('active');
+    }
+
+    var ticking = false;
+    function requestUpdate(){
+      if (!ticking) {
+        window.requestAnimationFrame(function(){ update(); ticking = false; });
+        ticking = true;
+      }
+    }
+
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate);
+    update();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initProgress);
+  } else {
+    initProgress();
+  }
 })();
 </script>
 
