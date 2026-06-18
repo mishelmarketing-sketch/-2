@@ -10,6 +10,7 @@
  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
  <noscript><link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
    <link rel="preload" as="image" href="https://base44.app/api/apps/6a25515e659bfc7a4f34bba2/files/mp/public/6a25515e659bfc7a4f34bba2/736d3a066_liat_hero_1600_q82.webp" fetchpriority="high" type="image/webp">
+  <link rel="preload" as="image" href="https://base44.app/api/apps/6a25515e659bfc7a4f34bba2/files/mp/public/6a25515e659bfc7a4f34bba2/87d9a2c1d_mobile_x0_y70_w620_h563.webp" fetchpriority="high" type="image/webp" media="(max-width: 900px)">
  <style>
  
  /* ===== SCROLL REVEAL ANIMATIONS ===== */
@@ -4830,8 +4831,9 @@ body {
 
 
 
+
 <style id="shapo-hero-cover-position-final-css">
-/* Final hero cover positioning — mobile crop fixed so there is no empty black gap. */
+/* Final hero cover positioning — desktop uses wide cover, mobile uses dedicated crop focused on Liat. */
 .hero-main-html-banner {
   background-image: none !important;
   background-color: #000000 !important;
@@ -4851,46 +4853,38 @@ body {
 }
 @media (max-width: 900px) {
   .hero-main-html-banner {
-    min-height: 520px !important;
-    padding: 150px 0 34px !important;
+    min-height: 690px !important;
+    padding: 420px 0 42px !important;
   }
   .hero-main-bg {
-    background-size: auto 560px !important;
-    background-position: 6% -255px !important;
+    background-image: url('https://base44.app/api/apps/6a25515e659bfc7a4f34bba2/files/mp/public/6a25515e659bfc7a4f34bba2/87d9a2c1d_mobile_x0_y70_w620_h563.webp') !important;
+    background-size: cover !important;
+    background-position: center top !important;
   }
   .hero-main-html-banner::before {
     background:
-      linear-gradient(180deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.12) 42%, rgba(0,0,0,0.76) 72%, rgba(0,0,0,0.98) 100%) !important;
+      linear-gradient(180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.04) 40%, rgba(0,0,0,0.62) 70%, rgba(0,0,0,0.98) 100%) !important;
   }
 }
 @media (max-width: 520px) {
   .hero-main-html-banner {
-    min-height: 505px !important;
-    padding-top: 138px !important;
+    min-height: 670px !important;
+    padding-top: 400px !important;
   }
   .hero-main-bg {
-    background-size: auto 545px !important;
-    background-position: 5% -252px !important;
+    background-position: center top !important;
   }
 }
 @media (max-width: 430px) {
   .hero-main-html-banner {
-    min-height: 495px !important;
-    padding-top: 128px !important;
-  }
-  .hero-main-bg {
-    background-size: auto 535px !important;
-    background-position: 4% -248px !important;
+    min-height: 650px !important;
+    padding-top: 382px !important;
   }
 }
 @media (max-width: 390px) {
   .hero-main-html-banner {
-    min-height: 485px !important;
-    padding-top: 122px !important;
-  }
-  .hero-main-bg {
-    background-size: auto 525px !important;
-    background-position: 3% -242px !important;
+    min-height: 635px !important;
+    padding-top: 370px !important;
   }
 }
 </style>
