@@ -4268,6 +4268,82 @@ button {
 }
 </style>
 
+
+<style id="shapo-legal-and-a11y-css">
+.form-legal-note {
+  display: block !important;
+  margin-top: 12px !important;
+  color: rgba(245,240,232,0.64) !important;
+  -webkit-text-fill-color: rgba(245,240,232,0.64) !important;
+  font-size: 0.78rem !important;
+  line-height: 1.7 !important;
+  text-align: center !important;
+}
+.form-legal-note a,
+.footer-legal-links a {
+  color: #C9A84C !important;
+  -webkit-text-fill-color: #C9A84C !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid rgba(201,168,76,0.36) !important;
+}
+.form-legal-note a:hover,
+.footer-legal-links a:hover {
+  color: #FFD700 !important;
+  -webkit-text-fill-color: #FFD700 !important;
+  border-bottom-color: #FFD700 !important;
+}
+.footer-legal-links {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin-bottom: 14px !important;
+  color: rgba(245,240,232,0.45) !important;
+  font-size: 0.9rem !important;
+}
+.footer-legal-links span {
+  color: rgba(201,168,76,0.38) !important;
+}
+.modal-content h2,
+.modal-content h3 {
+  color: #C9A84C !important;
+  -webkit-text-fill-color: #C9A84C !important;
+}
+.close-modal:hover,
+.close-modal:focus {
+  color: #FFD700 !important;
+}
+#custom-a11y-widget,
+#custom-a11y-widget * {
+  font-family: 'Rubik', Arial, sans-serif !important;
+}
+#custom-a11y-widget button,
+#a11y-toggle-btn {
+  background: #000000 !important;
+  color: #FFD700 !important;
+  -webkit-text-fill-color: #FFD700 !important;
+  border-color: #C9A84C !important;
+  box-shadow: 0 0 22px rgba(201,168,76,0.34) !important;
+}
+#a11y-menu {
+  background: #050505 !important;
+  border-color: #C9A84C !important;
+  color: #F5F0E8 !important;
+}
+#a11y-menu button {
+  background: rgba(201,168,76,0.08) !important;
+  color: #F5F0E8 !important;
+  -webkit-text-fill-color: #F5F0E8 !important;
+  border: 1px solid rgba(201,168,76,0.22) !important;
+}
+#a11y-menu button:hover {
+  background: rgba(201,168,76,0.18) !important;
+  color: #FFD700 !important;
+  -webkit-text-fill-color: #FFD700 !important;
+}
+</style>
+
 </head>
 <body>
  <!-- ===== HEADER ===== -->
@@ -4342,7 +4418,8 @@ button {
  <h3>בדיקה חינמית תוך 24 שעות</h3>
  <p>קבל הצעה מותאמת בדיוק למצבך</p>
  <form class="lead-form" id="lead-form-main" method="POST" action="https://formspree.io/f/xvznavql">
- <input type="hidden" name="_subject" value="ליד חדש מאתר ליאת מלכה">
+ <input type="hidden" name="_next" value="https://liat-malka.co.il/thank-you.html">
+  <input type="hidden" name="_subject" value="ליד חדש מאתר ליאת מלכה">
  <div class="form-group">
  <input type="text" placeholder="שם מלא" required name="name" class="form-input">
  </div>
@@ -4359,7 +4436,7 @@ button {
  
  <button type="submit" class="form-submit" data-fs-submit-btn>שלחו לי בדיקה חינמית</button>
  <div class="form-message"></div>
- <small class="form-security">המידע נשמר באופן מאובטח</small>
+ <small class="form-legal-note">בשליחת הפרטים הנכם מאשרים יצירת קשר ושימוש בפרטים בהתאם ל<a href="privacy.html">מדיניות הפרטיות</a>, <a href="terms.html">תנאי השימוש</a> והצהרת <a href="accessibility.html">הנגישות</a>.</small>
  </form>
  </div>
  </div>
@@ -4552,7 +4629,8 @@ button {
  <h2>רוצה להבין אם יש לנו פתרון בשבילך?</h2>
  <p>בואו נדבר על המצב שלך - הייעוץ הראשוני הוא בחינם וללא התחייבות</p>
  <form class="contact-form" id="contact-form-cta" method="POST" action="https://formspree.io/f/xvznavql">
- <input type="hidden" name="_subject" value="ליד חדש מאתר CTA - ליאת מלכה">
+ <input type="hidden" name="_next" value="https://liat-malka.co.il/thank-you.html">
+  <input type="hidden" name="_subject" value="ליד חדש מאתר CTA - ליאת מלכה">
  <div class="form-row">
  <div class="form-group">
  <input type="text" placeholder="שם מלא" required name="name" class="form-input">
@@ -4741,7 +4819,7 @@ button {
  </div>
  </div>
  <div class="footer-bottom">
- <a class="terms-link" onclick="document.getElementById('termsModal').style.display='block'">תקנון ותנאי שימוש והצהרת נגישות</a>
+ <div class="footer-legal-links"><a href="terms.html">תנאי שימוש</a><span>|</span><a href="privacy.html">מדיניות פרטיות</a><span>|</span><a href="accessibility.html">הצהרת נגישות</a></div>
  <p>© 2026 ליאת מלכה - פתרון משכנתא מקצועי. כל הזכויות שמורות.<small class="site-credit">אתר זה נבנה על ידי Shapo Digital - Mishel Zvigi <span class="muted-credit-phone">| 050-8563777</span></small></p>
  </div>
  </div>
@@ -4855,23 +4933,18 @@ button {
 <div id="termsModal" class="modal">
  <div class="modal-content">
  <span class="close-modal" onclick="document.getElementById('termsModal').style.display='none'">&times;</span>
- <h2>תקנון ותנאי שימוש</h2>
- <p>ברוכים הבאים לאתר של ליאת מלכה. השימוש באתר כפוף לתנאים המפורטים להלן:</p>
- 
- <h3>1. כללי</h3>
- <p>האתר נועד לספק מידע בנושא ייעוץ משכנתאות ושירותים פיננסיים. מילוי פרטים באתר מהווה הסכמה ליצירת קשר מצד צוות המשרד.</p>
- 
- <h3>2. פרטיות ומאגר מידע</h3>
- <p>הפרטים שתמסור/י ישמרו במאגר המידע של המשרד וישמשו לצורך מתן השירות, יצירת קשר ושליחת עדכונים או הצעות מקצועיות. אנו מתחייבים לא להעביר את פרטיך לצד שלישי ללא אישורך מראש.</p>
- 
- <h3>3. הגבלת אחריות</h3>
- <p>המידע באתר מוצג כמידע כללי בלבד ואינו מהווה תחליף לייעוץ משכנתא מקצועי ופרטני המותאם אישית למצבך הפיננסי. קבלת החלטה על בסיס המידע הכתוב באתר הינה באחריות המשתמש בלבד.</p>
- 
- <h3>4. נגישות</h3>
- <p>אנו פועלים רבות על מנת להנגיש את האתר לכלל האוכלוסייה, כולל אנשים עם מוגבלויות, בהתאם לתקן הנגישות. באתר מותקן תוסף נגישות מתקדם. במקרה שנתקלתם בבעיית נגישות כלשהי, נשמח אם תפנו אלינו לתיקון.</p>
- 
- <h3>5. יצירת קשר</h3>
- <p>לכל שאלה או בקשה ניתן לפנות אלינו בכתובת המייל: liatmalka.hamama@gmail.com או בטלפון המופיע באתר.</p>
+ <h2>תנאי שימוש, פרטיות והצהרת נגישות</h2>
+ <p>המידע באתר נועד לספק מידע כללי בלבד בתחום המשכנתאות ואינו מהווה ייעוץ פיננסי, משפטי או התחייבות לקבלת אישור מגוף מממן.</p>
+ <h3>שימוש באתר</h3>
+ <p>השימוש באתר כפוף לשיקול דעת המשתמשים. כל מקרה פיננסי נבחן לגופו בהתאם לנתונים האישיים, למסמכים, למדיניות הבנקים ולשיקול דעת הגופים המממנים.</p>
+ <h3>פרטיות</h3>
+ <p>פרטים הנמסרים בטפסים, כגון שם, טלפון, אימייל ונתונים רלוונטיים לפנייה, משמשים לצורך יצירת קשר, טיפול בפנייה ומתן שירות. אין להעביר מידע אישי לצדדים שלישיים שאינם נדרשים לטיפול בפנייה, אלא אם הדבר נדרש לצורך השירות, לפי דין או באישור הפונים.</p>
+ <h3>הגבלת אחריות</h3>
+ <p>אין באתר התחייבות לאישור משכנתא, לריבית מסוימת, להפחתת החזר או לקבלת תנאים מסוימים. התוצאות תלויות בנתוני הלקוחות, במדיניות הבנקים ובאישור הגופים המממנים.</p>
+ <h3>נגישות</h3>
+ <p>האתר פועל לשיפור נגישות השירות והתוכן בהתאם לעקרונות הנגישות המקובלים. אם נתקלתם בקושי בשימוש באתר, ניתן לפנות אלינו ונפעל לטפל בכך בהקדם האפשרי.</p>
+ <h3>יצירת קשר</h3>
+ <p>לפניות בנושא פרטיות, תנאי שימוש או נגישות: liatmalka.hamama@gmail.com או 050-9250486.</p>
  </div>
 </div>
 
@@ -4903,7 +4976,7 @@ window.addEventListener('click', function(event) {
  const originalBtnText = submitBtn.innerText;
  
  submitBtn.disabled = true;
- submitBtn.innerText = 'שולח... ⏳';
+ submitBtn.innerText = 'שולח...';
 
  try {
  // 1. Send to Formspree (Sends Email to Liat)
