@@ -1469,6 +1469,117 @@
             border: 1px solid #f5c6cb;
         }
     </style>
+
+<style id="shapo-floating-icons-final-override">
+/* FINAL OVERRIDE — floating side icons black/gold only */
+.floating-buttons-new,
+.floating-buttons,
+.floating-social {
+  position: fixed !important;
+  left: 18px !important;
+  top: 50% !important;
+  bottom: auto !important;
+  transform: translateY(-50%) !important;
+  z-index: 99998 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+.floating-buttons-new a,
+.floating-buttons a,
+.floating-social a,
+.gold-float-btn,
+.float-btn,
+.float-btn-whatsapp,
+.float-btn-facebook,
+.float-btn-instagram,
+.float-btn-tiktok {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  background: #050505 !important;
+  background-image: none !important;
+  border: 2px solid rgba(201,168,76,0.85) !important;
+  box-shadow: 0 0 14px rgba(201,168,76,0.38) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  color: #C9A84C !important;
+}
+.floating-buttons-new a:first-child,
+.gold-float-wa,
+.float-btn-whatsapp {
+  width: 56px !important;
+  height: 56px !important;
+  border-color: #FFD700 !important;
+  box-shadow: 0 0 22px rgba(255,215,0,0.45) !important;
+}
+.floating-buttons-new svg,
+.floating-buttons svg,
+.floating-social svg,
+.gold-float-btn svg,
+.float-btn svg {
+  width: 22px !important;
+  height: 22px !important;
+  fill: #C9A84C !important;
+  color: #C9A84C !important;
+}
+.floating-buttons-new a:first-child svg,
+.gold-float-wa svg,
+.float-btn-whatsapp svg {
+  width: 26px !important;
+  height: 26px !important;
+}
+.floating-buttons-new a:hover,
+.floating-buttons a:hover,
+.floating-social a:hover,
+.gold-float-btn:hover,
+.float-btn:hover {
+  transform: scale(1.1) !important;
+  background: #111 !important;
+  border-color: #FFD700 !important;
+  box-shadow: 0 0 28px rgba(255,215,0,0.65) !important;
+}
+
+/* Accessibility plugin kept, only restyled to black/gold */
+#custom-a11y-widget {
+  left: 18px !important;
+  bottom: 18px !important;
+  z-index: 99999 !important;
+}
+#a11y-toggle-btn {
+  background: #050505 !important;
+  color: #C9A84C !important;
+  border: 2px solid #C9A84C !important;
+  box-shadow: 0 0 16px rgba(201,168,76,0.4) !important;
+}
+#a11y-menu {
+  background: #070707 !important;
+  border: 1px solid rgba(201,168,76,0.65) !important;
+}
+#a11y-menu-header {
+  background: #0f0f0f !important;
+  color: #C9A84C !important;
+  border-bottom: 1px solid rgba(201,168,76,0.35) !important;
+}
+.a11y-btn {
+  color: #F5F0E8 !important;
+  border-bottom: 1px solid rgba(201,168,76,0.18) !important;
+}
+.a11y-btn:hover {
+  background: rgba(201,168,76,0.12) !important;
+  color: #FFD700 !important;
+}
+@media (max-width: 768px) {
+  .floating-buttons-new, .floating-buttons, .floating-social { left: 10px !important; gap: 9px !important; }
+  .floating-buttons-new a, .floating-buttons a, .floating-social a, .gold-float-btn, .float-btn { width: 44px !important; height: 44px !important; }
+  .floating-buttons-new a:first-child, .gold-float-wa, .float-btn-whatsapp { width: 50px !important; height: 50px !important; }
+  #custom-a11y-widget { left: 10px !important; bottom: 14px !important; }
+  #a11y-toggle-btn { width: 50px !important; height: 50px !important; }
+}
+</style>
+
 </head>
 <body>
     <!-- ===== HEADER ===== -->
