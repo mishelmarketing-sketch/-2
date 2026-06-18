@@ -2195,6 +2195,174 @@ button {
 }
 </style>
 
+
+<style id="shapo-html-text-premium-banner-css">
+.html-text-premium-banner {
+  position: relative !important;
+  min-height: 560px !important;
+  display: flex !important;
+  align-items: center !important;
+  background-image: var(--banner-bg) !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  border-top: 1px solid rgba(201,168,76,0.34) !important;
+  border-bottom: 1px solid rgba(201,168,76,0.34) !important;
+  padding: 110px 0 !important;
+}
+.html-text-premium-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: var(--banner-bg) center/cover no-repeat;
+  transform: scale(1.035);
+  animation: htmlBannerSlowZoom 18s ease-in-out infinite alternate;
+}
+.html-text-premium-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 78% 48%, rgba(255,215,0,0.11), transparent 25rem),
+    linear-gradient(90deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.55) 44%, rgba(0,0,0,0.94) 100%);
+  pointer-events: none;
+}
+.html-text-banner-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.36), transparent 24%, transparent 68%, rgba(0,0,0,0.58)),
+    linear-gradient(90deg, transparent, rgba(201,168,76,0.08), transparent);
+}
+.html-text-banner-content {
+  position: relative !important;
+  z-index: 3 !important;
+  width: min(620px, 100%) !important;
+  margin-right: auto !important;
+  padding: 42px 44px !important;
+  border-radius: 28px !important;
+  background: linear-gradient(145deg, rgba(0,0,0,0.72), rgba(10,10,10,0.52)) !important;
+  border: 1px solid rgba(201,168,76,0.42) !important;
+  box-shadow: 0 28px 80px rgba(0,0,0,0.58), 0 0 34px rgba(201,168,76,0.16) !important;
+  backdrop-filter: blur(9px) !important;
+  -webkit-backdrop-filter: blur(9px) !important;
+  overflow: hidden !important;
+}
+.html-text-banner-content::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,215,0,0.20) 42%, rgba(255,255,255,0.20) 50%, rgba(201,168,76,0.18) 58%, transparent 100%);
+  transform: translateX(120%) skewX(-18deg);
+  animation: htmlBannerContentShine 4.8s ease-in-out infinite;
+  pointer-events: none;
+}
+.html-text-banner-kicker {
+  display: inline-flex !important;
+  color: #FFD700 !important;
+  border: 1px solid rgba(201,168,76,0.42) !important;
+  border-radius: 999px !important;
+  padding: 8px 16px !important;
+  font-size: 0.92rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.02em !important;
+  background: rgba(201,168,76,0.09) !important;
+  margin-bottom: 18px !important;
+}
+.html-text-banner-content h2 {
+  color: #C9A84C !important;
+  font-size: clamp(2.3rem, 4vw, 4rem) !important;
+  line-height: 1.12 !important;
+  font-weight: 900 !important;
+  margin: 0 0 18px !important;
+  text-shadow: 0 0 24px rgba(255,215,0,0.20) !important;
+}
+.html-text-banner-content p {
+  color: rgba(245,240,232,0.86) !important;
+  font-size: clamp(1.05rem, 1.55vw, 1.32rem) !important;
+  line-height: 1.9 !important;
+  margin: 0 0 28px !important;
+  max-width: 540px !important;
+}
+.html-text-banner-points {
+  display: grid !important;
+  gap: 12px !important;
+  margin-bottom: 30px !important;
+}
+.html-text-banner-points span {
+  position: relative !important;
+  color: rgba(245,240,232,0.84) !important;
+  font-weight: 700 !important;
+  padding: 12px 18px 12px 12px !important;
+  border-right: 2px solid #C9A84C !important;
+  border-radius: 14px !important;
+  background: rgba(255,255,255,0.035) !important;
+  box-shadow: inset 0 0 0 1px rgba(201,168,76,0.10) !important;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease !important;
+}
+.html-text-banner-points span:hover {
+  transform: translateX(-6px) !important;
+  background: rgba(201,168,76,0.075) !important;
+  box-shadow: inset 0 0 0 1px rgba(201,168,76,0.25), 0 0 20px rgba(201,168,76,0.10) !important;
+}
+.html-text-banner-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #000 !important;
+  background: linear-gradient(135deg, #C9A84C, #FFD700) !important;
+  border: 1px solid rgba(255,215,0,0.65) !important;
+  border-radius: 999px !important;
+  padding: 15px 28px !important;
+  text-decoration: none !important;
+  font-weight: 900 !important;
+  box-shadow: 0 16px 36px rgba(201,168,76,0.28), 0 0 24px rgba(255,215,0,0.16) !important;
+  transition: transform 0.28s ease, box-shadow 0.28s ease !important;
+}
+.html-text-banner-cta:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 22px 46px rgba(201,168,76,0.34), 0 0 30px rgba(255,215,0,0.22) !important;
+}
+@keyframes htmlBannerSlowZoom {
+  from { transform: scale(1.035) translateX(0); }
+  to { transform: scale(1.075) translateX(-18px); }
+}
+@keyframes htmlBannerContentShine {
+  0%, 46% { transform: translateX(120%) skewX(-18deg); opacity: 0; }
+  58% { opacity: 1; }
+  82%, 100% { transform: translateX(-120%) skewX(-18deg); opacity: 0; }
+}
+@media (max-width: 900px) {
+  .html-text-premium-banner {
+    min-height: 620px !important;
+    padding: 80px 0 !important;
+    background-position: 34% center !important;
+  }
+  .html-text-premium-banner::after {
+    background: linear-gradient(180deg, rgba(0,0,0,0.22), rgba(0,0,0,0.82) 48%, rgba(0,0,0,0.95) 100%) !important;
+  }
+  .html-text-banner-content {
+    margin: 300px auto 0 !important;
+    padding: 30px 24px !important;
+    border-radius: 22px !important;
+  }
+}
+@media (max-width: 520px) {
+  .html-text-premium-banner { min-height: 690px !important; }
+  .html-text-banner-content { margin-top: 330px !important; }
+  .html-text-banner-cta { width: 100% !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .html-text-premium-banner::before,
+  .html-text-banner-content::before { animation: none !important; }
+}
+</style>
+
 </head>
 <body>
  <!-- ===== HEADER ===== -->
@@ -2311,7 +2479,26 @@ button {
  </div>
  </section>
 
- <!-- ===== REJECTED SECTION ===== -->
+ 
+<!-- ===== HTML TEXT PREMIUM BANNER ===== -->
+<section class="html-text-premium-banner" style="--banner-bg: url('https://base44.app/api/apps/6a25515e659bfc7a4f34bba2/files/mp/public/6a25515e659bfc7a4f34bba2/978698c5b_liat_html_text_banner_bg.jpg');" aria-label="ייעוץ פיננסי מקצועי">
+  <div class="html-text-banner-overlay" aria-hidden="true"></div>
+  <div class="container">
+    <div class="html-text-banner-content" reveal-on-scroll>
+      <span class="html-text-banner-kicker">ייעוץ משכנתאות ואיחוד הלוואות</span>
+      <h2>תכנון פיננסי שמחזיר שליטה</h2>
+      <p>ליווי אישי, בדיקה מקצועית ובניית פתרון מותאם להחזר חודשי נכון יותר.</p>
+      <div class="html-text-banner-points" aria-label="יתרונות השירות">
+        <span>בדיקה ראשונית ללא התחייבות</span>
+        <span>ליווי עד קבלת פתרון</span>
+        <span>התמקדות בתוצאה</span>
+      </div>
+      <a href="#lead-form" class="html-text-banner-cta">לתיאום בדיקה מקצועית</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REJECTED SECTION ===== -->
  <section id="rejected">
  <div class="container">
  <h2 class="section-title" reveal-on-scroll>
