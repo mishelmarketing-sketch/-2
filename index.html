@@ -1748,6 +1748,293 @@
 }
 </style>
 
+
+<style id="shapo-sitewide-premium-features">
+:root {
+  --premium-gold: #C9A84C;
+  --premium-gold-bright: #FFD700;
+  --premium-black: #000000;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background:
+    radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 30%), rgba(255,215,0,0.055), transparent 22rem),
+    linear-gradient(90deg, rgba(201,168,76,0.018) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(201,168,76,0.014) 1px, transparent 1px);
+  background-size: auto, 72px 72px, 72px 72px;
+  opacity: 0.85;
+}
+
+#premium-scroll-progress {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 3px;
+  width: 0%;
+  z-index: 1000000;
+  background: linear-gradient(90deg, var(--premium-gold), var(--premium-gold-bright));
+  box-shadow: 0 0 16px rgba(255,215,0,0.65);
+  pointer-events: none;
+}
+
+.section-title {
+  position: relative !important;
+  display: block !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  margin-inline: auto !important;
+  padding-bottom: 18px !important;
+}
+.section-title::before,
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  height: 1px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.45), #FFD700, rgba(201,168,76,0.45), transparent);
+}
+.section-title::before { width: min(280px, 72vw); opacity: 0.55; }
+.section-title::after {
+  width: 84px;
+  height: 2px;
+  box-shadow: 0 0 18px rgba(255,215,0,0.55);
+  animation: premiumTitlePulse 2.8s ease-in-out infinite;
+}
+
+section {
+  overflow: hidden;
+}
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: min(920px, 92vw);
+  height: 1px;
+  transform: translateX(50%);
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.22), transparent);
+  pointer-events: none;
+}
+
+.service-card,
+.faq-item,
+.lead-box,
+.contact-card,
+.testimonial-card,
+.why-liat-list li,
+.rejected-list li,
+.benefit,
+.highlight-box {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+}
+
+.service-card::before,
+.faq-item::before,
+.lead-box::before,
+.contact-card::before,
+.testimonial-card::before,
+.why-liat-list li::before,
+.highlight-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(circle at var(--card-x, 50%) var(--card-y, 0%), rgba(255,215,0,0.16), transparent 14rem);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.service-card:hover::before,
+.faq-item:hover::before,
+.lead-box:hover::before,
+.contact-card:hover::before,
+.testimonial-card:hover::before,
+.why-liat-list li:hover::before,
+.highlight-box:hover::before {
+  opacity: 1;
+}
+
+.service-card,
+.faq-item,
+.lead-box,
+.contact-card,
+.testimonial-card,
+.why-liat-list li {
+  border-color: rgba(201,168,76,0.22) !important;
+  background-image: linear-gradient(145deg, rgba(20,20,20,0.96), rgba(0,0,0,0.98)) !important;
+}
+
+.service-card::after,
+.faq-item::after,
+.lead-box::after,
+.contact-card::after,
+.testimonial-card::after,
+.why-liat-list li::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255,215,0,0.48), transparent 34%, rgba(201,168,76,0.2), transparent 72%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.service-card:hover::after,
+.faq-item:hover::after,
+.lead-box:hover::after,
+.contact-card:hover::after,
+.testimonial-card:hover::after,
+.why-liat-list li:hover::after {
+  opacity: 1;
+}
+
+.service-card {
+  transform-style: preserve-3d;
+}
+.service-card:hover .service-icon {
+  transform: translateY(-4px) scale(1.04);
+}
+.service-features li {
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+.service-card:hover .service-features li {
+  color: rgba(245,240,232,0.9) !important;
+}
+.service-card:hover .service-features li:nth-child(1) { transform: translateX(-4px); transition-delay: 0.03s; }
+.service-card:hover .service-features li:nth-child(2) { transform: translateX(-4px); transition-delay: 0.08s; }
+.service-card:hover .service-features li:nth-child(3) { transform: translateX(-4px); transition-delay: 0.13s; }
+
+.why-liat-list {
+  position: relative;
+}
+.why-liat-list::before {
+  content: '';
+  position: absolute;
+  right: 28px;
+  top: 28px;
+  bottom: 28px;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(201,168,76,0.42), transparent);
+  opacity: 0.55;
+}
+.why-liat-list li {
+  transform: translateX(0);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.why-liat-list li:hover {
+  transform: translateX(-8px);
+  box-shadow: 0 18px 46px rgba(0,0,0,0.35), 0 0 22px rgba(201,168,76,0.14) !important;
+}
+.list-number {
+  box-shadow: 0 0 0 1px rgba(255,215,0,0.22), 0 0 20px rgba(201,168,76,0.16) !important;
+}
+
+.faq-item.active {
+  border-color: rgba(255,215,0,0.52) !important;
+  box-shadow: 0 22px 58px rgba(0,0,0,0.42), 0 0 28px rgba(201,168,76,0.16) !important;
+}
+.faq-answer {
+  background: linear-gradient(180deg, rgba(201,168,76,0.035), transparent) !important;
+}
+
+.form-input,
+.form-submit,
+.cta-btn,
+button {
+  position: relative;
+}
+.form-input {
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease !important;
+}
+.form-input:focus {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 0 0 4px rgba(201,168,76,0.10), 0 0 24px rgba(201,168,76,0.14) !important;
+}
+.cta-btn,
+.form-submit {
+  overflow: hidden !important;
+  box-shadow: 0 12px 34px rgba(201,168,76,0.22) !important;
+}
+.cta-btn::after,
+.form-submit::after {
+  content: '';
+  position: absolute;
+  top: -40%;
+  bottom: -40%;
+  width: 42px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.42), transparent);
+  transform: translateX(190px) skewX(-18deg);
+  opacity: 0;
+  pointer-events: none;
+}
+.cta-btn:hover::after,
+.form-submit:hover::after {
+  animation: premiumButtonSweep 0.9s ease forwards;
+}
+
+.footer,
+.header-topbar {
+  position: relative;
+  overflow: hidden;
+}
+.footer::before,
+.header-topbar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,215,0,0.12), transparent);
+  transform: translateX(110%);
+  animation: premiumWideSweep 7s ease-in-out infinite;
+  pointer-events: none;
+}
+
+[data-premium-ready='true'] .service-card,
+[data-premium-ready='true'] .faq-item,
+[data-premium-ready='true'] .why-liat-list li,
+[data-premium-ready='true'] .lead-box {
+  will-change: transform;
+}
+
+@keyframes premiumTitlePulse {
+  0%, 100% { opacity: 0.58; transform: translateX(-50%) scaleX(0.82); }
+  50% { opacity: 1; transform: translateX(-50%) scaleX(1.25); }
+}
+@keyframes premiumButtonSweep {
+  0% { opacity: 0; transform: translateX(190px) skewX(-18deg); }
+  20% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(-280px) skewX(-18deg); }
+}
+@keyframes premiumWideSweep {
+  0%, 48% { transform: translateX(110%); opacity: 0; }
+  58% { opacity: 1; }
+  75%, 100% { transform: translateX(-110%); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .why-liat-list::before { display: none; }
+  body::before { opacity: 0.45; }
+  .section-title { width: auto !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+}
+</style>
+
 </head>
 <body>
  <!-- ===== HEADER ===== -->
@@ -2723,6 +3010,66 @@ window.addEventListener('click', function(event) {
   } else {
     startStats();
   }
+})();
+</script>
+
+
+<script id="shapo-sitewide-premium-features-js">
+(function () {
+  document.documentElement.setAttribute('data-premium-ready', 'true');
+
+  let progress = document.getElementById('premium-scroll-progress');
+  if (!progress) {
+    progress = document.createElement('div');
+    progress.id = 'premium-scroll-progress';
+    document.body.appendChild(progress);
+  }
+
+  function updateProgress() {
+    const doc = document.documentElement;
+    const max = Math.max(1, doc.scrollHeight - window.innerHeight);
+    const value = Math.min(100, Math.max(0, (window.scrollY / max) * 100));
+    progress.style.width = value + '%';
+  }
+  updateProgress();
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+
+  let raf = null;
+  document.addEventListener('pointermove', function (event) {
+    if (raf) return;
+    raf = requestAnimationFrame(function () {
+      raf = null;
+      const x = (event.clientX / window.innerWidth) * 100;
+      const y = (event.clientY / window.innerHeight) * 100;
+      document.documentElement.style.setProperty('--mouse-x', x + '%');
+      document.documentElement.style.setProperty('--mouse-y', y + '%');
+    });
+  }, { passive: true });
+
+  const premiumCards = document.querySelectorAll('.service-card, .faq-item, .lead-box, .contact-card, .testimonial-card, .why-liat-list li, .highlight-box');
+  premiumCards.forEach(function (card) {
+    card.addEventListener('pointermove', function (event) {
+      const rect = card.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--card-x', x + '%');
+      card.style.setProperty('--card-y', y + '%');
+    }, { passive: true });
+  });
+
+  const buttons = document.querySelectorAll('.cta-btn, .form-submit');
+  buttons.forEach(function (button) {
+    button.addEventListener('pointermove', function (event) {
+      const rect = button.getBoundingClientRect();
+      const x = event.clientX - rect.left - rect.width / 2;
+      const y = event.clientY - rect.top - rect.height / 2;
+      button.style.transform = 'translate(' + (x * 0.045) + 'px,' + (y * 0.045) + 'px) translateY(-2px)';
+    }, { passive: true });
+    button.addEventListener('pointerleave', function () {
+      button.style.transform = '';
+    });
+  });
 })();
 </script>
 
