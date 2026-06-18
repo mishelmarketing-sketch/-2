@@ -3540,6 +3540,52 @@ button {
 }
 </style>
 
+
+<style id="shapo-why-liat-visibility-fix">
+/* Fix: keep Liat visible inside the Why section banner instead of cropping her out */
+#why .why-liat-image {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: auto !important;
+  height: auto !important;
+  background: #000000 !important;
+}
+#why .why-liat-image img {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: 5 / 3 !important;
+  object-fit: cover !important;
+  object-position: left center !important;
+  transform: none !important;
+}
+#why .why-liat-image:hover img {
+  transform: scale(1.015) !important;
+}
+@media (min-width: 901px) {
+  #why .why-liat-image img {
+    min-height: 500px !important;
+    object-position: left center !important;
+  }
+}
+@media (max-width: 900px) {
+  #why .why-liat-image img {
+    min-height: 360px !important;
+    aspect-ratio: 4 / 3 !important;
+    object-position: left center !important;
+  }
+}
+@media (max-width: 520px) {
+  #why .why-liat-image img {
+    min-height: 315px !important;
+    aspect-ratio: 1 / 1 !important;
+    object-position: left center !important;
+  }
+}
+</style>
+
 </head>
 <body>
  <!-- ===== HEADER ===== -->
