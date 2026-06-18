@@ -2573,6 +2573,209 @@ button {
 }
 </style>
 
+
+<style id="shapo-animated-premium-hero-banner">
+.hero-main-html-banner {
+  min-height: 700px !important;
+  padding: 104px 0 94px !important;
+  background: #000 !important;
+  overflow: hidden !important;
+}
+.hero-main-bg {
+  background-image: var(--main-hero-bg) !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  transform: scale(1.03) translate3d(0,0,0) !important;
+  transform-origin: 42% 50% !important;
+  animation: heroImageCinematicMove 22s ease-in-out infinite alternate !important;
+  filter: contrast(1.05) saturate(1.04) !important;
+}
+.hero-main-html-banner::before {
+  background:
+    radial-gradient(circle at 78% 46%, rgba(255,215,0,0.15), transparent 22rem),
+    radial-gradient(circle at 22% 45%, rgba(201,168,76,0.08), transparent 28rem),
+    linear-gradient(90deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.12) 38%, rgba(0,0,0,0.52) 62%, rgba(0,0,0,0.93) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.34) 0%, transparent 35%, rgba(0,0,0,0.56) 100%) !important;
+  animation: heroOverlayBreath 7s ease-in-out infinite !important;
+}
+.hero-premium-animated-layers {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+}
+.hero-gold-line {
+  position: absolute !important;
+  height: 1px !important;
+  width: 58vw !important;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.25), #FFD700, rgba(201,168,76,0.25), transparent) !important;
+  box-shadow: 0 0 18px rgba(255,215,0,0.34) !important;
+  opacity: 0 !important;
+  transform: translateX(45vw) rotate(-18deg) !important;
+}
+.hero-gold-line-1 {
+  top: 24% !important;
+  right: -12% !important;
+  animation: heroGoldLineSweep 6.8s ease-in-out infinite !important;
+}
+.hero-gold-line-2 {
+  bottom: 18% !important;
+  right: -20% !important;
+  animation: heroGoldLineSweep 7.6s ease-in-out 1.35s infinite !important;
+}
+.hero-orbit {
+  position: absolute !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(201,168,76,0.18) !important;
+  box-shadow: inset 0 0 22px rgba(255,215,0,0.06), 0 0 26px rgba(201,168,76,0.09) !important;
+  opacity: 0.5 !important;
+}
+.hero-orbit::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #FFD700;
+  top: 11%;
+  left: 50%;
+  box-shadow: 0 0 16px #FFD700;
+}
+.hero-orbit-1 {
+  width: 420px !important;
+  height: 420px !important;
+  left: 52% !important;
+  top: 16% !important;
+  animation: heroOrbitSpin 18s linear infinite !important;
+}
+.hero-orbit-2 {
+  width: 260px !important;
+  height: 260px !important;
+  left: 70% !important;
+  bottom: 7% !important;
+  animation: heroOrbitSpinReverse 14s linear infinite !important;
+}
+.hero-spark {
+  position: absolute !important;
+  width: 5px !important;
+  height: 5px !important;
+  border-radius: 50% !important;
+  background: #FFD700 !important;
+  box-shadow: 0 0 18px #FFD700, 0 0 30px rgba(201,168,76,0.45) !important;
+  opacity: 0 !important;
+}
+.spark-1 { right: 22%; top: 28%; animation: heroSparkFloat 5.7s ease-in-out infinite; }
+.spark-2 { right: 34%; top: 62%; animation: heroSparkFloat 6.4s ease-in-out 0.8s infinite; }
+.spark-3 { right: 12%; top: 48%; animation: heroSparkFloat 5.2s ease-in-out 1.45s infinite; }
+.spark-4 { right: 44%; top: 18%; animation: heroSparkFloat 7.1s ease-in-out 2.1s infinite; }
+.hero-main-content {
+  transform: translateY(18px) scale(0.98) !important;
+  opacity: 0 !important;
+  animation: heroTextCardEntrance 1.05s cubic-bezier(.2,.9,.2,1) 0.25s forwards !important;
+}
+.hero-main-kicker {
+  animation: heroKickerGlow 2.8s ease-in-out infinite !important;
+}
+.hero-main-content h1 span,
+.hero-main-content h1 strong,
+.hero-main-content p,
+.hero-main-points span,
+.hero-main-cta {
+  transform: translateY(12px) !important;
+  opacity: 0 !important;
+  animation: heroTextItemRise 0.8s cubic-bezier(.2,.9,.2,1) forwards !important;
+}
+.hero-main-content h1 span { animation-delay: 0.48s !important; }
+.hero-main-content h1 strong { animation-delay: 0.62s !important; }
+.hero-main-content p { animation-delay: 0.78s !important; }
+.hero-main-points span:nth-child(1) { animation-delay: 0.92s !important; }
+.hero-main-points span:nth-child(2) { animation-delay: 1.04s !important; }
+.hero-main-points span:nth-child(3) { animation-delay: 1.16s !important; }
+.hero-main-cta { animation-delay: 1.28s !important; }
+.hero-main-content::after {
+  content: '';
+  position: absolute;
+  inset: auto 34px 0 34px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FFD700, rgba(201,168,76,0.6), transparent);
+  box-shadow: 0 0 18px rgba(255,215,0,0.55);
+  opacity: 0.85;
+  animation: heroBottomLinePulse 3.2s ease-in-out infinite;
+}
+@keyframes heroImageCinematicMove {
+  0% { transform: scale(1.03) translate3d(0,0,0); }
+  45% { transform: scale(1.055) translate3d(-14px,-4px,0); }
+  100% { transform: scale(1.075) translate3d(-26px,7px,0); }
+}
+@keyframes heroOverlayBreath {
+  0%, 100% { opacity: 0.92; }
+  50% { opacity: 1; }
+}
+@keyframes heroGoldLineSweep {
+  0%, 42% { opacity: 0; transform: translateX(45vw) rotate(-18deg); }
+  56% { opacity: 0.95; }
+  82%, 100% { opacity: 0; transform: translateX(-80vw) rotate(-18deg); }
+}
+@keyframes heroOrbitSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes heroOrbitSpinReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+@keyframes heroSparkFloat {
+  0%, 100% { opacity: 0; transform: translate3d(0,20px,0) scale(0.6); }
+  22% { opacity: 0.9; }
+  60% { opacity: 0.55; transform: translate3d(-34px,-28px,0) scale(1.15); }
+  82% { opacity: 0; transform: translate3d(-58px,-46px,0) scale(0.8); }
+}
+@keyframes heroTextCardEntrance {
+  0% { opacity: 0; transform: translateY(24px) scale(0.96); filter: blur(7px); }
+  72% { opacity: 1; transform: translateY(-4px) scale(1.01); filter: blur(0); }
+  100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+@keyframes heroTextItemRise {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroKickerGlow {
+  0%, 100% { box-shadow: 0 0 0 rgba(255,215,0,0); }
+  50% { box-shadow: 0 0 22px rgba(255,215,0,0.16); }
+}
+@keyframes heroBottomLinePulse {
+  0%, 100% { opacity: 0.42; transform: scaleX(0.7); }
+  50% { opacity: 1; transform: scaleX(1); }
+}
+@media (max-width: 900px) {
+  .hero-main-html-banner { min-height: 800px !important; padding-top: 400px !important; }
+  .hero-main-bg { background-position: 30% top !important; animation-duration: 18s !important; }
+  .hero-orbit-1 { width: 290px !important; height: 290px !important; left: 50% !important; top: 11% !important; }
+  .hero-orbit-2 { display: none !important; }
+  .hero-gold-line { width: 86vw !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-main-bg,
+  .hero-main-html-banner::before,
+  .hero-gold-line,
+  .hero-orbit,
+  .hero-spark,
+  .hero-main-content,
+  .hero-main-kicker,
+  .hero-main-content h1 span,
+  .hero-main-content h1 strong,
+  .hero-main-content p,
+  .hero-main-points span,
+  .hero-main-cta,
+  .hero-main-content::after {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+}
+</style>
+
 </head>
 <body>
  <!-- ===== HEADER ===== -->
@@ -2614,6 +2817,16 @@ button {
  <!-- ===== HERO SECTION - FULL WIDTH BANNER ===== -->
  
 <section class="hero hero-main-html-banner" id="hero" style="--main-hero-bg: url('https://base44.app/api/apps/6a25515e659bfc7a4f34bba2/files/mp/public/6a25515e659bfc7a4f34bba2/f72119624_liat_real_photo_wide_hero_banner.jpg');">
+  <div class="hero-premium-animated-layers" aria-hidden="true">
+    <span class="hero-gold-line hero-gold-line-1"></span>
+    <span class="hero-gold-line hero-gold-line-2"></span>
+    <span class="hero-orbit hero-orbit-1"></span>
+    <span class="hero-orbit hero-orbit-2"></span>
+    <span class="hero-spark spark-1"></span>
+    <span class="hero-spark spark-2"></span>
+    <span class="hero-spark spark-3"></span>
+    <span class="hero-spark spark-4"></span>
+  </div>
   <div class="hero-main-bg" aria-hidden="true"></div>
   <div class="container">
     <div class="hero-main-content" reveal-on-scroll>
