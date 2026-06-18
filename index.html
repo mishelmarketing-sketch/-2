@@ -3586,6 +3586,73 @@ button {
 }
 </style>
 
+
+<style id="shapo-why-clean-photo-banner-css">
+#why .why-liat-image {
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 28px !important;
+  border: 1px solid rgba(201,168,76,0.42) !important;
+  background: #000 !important;
+  box-shadow: 0 28px 80px rgba(0,0,0,0.56), 0 0 34px rgba(201,168,76,0.15) !important;
+}
+#why .why-liat-image::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+  background: linear-gradient(115deg, transparent 0%, transparent 42%, rgba(255,215,0,0.10) 52%, transparent 64%, transparent 100%) !important;
+  opacity: 0.75 !important;
+}
+#why .why-liat-image::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 12px !important;
+  z-index: 3 !important;
+  border: 1px solid rgba(255,215,0,0.20) !important;
+  border-radius: 22px !important;
+  pointer-events: none !important;
+}
+#why .why-liat-image img {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 500px !important;
+  aspect-ratio: 5 / 3 !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  border-radius: 28px !important;
+  display: block !important;
+  filter: contrast(1.03) saturate(0.98) !important;
+  transform: none !important;
+}
+#why .why-liat-image:hover img {
+  transform: scale(1.012) !important;
+}
+@media (max-width: 900px) {
+  #why .why-liat-image {
+    border-radius: 22px !important;
+  }
+  #why .why-liat-image::after {
+    inset: 9px !important;
+    border-radius: 17px !important;
+  }
+  #why .why-liat-image img {
+    min-height: 360px !important;
+    aspect-ratio: 4 / 3 !important;
+    object-position: center center !important;
+    border-radius: 22px !important;
+  }
+}
+@media (max-width: 520px) {
+  #why .why-liat-image img {
+    min-height: 315px !important;
+    aspect-ratio: 1 / 1 !important;
+    object-position: center center !important;
+  }
+}
+</style>
+
 </head>
 <body>
  <!-- ===== HEADER ===== -->
@@ -3768,7 +3835,7 @@ button {
  </h2>
  <div class="why-liat-content">
  <div class="why-liat-image">
- <img src="https://base44.app/api/apps/6a25515e659bfc7a4f34bba2/files/mp/public/6a25515e659bfc7a4f34bba2/b424210f8_liat_why_storytelling_business_banner.jpg" alt="למה לבחור בליאת מלכה" style="width:100%;height:auto;border-radius:16px;display:block;">
+ <img src="https://base44.app/api/apps/6a25515e659bfc7a4f34bba2/files/mp/public/6a25515e659bfc7a4f34bba2/f43c2cd75_liat_why_clean_photo_gold_banner.jpg" alt="למה לבחור בליאת מלכה" style="width:100%;height:auto;border-radius:16px;display:block;">
  </div>
  <div>
  <ul class="why-liat-list">
