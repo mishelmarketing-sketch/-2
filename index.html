@@ -3329,6 +3329,57 @@ button {
 }
 </style>
 
+
+<style id="shapo-mobile-liat-head-position-fix">
+/* Mobile: lower Liat slightly so the head is not clipped */
+@media (max-width: 900px) {
+  .hero-main-bg {
+    height: 410px !important;
+    min-height: 410px !important;
+    background-size: auto 388px !important;
+    background-position: left 0 top 22px !important;
+  }
+
+  .hero-main-html-banner::before {
+    height: 410px !important;
+  }
+
+  .hero-main-html-banner .container {
+    margin-top: -22px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-main-bg {
+    height: 385px !important;
+    min-height: 385px !important;
+    background-size: auto 360px !important;
+    background-position: left 0 top 24px !important;
+  }
+
+  .hero-main-html-banner::before {
+    height: 385px !important;
+  }
+
+  .hero-main-html-banner .container {
+    margin-top: -20px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-main-bg {
+    height: 360px !important;
+    min-height: 360px !important;
+    background-size: auto 335px !important;
+    background-position: left 0 top 24px !important;
+  }
+
+  .hero-main-html-banner::before {
+    height: 360px !important;
+  }
+}
+</style>
+
 </head>
 <body>
  <!-- ===== HEADER ===== -->
