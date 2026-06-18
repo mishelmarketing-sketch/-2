@@ -3384,33 +3384,6 @@ button {
 
 
 
-<style id="shapo-footer-phone-credit-css">
-.footer-bottom .site-credit,
-.footer-bottom small.site-credit {
-  display: block !important;
-  margin-top: 0.85rem !important;
-  color: rgba(245,240,232,0.52) !important;
-  font-size: 0.84rem !important;
-  line-height: 1.75 !important;
-  font-weight: 400 !important;
-  letter-spacing: 0.01em !important;
-  text-decoration: none !important;
-}
-.footer-bottom .footer-build-phone,
-.footer-bottom .footer-credit-phone,
-.footer-bottom .footer-phone-sep {
-  display: none !important;
-}
-@media (max-width: 520px) {
-  .footer-bottom .site-credit,
-  .footer-bottom small.site-credit {
-    font-size: 0.76rem !important;
-    line-height: 1.8 !important;
-  }
-}
-</style>
-
-
 <style id="shapo-why-storytelling-banner-css">
 #why {
   background:
@@ -3518,6 +3491,51 @@ button {
     animation: none !important;
     transition: none !important;
     transform: none !important;
+  }
+}
+</style>
+
+
+<style id="shapo-footer-phone-credit-css">
+.footer-bottom .site-credit,
+.footer-bottom small.site-credit {
+  display: block !important;
+  margin-top: 0.85rem !important;
+  color: rgba(245,240,232,0.46) !important;
+  font-size: 0.82rem !important;
+  line-height: 1.75 !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.01em !important;
+  text-decoration: none !important;
+}
+.footer-bottom .site-credit .muted-credit-phone {
+  color: rgba(245,240,232,0.30) !important;
+  -webkit-text-fill-color: rgba(245,240,232,0.30) !important;
+  font-weight: 300 !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0 !important;
+  text-shadow: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  opacity: 0.78 !important;
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+}
+.footer-bottom .footer-build-phone,
+.footer-bottom .footer-credit-phone,
+.footer-bottom .footer-phone-sep {
+  display: none !important;
+}
+@media (max-width: 520px) {
+  .footer-bottom .site-credit,
+  .footer-bottom small.site-credit {
+    font-size: 0.74rem !important;
+    line-height: 1.8 !important;
+  }
+  .footer-bottom .site-credit .muted-credit-phone {
+    font-size: 0.70rem !important;
+    opacity: 0.72 !important;
   }
 }
 </style>
@@ -3941,7 +3959,7 @@ button {
  </div>
  <div class="footer-bottom">
  <a class="terms-link" onclick="document.getElementById('termsModal').style.display='block'">תקנון ותנאי שימוש והצהרת נגישות</a>
- <p>© 2026 ליאת מלכה - פתרון משכנתא מקצועי. כל הזכויות שמורות.<small class="site-credit">אתר זה נבנה על ידי Shapo Digital - Mishel Zvigi | 050-8563777</small></p>
+ <p>© 2026 ליאת מלכה - פתרון משכנתא מקצועי. כל הזכויות שמורות.<small class="site-credit">אתר זה נבנה על ידי Shapo Digital - Mishel Zvigi <span class="muted-credit-phone">| 050-8563777</span></small></p>
  </div>
  </div>
  </footer>
