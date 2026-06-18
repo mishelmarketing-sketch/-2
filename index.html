@@ -4073,6 +4073,201 @@ button {
 }
 </style>
 
+
+<style id="shapo-mortgage-knowledge-css">
+.mortgage-knowledge-section {
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 96px 0 !important;
+  background:
+    radial-gradient(circle at 18% 10%, rgba(201,168,76,0.14), transparent 28rem),
+    radial-gradient(circle at 84% 76%, rgba(255,215,0,0.08), transparent 32rem),
+    linear-gradient(180deg, #050505 0%, #000000 48%, #070707 100%) !important;
+}
+.mortgage-knowledge-section::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background:
+    linear-gradient(90deg, rgba(201,168,76,0.055) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(201,168,76,0.04) 1px, transparent 1px) !important;
+  background-size: 82px 82px !important;
+  opacity: 0.34 !important;
+  pointer-events: none !important;
+}
+.mortgage-knowledge-section .container {
+  position: relative !important;
+  z-index: 2 !important;
+}
+.mortgage-knowledge-header {
+  max-width: 920px !important;
+  margin: 0 auto 38px !important;
+  text-align: center !important;
+}
+.mortgage-knowledge-kicker {
+  display: inline-flex !important;
+  margin-bottom: 14px !important;
+  padding: 8px 18px !important;
+  border-radius: 999px !important;
+  color: #FFD700 !important;
+  -webkit-text-fill-color: #FFD700 !important;
+  background: rgba(201,168,76,0.08) !important;
+  border: 1px solid rgba(201,168,76,0.36) !important;
+  font-weight: 800 !important;
+  font-size: 0.92rem !important;
+}
+.mortgage-knowledge-header .section-title {
+  margin-bottom: 18px !important;
+}
+.mortgage-knowledge-header p {
+  max-width: 860px !important;
+  margin: 0 auto !important;
+  color: rgba(245,240,232,0.80) !important;
+  -webkit-text-fill-color: rgba(245,240,232,0.80) !important;
+  font-size: 1.06rem !important;
+  line-height: 1.95 !important;
+}
+.mortgage-knowledge-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 22px !important;
+  margin-top: 34px !important;
+}
+.mortgage-knowledge-card {
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: 305px !important;
+  padding: 30px 26px !important;
+  border-radius: 26px !important;
+  background: linear-gradient(145deg, rgba(10,10,10,0.96), rgba(20,15,4,0.86)) !important;
+  border: 1px solid rgba(201,168,76,0.28) !important;
+  box-shadow: 0 18px 48px rgba(0,0,0,0.42), 0 0 24px rgba(201,168,76,0.08) !important;
+  transition: transform 0.32s ease, border-color 0.32s ease, box-shadow 0.32s ease !important;
+}
+.mortgage-knowledge-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 4px !important;
+  background: linear-gradient(90deg, transparent, #C9A84C, #FFD700, transparent) !important;
+  opacity: 0.72 !important;
+}
+.mortgage-knowledge-card::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(115deg, transparent 0%, rgba(255,215,0,0.10) 45%, transparent 62%) !important;
+  transform: translateX(130%) skewX(-18deg) !important;
+  transition: transform 0.78s ease !important;
+  pointer-events: none !important;
+}
+.mortgage-knowledge-card:hover {
+  transform: translateY(-8px) !important;
+  border-color: rgba(255,215,0,0.52) !important;
+  box-shadow: 0 28px 68px rgba(0,0,0,0.56), 0 0 34px rgba(201,168,76,0.15) !important;
+}
+.mortgage-knowledge-card:hover::after {
+  transform: translateX(-130%) skewX(-18deg) !important;
+}
+.mortgage-card-number {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 56px !important;
+  height: 56px !important;
+  margin-bottom: 22px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #C9A84C, #FFD700) !important;
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.02em !important;
+  box-shadow: 0 12px 28px rgba(201,168,76,0.22) !important;
+}
+.mortgage-knowledge-card h3 {
+  margin: 0 0 14px !important;
+  color: #FFD700 !important;
+  -webkit-text-fill-color: #FFD700 !important;
+  font-size: 1.28rem !important;
+  line-height: 1.38 !important;
+  font-weight: 900 !important;
+}
+.mortgage-knowledge-card p {
+  margin: 0 !important;
+  color: rgba(245,240,232,0.76) !important;
+  -webkit-text-fill-color: rgba(245,240,232,0.76) !important;
+  line-height: 1.85 !important;
+  font-size: 0.98rem !important;
+}
+.mortgage-knowledge-bottom {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 24px !important;
+  margin-top: 28px !important;
+  padding: 28px 32px !important;
+  border-radius: 26px !important;
+  background: rgba(0,0,0,0.58) !important;
+  border: 1px solid rgba(201,168,76,0.32) !important;
+  box-shadow: 0 18px 46px rgba(0,0,0,0.38) !important;
+}
+.mortgage-knowledge-bottom strong {
+  display: block !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  font-size: 1.18rem !important;
+  margin-bottom: 6px !important;
+}
+.mortgage-knowledge-bottom p {
+  margin: 0 !important;
+  color: rgba(245,240,232,0.74) !important;
+  -webkit-text-fill-color: rgba(245,240,232,0.74) !important;
+  line-height: 1.7 !important;
+}
+.mortgage-knowledge-cta {
+  flex: 0 0 auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 52px !important;
+  padding: 14px 28px !important;
+  border-radius: 999px !important;
+  text-decoration: none !important;
+  background: linear-gradient(135deg, #C9A84C 0%, #FFD700 56%, #B8912E 100%) !important;
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  font-weight: 900 !important;
+  box-shadow: 0 16px 34px rgba(201,168,76,0.22) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+.mortgage-knowledge-cta:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 22px 48px rgba(255,215,0,0.25), 0 0 26px rgba(201,168,76,0.18) !important;
+}
+@media (max-width: 920px) {
+  .mortgage-knowledge-section {
+    padding: 74px 0 !important;
+  }
+  .mortgage-knowledge-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .mortgage-knowledge-card {
+    min-height: auto !important;
+  }
+  .mortgage-knowledge-bottom {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    text-align: center !important;
+    padding: 24px 18px !important;
+  }
+  .mortgage-knowledge-cta {
+    width: 100% !important;
+  }
+}
+</style>
+
 </head>
 <body>
  <!-- ===== HEADER ===== -->
@@ -4246,7 +4441,48 @@ button {
  </div>
  </section>
 
- <!-- ===== WHY LIAT SECTION ===== -->
+ 
+
+<!-- ===== MORTGAGE KNOWLEDGE SECTION ===== -->
+<section id="mortgage-knowledge" class="mortgage-knowledge-section">
+  <div class="container">
+    <div class="mortgage-knowledge-header" reveal-on-scroll>
+      <span class="mortgage-knowledge-kicker">משכנתא נכונה מתחילה בהבנה נכונה</span>
+      <h2 class="section-title"><span class="highlight">מה חשוב לדעת</span><br>לפני שלוקחים משכנתא</h2>
+      <p>משכנתא היא לא רק אישור מהבנק. זו החלטה פיננסית שיכולה להשפיע על ההחזר החודשי, על איכות החיים ועל הביטחון הכלכלי לשנים קדימה. לכן חשוב לבנות תמהיל נכון, להבין את המסלולים, לבדוק את יכולת ההחזר ולוודא שהפתרון מתאים למציאות שלכם ולא רק לטופס של הבנק.</p>
+    </div>
+
+    <div class="mortgage-knowledge-grid">
+      <article class="mortgage-knowledge-card" reveal-on-scroll>
+        <span class="mortgage-card-number">01</span>
+        <h3>תמהיל משכנתא הוא לא דבר גנרי</h3>
+        <p>אותו סכום משכנתא יכול להיראות אחרת לגמרי אצל שני לקוחות שונים. ההבדל נמצא בבחירת המסלולים, בפריסה, בריביות וביכולת להתאים את ההחזר להכנסות, להתחייבויות ולתוכניות העתידיות.</p>
+      </article>
+
+      <article class="mortgage-knowledge-card" reveal-on-scroll>
+        <span class="mortgage-card-number">02</span>
+        <h3>החזר חודשי נמוך לא תמיד אומר עסקה טובה</h3>
+        <p>לפעמים החזר נמוך מדי מייצר עלות כוללת גבוהה לאורך השנים. המטרה היא למצוא איזון חכם בין החזר שנוח לעמוד בו היום לבין משכנתא שלא מכבידה בצורה מיותרת בעתיד.</p>
+      </article>
+
+      <article class="mortgage-knowledge-card" reveal-on-scroll>
+        <span class="mortgage-card-number">03</span>
+        <h3>גם סירוב מהבנק לא חייב לסגור את הדלת</h3>
+        <p>במקרים של דירוג אשראי מורכב, מינוס, הלוואות קיימות או הכנסות לא סטנדרטיות, עדיין ניתן לבדוק פתרונות דרך בנקים, קרנות וגופים פיננסיים נוספים שמכירים מצבים מורכבים.</p>
+      </article>
+    </div>
+
+    <div class="mortgage-knowledge-bottom" reveal-on-scroll>
+      <div>
+        <strong>המטרה של ליאת מלכה היא לא רק להשיג אישור.</strong>
+        <p>המטרה היא לבנות פתרון משכנתא שמרגיש ברור, אפשרי ונכון עבור החיים האמיתיים שלכם.</p>
+      </div>
+      <a href="#lead-form" class="mortgage-knowledge-cta">בדיקת התאמה ראשונית</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY LIAT SECTION ===== -->
  <section id="why">
  <div class="container">
  <h2 class="section-title" reveal-on-scroll>
