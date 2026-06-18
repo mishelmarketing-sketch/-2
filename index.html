@@ -4829,8 +4829,9 @@ body {
 
 
 
+
 <style id="shapo-hero-cover-position-final-css">
-/* Final hero cover positioning — removes mobile dead-space while keeping the optimized WebP. */
+/* Final hero cover positioning — mobile crop fixed so there is no empty black gap. */
 .hero-main-html-banner {
   background-image: none !important;
   background-color: #000000 !important;
@@ -4850,46 +4851,46 @@ body {
 }
 @media (max-width: 900px) {
   .hero-main-html-banner {
-    min-height: 640px !important;
-    padding: 245px 0 38px !important;
+    min-height: 520px !important;
+    padding: 150px 0 34px !important;
   }
   .hero-main-bg {
-    background-size: auto 640px !important;
-    background-position: 17% -92px !important;
+    background-size: auto 560px !important;
+    background-position: 6% -255px !important;
   }
   .hero-main-html-banner::before {
     background:
-      linear-gradient(180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.08) 36%, rgba(0,0,0,0.78) 66%, rgba(0,0,0,0.98) 100%) !important;
+      linear-gradient(180deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.12) 42%, rgba(0,0,0,0.76) 72%, rgba(0,0,0,0.98) 100%) !important;
   }
 }
 @media (max-width: 520px) {
   .hero-main-html-banner {
-    min-height: 610px !important;
-    padding-top: 230px !important;
+    min-height: 505px !important;
+    padding-top: 138px !important;
   }
   .hero-main-bg {
-    background-size: auto 610px !important;
-    background-position: 15% -88px !important;
+    background-size: auto 545px !important;
+    background-position: 5% -252px !important;
   }
 }
 @media (max-width: 430px) {
   .hero-main-html-banner {
-    min-height: 590px !important;
-    padding-top: 218px !important;
+    min-height: 495px !important;
+    padding-top: 128px !important;
   }
   .hero-main-bg {
-    background-size: auto 590px !important;
-    background-position: 13% -82px !important;
+    background-size: auto 535px !important;
+    background-position: 4% -248px !important;
   }
 }
 @media (max-width: 390px) {
   .hero-main-html-banner {
-    min-height: 575px !important;
-    padding-top: 210px !important;
+    min-height: 485px !important;
+    padding-top: 122px !important;
   }
   .hero-main-bg {
-    background-size: auto 575px !important;
-    background-position: 11% -78px !important;
+    background-size: auto 525px !important;
+    background-position: 3% -242px !important;
   }
 }
 </style>
