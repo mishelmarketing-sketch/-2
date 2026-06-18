@@ -3653,6 +3653,237 @@ button {
 }
 </style>
 
+
+<style id="shapo-faq-strong-hook-css">
+#faq {
+  position: relative !important;
+  overflow: hidden !important;
+  background:
+    radial-gradient(circle at 20% 8%, rgba(201,168,76,0.16), transparent 28rem),
+    radial-gradient(circle at 86% 54%, rgba(255,215,0,0.08), transparent 34rem),
+    linear-gradient(180deg, #000000 0%, #070707 52%, #000000 100%) !important;
+  padding: 96px 0 !important;
+}
+#faq::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(90deg, rgba(201,168,76,0.06) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(201,168,76,0.045) 1px, transparent 1px) !important;
+  background-size: 72px 72px !important;
+  opacity: 0.34 !important;
+}
+#faq .container {
+  position: relative !important;
+  z-index: 2 !important;
+}
+#faq .section-title {
+  margin-bottom: 26px !important;
+}
+#faq .faq-hook {
+  position: relative !important;
+  max-width: 980px !important;
+  margin: 0 auto 38px !important;
+  padding: 34px 36px !important;
+  border-radius: 30px !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(135deg, rgba(0,0,0,0.94), rgba(17,13,4,0.88)),
+    radial-gradient(circle at 12% 24%, rgba(255,215,0,0.15), transparent 22rem) !important;
+  border: 1px solid rgba(201,168,76,0.46) !important;
+  box-shadow: 0 26px 76px rgba(0,0,0,0.60), 0 0 34px rgba(201,168,76,0.15) !important;
+  text-align: center !important;
+}
+#faq .faq-hook::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 4px !important;
+  background: linear-gradient(90deg, transparent, #C9A84C, #FFD700, #C9A84C, transparent) !important;
+}
+#faq .faq-hook::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 14px !important;
+  border: 1px solid rgba(255,215,0,0.13) !important;
+  border-radius: 22px !important;
+  pointer-events: none !important;
+}
+#faq .faq-hook-kicker {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 14px !important;
+  padding: 7px 16px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(201,168,76,0.38) !important;
+  color: #FFD700 !important;
+  -webkit-text-fill-color: #FFD700 !important;
+  background: rgba(201,168,76,0.08) !important;
+  font-size: 0.88rem !important;
+  font-weight: 800 !important;
+}
+#faq .faq-hook h3 {
+  max-width: 850px !important;
+  margin: 0 auto 16px !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  font-size: clamp(1.85rem, 3.5vw, 3.25rem) !important;
+  line-height: 1.12 !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.04em !important;
+}
+#faq .faq-hook p {
+  max-width: 820px !important;
+  margin: 0 auto 24px !important;
+  color: rgba(245,240,232,0.82) !important;
+  -webkit-text-fill-color: rgba(245,240,232,0.82) !important;
+  font-size: 1.05rem !important;
+  line-height: 1.9 !important;
+}
+#faq .faq-hook-points {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 12px !important;
+  margin: 0 auto 24px !important;
+  max-width: 920px !important;
+}
+#faq .faq-hook-points span {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 72px !important;
+  padding: 14px 16px !important;
+  border-radius: 18px !important;
+  background: rgba(0,0,0,0.42) !important;
+  border: 1px solid rgba(201,168,76,0.26) !important;
+  color: rgba(245,240,232,0.86) !important;
+  -webkit-text-fill-color: rgba(245,240,232,0.86) !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  line-height: 1.55 !important;
+}
+#faq .faq-hook-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 52px !important;
+  padding: 14px 30px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(135deg, #C9A84C 0%, #FFD700 54%, #B8912E 100%) !important;
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  text-decoration: none !important;
+  font-weight: 900 !important;
+  box-shadow: 0 16px 34px rgba(201,168,76,0.24), inset 0 1px 0 rgba(255,255,255,0.28) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease !important;
+}
+#faq .faq-hook-cta:hover {
+  transform: translateY(-3px) !important;
+  filter: brightness(1.05) !important;
+  box-shadow: 0 22px 46px rgba(255,215,0,0.26), 0 0 24px rgba(201,168,76,0.22) !important;
+}
+#faq .faq-container {
+  max-width: 980px !important;
+  gap: 1rem !important;
+}
+#faq .faq-item {
+  border-radius: 20px !important;
+  background: linear-gradient(135deg, rgba(9,9,9,0.96), rgba(16,13,5,0.86)) !important;
+  border: 1px solid rgba(201,168,76,0.22) !important;
+  box-shadow: 0 14px 42px rgba(0,0,0,0.34) !important;
+}
+#faq .faq-item:hover,
+#faq .faq-item.active {
+  border-color: rgba(255,215,0,0.52) !important;
+  box-shadow: 0 22px 58px rgba(0,0,0,0.48), 0 0 26px rgba(201,168,76,0.13) !important;
+}
+#faq .faq-question {
+  min-height: 76px !important;
+  padding: 1.35rem 1.6rem !important;
+  background: transparent !important;
+  color: #F5F0E8 !important;
+  -webkit-text-fill-color: #F5F0E8 !important;
+  font-size: 1.08rem !important;
+  text-align: right !important;
+}
+#faq .faq-question span:first-child {
+  color: #F5F0E8 !important;
+  -webkit-text-fill-color: #F5F0E8 !important;
+}
+#faq .faq-icon {
+  position: relative !important;
+  flex: 0 0 34px !important;
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 50% !important;
+  background: rgba(201,168,76,0.14) !important;
+  border: 1px solid rgba(201,168,76,0.42) !important;
+  color: transparent !important;
+  font-size: 0 !important;
+  transform: none !important;
+}
+#faq .faq-icon::before,
+#faq .faq-icon::after {
+  content: '' !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: 15px !important;
+  height: 2px !important;
+  background: #FFD700 !important;
+  border-radius: 999px !important;
+  transform: translate(-50%, -50%) !important;
+  transition: transform 0.25s ease, opacity 0.25s ease !important;
+}
+#faq .faq-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg) !important;
+}
+#faq .faq-item.active .faq-icon::after {
+  opacity: 0 !important;
+  transform: translate(-50%, -50%) rotate(0deg) !important;
+}
+#faq .faq-answer {
+  border-top: 1px solid rgba(201,168,76,0.18) !important;
+}
+#faq .faq-item.active .faq-answer {
+  padding: 0 1.6rem 1.55rem !important;
+}
+#faq .faq-answer p {
+  color: rgba(245,240,232,0.76) !important;
+  -webkit-text-fill-color: rgba(245,240,232,0.76) !important;
+  font-size: 0.98rem !important;
+  line-height: 1.9 !important;
+}
+@media (max-width: 820px) {
+  #faq {
+    padding: 74px 0 !important;
+  }
+  #faq .faq-hook {
+    padding: 28px 18px !important;
+    border-radius: 24px !important;
+  }
+  #faq .faq-hook-points {
+    grid-template-columns: 1fr !important;
+  }
+  #faq .faq-hook h3 {
+    font-size: clamp(1.65rem, 8vw, 2.35rem) !important;
+  }
+  #faq .faq-hook p {
+    font-size: 0.96rem !important;
+  }
+  #faq .faq-question {
+    padding: 1.15rem 1rem !important;
+    font-size: 0.98rem !important;
+    gap: 14px !important;
+  }
+}
+</style>
+
 </head>
 <body>
  <!-- ===== HEADER ===== -->
@@ -3918,8 +4149,20 @@ button {
  <!-- ===== FAQ SECTION ===== -->
  <section id="faq">
  <div class="container">
- <h2 class="section-title" reveal-on-scroll>שאלות נפוצות</h2>
- <div class="faq-container">
+ <h2 class="section-title" reveal-on-scroll><span class="highlight">השאלות שכולם חושבים עליהן</span><br>לפני שמתחילים</h2>
+
+  <div class="faq-hook" reveal-on-scroll>
+    <span class="faq-hook-kicker">לפני שמקבלים החלטה פיננסית גדולה</span>
+    <h3>אם השאלה הזאת כבר יושבת לך בראש, כנראה שהגיע הזמן לעשות סדר.</h3>
+    <p>לקוחות מגיעים לליאת כשהבנק אמר לא, כשההחזר החודשי חונק, או כשהם מרגישים שאף אחד לא באמת מסתכל על התמונה המלאה. כאן מתחילים לפרק את החשש לשאלות ברורות, ואז בונים דרך פעולה.</p>
+    <div class="faq-hook-points" aria-label="מצבים נפוצים לפני פנייה לליאת מלכה">
+      <span>סירוב מהבנק לא חייב להיות סוף הדרך</span>
+      <span>הלוואות מפוזרות יכולות להפוך לתוכנית אחת</span>
+      <span>שיחה אחת יכולה לגלות אם יש כיוון אמיתי</span>
+    </div>
+    <a href="#lead-form" class="faq-hook-cta">בדיקה ראשונית ללא התחייבות</a>
+  </div>
+<div class="faq-container">
  <div class="faq-item" reveal-on-scroll>
  <button class="faq-question" onclick="toggleFAQ(this)">
  <span>מה עושים אם הבנק סירב לי?</span>
