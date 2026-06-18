@@ -2363,6 +2363,160 @@ button {
 }
 </style>
 
+
+<style id="shapo-main-html-hero-banner-css">
+.hero-main-html-banner {
+  position: relative !important;
+  min-height: 680px !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 110px 0 95px !important;
+  background: #000 !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  border-bottom: 1px solid rgba(201,168,76,0.35) !important;
+}
+.hero-main-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -2 !important;
+  background-image: var(--main-hero-bg) !important;
+  background-size: cover !important;
+  background-position: 42% center !important;
+  background-repeat: no-repeat !important;
+  transform: scale(1.015) !important;
+  animation: mainHeroSlowMove 18s ease-in-out infinite alternate !important;
+}
+.hero-main-html-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 68% 48%, rgba(255,215,0,0.12), transparent 24rem),
+    linear-gradient(90deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.22) 43%, rgba(0,0,0,0.86) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.42) 0%, transparent 30%, rgba(0,0,0,0.56) 100%);
+  pointer-events: none;
+}
+.hero-main-content {
+  width: min(680px, 100%) !important;
+  margin-right: auto !important;
+  position: relative !important;
+  z-index: 3 !important;
+  padding: 42px 46px !important;
+  border-radius: 30px !important;
+  background: linear-gradient(145deg, rgba(0,0,0,0.74), rgba(9,9,9,0.54)) !important;
+  border: 1px solid rgba(201,168,76,0.44) !important;
+  box-shadow: 0 30px 90px rgba(0,0,0,0.62), 0 0 36px rgba(201,168,76,0.16) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  overflow: hidden !important;
+}
+.hero-main-content::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(120deg, transparent, rgba(255,215,0,0.20), rgba(255,255,255,0.18), rgba(201,168,76,0.18), transparent);
+  transform: translateX(120%) skewX(-18deg);
+  animation: mainHeroCardShine 5s ease-in-out infinite;
+  pointer-events: none;
+}
+.hero-main-kicker {
+  display: inline-flex !important;
+  color: #FFD700 !important;
+  font-family: 'Rubik', Arial, sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  padding: 8px 16px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(201,168,76,0.45) !important;
+  background: rgba(201,168,76,0.10) !important;
+  margin-bottom: 18px !important;
+}
+.hero-main-content h1 {
+  margin: 0 0 18px !important;
+  font-family: 'Rubik', Arial, sans-serif !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.04em !important;
+}
+.hero-main-content h1 span {
+  display: block !important;
+  color: #FFFFFF !important;
+  font-size: clamp(2.35rem, 4.8vw, 4.8rem) !important;
+  font-weight: 900 !important;
+  text-shadow: 0 0 24px rgba(0,0,0,0.56) !important;
+}
+.hero-main-content h1 strong {
+  display: block !important;
+  color: #C9A84C !important;
+  font-size: clamp(2rem, 3.8vw, 4rem) !important;
+  font-weight: 900 !important;
+  text-shadow: 0 0 22px rgba(255,215,0,0.20) !important;
+}
+.hero-main-content p {
+  color: rgba(245,240,232,0.88) !important;
+  font-family: 'Rubik', Arial, sans-serif !important;
+  font-size: clamp(1.05rem, 1.45vw, 1.28rem) !important;
+  line-height: 1.85 !important;
+  margin: 0 0 24px !important;
+  max-width: 590px !important;
+}
+.hero-main-points {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin: 0 0 28px !important;
+}
+.hero-main-points span {
+  color: rgba(245,240,232,0.88) !important;
+  font-family: 'Rubik', Arial, sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 0.94rem !important;
+  border: 1px solid rgba(201,168,76,0.30) !important;
+  background: rgba(201,168,76,0.08) !important;
+  border-radius: 999px !important;
+  padding: 9px 14px !important;
+}
+.hero-main-cta {
+  width: fit-content !important;
+}
+@keyframes mainHeroSlowMove {
+  from { transform: scale(1.015) translateX(0); }
+  to { transform: scale(1.055) translateX(-16px); }
+}
+@keyframes mainHeroCardShine {
+  0%, 48% { opacity: 0; transform: translateX(120%) skewX(-18deg); }
+  60% { opacity: 1; }
+  84%, 100% { opacity: 0; transform: translateX(-120%) skewX(-18deg); }
+}
+@media (max-width: 900px) {
+  .hero-main-html-banner {
+    min-height: 760px !important;
+    padding: 390px 0 48px !important;
+  }
+  .hero-main-bg {
+    background-position: 34% top !important;
+  }
+  .hero-main-html-banner::before {
+    background: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.42) 38%, rgba(0,0,0,0.94) 68%, rgba(0,0,0,0.98) 100%) !important;
+  }
+  .hero-main-content {
+    margin: 0 auto !important;
+    padding: 30px 24px !important;
+    border-radius: 22px !important;
+  }
+  .hero-main-points { display: grid !important; }
+  .hero-main-cta { width: 100% !important; justify-content: center !important; }
+}
+@media (max-width: 520px) {
+  .hero-main-html-banner { min-height: 780px !important; padding-top: 360px !important; }
+  .hero-main-bg { background-position: 31% top !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-main-bg, .hero-main-content::before { animation: none !important; }
+}
+</style>
+
 </head>
 <body>
  <!-- ===== HEADER ===== -->
@@ -2402,52 +2556,23 @@ button {
  </header>
 
  <!-- ===== HERO SECTION - FULL WIDTH BANNER ===== -->
- <section class="hero" id="hero">
- <div class="hero-banner-full">
- <img src="https://base44.app/api/apps/6a25515e659bfc7a4f34bba2/files/mp/public/6a25515e659bfc7a4f34bba2/a73f41870_liat_banner_pro_2048.png" alt="ליאת מלכה - ייעוץ משכנתאות" style="width:100%;display:block;height:auto;object-fit:contain;image-rendering:auto;">
- </div>
- <div class="container">
- <div class="hero-grid">
- <div class="hero-image" style="display:none;">
- <img src="images/main_banner_liat.png" alt="ליאת מלכה">
- </div>
- <div class="hero-content">
- <h1>
- <span class="highlight">חנוקים בהלוואות?</span>
- <strong>בואו לעשות איחוד הלוואות!</strong>
- </h1>
- <p class="hero-subtitle">
- נפחית לכם את ההחזר החודשי ביותר מ-<strong>50%</strong> <br>
- איחוד כל ההלוואות שלך להלוואה אחת מסודרת —
- ריבית נמוכה יותר, פריסה גמישה יותר, שקט נפשי.
- <br><strong>תשלום על בסיס הצלחה בלבד — אפס סיכון.</strong>
- </p>
- <div class="benefits">
- <div class="benefit">
- <span class="benefit-icon">✓</span>
- <span>פתרונות מותאמים</span>
- </div>
- <div class="benefit">
- <span class="benefit-icon">✓</span>
- <span>ליווי אישי מלא</span>
- </div>
- <div class="benefit">
- <span class="benefit-icon">✓</span>
- <span>תנאים מועדפים</span>
- </div>
- <div class="benefit">
- <span class="benefit-icon">✓</span>
- <span>קשרים בבנקים</span>
- </div>
- </div>
- <a href="#lead-form" class="cta-btn">
- <span>בדיקה חינמית עכשיו</span>
- <span>←</span>
- </a>
- </div>
- </div>
- </div>
- </section>
+ 
+<section class="hero hero-main-html-banner" id="hero" style="--main-hero-bg: url('https://base44.app/api/apps/6a25515e659bfc7a4f34bba2/files/mp/public/6a25515e659bfc7a4f34bba2/3ac54f08b_liat_main_center_banner_no_text.jpg');">
+  <div class="hero-main-bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-main-content" reveal-on-scroll>
+      <span class="hero-main-kicker">ליאת מלכה — החממה לייעוץ משכנתאות</span>
+      <h1><span>חנוקים בהלוואות?</span><strong>בואו לעשות איחוד הלוואות</strong></h1>
+      <p>איחוד כל ההלוואות להלוואה אחת מסודרת, עם פריסה גמישה יותר, ריבית נמוכה יותר ושקט נפשי.</p>
+      <div class="hero-main-points">
+        <span>הפחתת החזר חודשי</span>
+        <span>ליווי אישי מלא</span>
+        <span>תשלום על בסיס הצלחה</span>
+      </div>
+      <a href="#lead-form" class="cta-btn hero-main-cta"><span>בדיקה חינמית עכשיו</span><span>←</span></a>
+    </div>
+  </div>
+</section>
 
  <!-- ===== LEAD FORM ===== -->
  <section id="lead-form" style="padding: 60px 0; background: linear-gradient(135deg, rgba(26, 35, 126, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%);">
@@ -2480,24 +2605,6 @@ button {
  </section>
 
  
-<!-- ===== HTML TEXT PREMIUM BANNER ===== -->
-<section class="html-text-premium-banner" style="--banner-bg: url('https://base44.app/api/apps/6a25515e659bfc7a4f34bba2/files/mp/public/6a25515e659bfc7a4f34bba2/978698c5b_liat_html_text_banner_bg.jpg');" aria-label="ייעוץ פיננסי מקצועי">
-  <div class="html-text-banner-overlay" aria-hidden="true"></div>
-  <div class="container">
-    <div class="html-text-banner-content" reveal-on-scroll>
-      <span class="html-text-banner-kicker">ייעוץ משכנתאות ואיחוד הלוואות</span>
-      <h2>תכנון פיננסי שמחזיר שליטה</h2>
-      <p>ליווי אישי, בדיקה מקצועית ובניית פתרון מותאם להחזר חודשי נכון יותר.</p>
-      <div class="html-text-banner-points" aria-label="יתרונות השירות">
-        <span>בדיקה ראשונית ללא התחייבות</span>
-        <span>ליווי עד קבלת פתרון</span>
-        <span>התמקדות בתוצאה</span>
-      </div>
-      <a href="#lead-form" class="html-text-banner-cta">לתיאום בדיקה מקצועית</a>
-    </div>
-  </div>
-</section>
-
 <!-- ===== REJECTED SECTION ===== -->
  <section id="rejected">
  <div class="container">
