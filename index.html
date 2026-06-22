@@ -2129,6 +2129,35 @@
     }
   </style>
 
+
+  <style id="liat-hero-mobile-gap-fix">
+    @media(max-width:980px){
+      /* kill black gap above Liat's photo in the mobile hero */
+      html body section.hero#top .hero-image,
+      html body .hero-main-bg{
+        background-size:cover !important;
+        background-position:center top !important;
+        height:430px !important;
+        min-height:430px !important;
+      }
+      html body section.hero#top .hero-copy{
+        padding-bottom:18px !important;
+      }
+    }
+    @media(max-width:520px){
+      html body section.hero#top .hero-image,
+      html body .hero-main-bg{
+        background-size:cover !important;
+        background-position:15% top !important;
+        height:380px !important;
+        min-height:380px !important;
+      }
+      html body section.hero#top .hero-copy{
+        padding-bottom:14px !important;
+      }
+    }
+  </style>
+
 </head>
 <body>
   <main>
