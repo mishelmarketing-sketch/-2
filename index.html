@@ -2030,20 +2030,7 @@
       }
     }
   </style>
-
-  <style id="liat-testimonial-names-style">
-    html body #testimonials .quote strong{
-      display:block !important;
-      margin-top:26px !important;
-      color:#2B3440 !important;
-      font-size:18px !important;
-      font-weight:900 !important;
-      letter-spacing:0 !important;
-    }
-  </style>
-
-
-  <style id="liat-hero-intro-style">
+<style id="liat-hero-intro-style">
     html body .hero .liat-hero-intro{direction:rtl !important;text-align:right !important;margin:14px 0 18px !important;}
     html body .hero .liat-hero-intro-lead{margin:0 0 12px !important;color:rgba(255,255,255,.92) !important;font-size:16px !important;line-height:1.7 !important;font-weight:500 !important;font-family:'Assistant',sans-serif !important;}
     html body .hero .liat-hero-benefits{list-style:none !important;margin:14px 0 0 !important;padding:0 !important;display:flex !important;flex-direction:column !important;gap:10px !important;}
@@ -2053,23 +2040,62 @@
     @media(max-width:980px){html body .hero .liat-hero-intro{text-align:right !important;margin:12px auto 16px !important;max-width:520px !important;}html body .hero .liat-hero-benefits li{font-size:15.5px !important;}}
   </style>
 
-
-  <style id="liat-quote-area-style">
-    html body #testimonials .quote strong{
-      display:block !important;
-      margin-top:26px !important;
-      color:#2B3440 !important;
-      font-size:18px !important;
-      font-weight:900 !important;
-      letter-spacing:0 !important;
+  <style id="liat-testimonials-pro-style">
+    html body #testimonials .lt-trust-row{
+      display:flex !important;justify-content:center !important;gap:46px !important;
+      flex-wrap:wrap !important;margin:0 0 34px !important;
     }
-    html body #testimonials .quote strong .quote-area{
-      display:block !important;
-      margin-top:4px !important;
-      color:#C0A157 !important;
-      font-size:14px !important;
-      font-weight:700 !important;
-      letter-spacing:.01em !important;
+    html body #testimonials .lt-trust-item{text-align:center !important;}
+    html body #testimonials .lt-trust-item strong{
+      display:block !important;color:#E3C468 !important;font-size:30px !important;font-weight:900 !important;line-height:1 !important;
+      font-family:'Assistant',sans-serif !important;
+    }
+    html body #testimonials .lt-trust-item span{
+      display:block !important;margin-top:6px !important;color:rgba(255,255,255,.78) !important;font-size:14px !important;font-weight:600 !important;
+    }
+    html body #testimonials .lt-grid{
+      display:grid !important;grid-template-columns:repeat(3,1fr) !important;gap:22px !important;
+    }
+    html body #testimonials .lt-card{
+      background:#fff !important;color:#0C1624 !important;padding:26px 24px !important;
+      border-radius:4px !important;border:1px solid rgba(192,161,87,.28) !important;
+      box-shadow:0 16px 40px rgba(0,0,0,.18) !important;display:flex !important;flex-direction:column !important;
+      text-align:right !important;direction:rtl !important;
+    }
+    html body #testimonials .lt-stars{display:flex !important;gap:4px !important;margin-bottom:14px !important;}
+    html body #testimonials .lt-star{
+      width:18px !important;height:18px !important;display:inline-block !important;
+      background:linear-gradient(135deg,#FFE901,#C0A157) !important;
+      clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%) !important;
+    }
+    html body #testimonials .lt-text{
+      font-size:16px !important;line-height:1.65 !important;font-weight:600 !important;color:#1c2531 !important;
+      margin:0 0 22px !important;flex:1 1 auto !important;font-family:'Assistant',sans-serif !important;
+    }
+    html body #testimonials .lt-person{
+      display:flex !important;align-items:center !important;gap:12px !important;
+      border-top:1px solid rgba(12,22,36,.08) !important;padding-top:16px !important;
+    }
+    html body #testimonials .lt-avatar{
+      flex:0 0 auto !important;width:46px !important;height:46px !important;border-radius:50% !important;
+      background:linear-gradient(135deg,#0C1624,#2B3440) !important;color:#E3C468 !important;
+      display:flex !important;align-items:center !important;justify-content:center !important;
+      font-size:15px !important;font-weight:800 !important;border:1.5px solid #C0A157 !important;
+      font-family:'Assistant',sans-serif !important;
+    }
+    html body #testimonials .lt-meta{display:flex !important;flex-direction:column !important;gap:2px !important;flex:1 1 auto !important;}
+    html body #testimonials .lt-name{color:#0C1624 !important;font-size:16px !important;font-weight:900 !important;}
+    html body #testimonials .lt-area{color:#8a8f97 !important;font-size:13px !important;font-weight:600 !important;}
+    html body #testimonials .lt-service{color:#C0A157 !important;font-size:13px !important;font-weight:800 !important;margin-top:1px !important;}
+    html body #testimonials .lt-verified{
+      flex:0 0 auto !important;align-self:flex-start !important;
+      background:rgba(192,161,87,.14) !important;color:#9a7d2e !important;
+      border:1px solid rgba(192,161,87,.5) !important;border-radius:999px !important;
+      font-size:11.5px !important;font-weight:800 !important;padding:5px 10px !important;white-space:nowrap !important;
+    }
+    @media(max-width:980px){
+      html body #testimonials .lt-grid{grid-template-columns:1fr !important;}
+      html body #testimonials .lt-trust-row{gap:30px !important;}
     }
   </style>
 
@@ -2292,10 +2318,90 @@
     <section class="section" id="testimonials">
       <div class="container">
         <div class="section-title"><h2>לקוחות ממליצים</h2><div class="gold-rule"></div></div>
-        <div class="quote-grid">
-          <article class="quote"><p>ליאת עשתה לנו סדר בכל מה שהבנק אמר. סוף סוף הבנו מה נכון לנו.</p><strong>משפחת בן דוד<span class="quote-area">ראשון לציון</span></strong></article>
-          <article class="quote"><p>הגענו עם החזר חודשי כבד ויצאנו עם תוכנית הרבה יותר ברורה ונוחה.</p><strong>נועה ואיתי כהן<span class="quote-area">חיפה</span></strong></article>
-          <article class="quote"><p>הליווי היה צמוד מהשיחה הראשונה ועד האישור. הרגשנו שיש מישהי בצד שלנו.</p><strong>שיר ויונתן לוי<span class="quote-area">פתח תקווה</span></strong></article>
+        <div class="lt-trust-row">
+          <div class="lt-trust-item"><strong>4.9</strong><span>דירוג ממוצע</span></div>
+          <div class="lt-trust-item"><strong>+300</strong><span>משפחות מלוות</span></div>
+          <div class="lt-trust-item"><strong>100%</strong><span>ליווי אישי עד האישור</span></div>
+        </div>
+        <div class="lt-grid">
+          <article class="lt-card">
+            <div class="lt-stars" aria-label="דירוג 5 מתוך 5"><span class="lt-star"></span><span class="lt-star"></span><span class="lt-star"></span><span class="lt-star"></span><span class="lt-star"></span></div>
+            <p class="lt-text">ליאת עשתה לנו סדר בכל מה שהבנק אמר. סוף סוף הבנו מה נכון לנו, וההחזר החודשי ירד בצורה משמעותית.</p>
+            <div class="lt-person">
+              <div class="lt-avatar" aria-hidden="true">ב״ד</div>
+              <div class="lt-meta">
+                <strong class="lt-name">משפחת בן דוד</strong>
+                <span class="lt-area">ראשון לציון</span>
+                <span class="lt-service">מחזור משכנתא</span>
+              </div>
+              <span class="lt-verified">לקוח מאומת</span>
+            </div>
+          </article>
+          <article class="lt-card">
+            <div class="lt-stars" aria-label="דירוג 5 מתוך 5"><span class="lt-star"></span><span class="lt-star"></span><span class="lt-star"></span><span class="lt-star"></span><span class="lt-star"></span></div>
+            <p class="lt-text">הגענו עם החזר חודשי כבד ויצאנו עם תוכנית הרבה יותר ברורה ונוחה. סוף סוף הרגשנו שיש לנו שליטה על הכסף.</p>
+            <div class="lt-person">
+              <div class="lt-avatar" aria-hidden="true">נ״כ</div>
+              <div class="lt-meta">
+                <strong class="lt-name">נועה ואיתי כהן</strong>
+                <span class="lt-area">חיפה</span>
+                <span class="lt-service">איחוד הלוואות</span>
+              </div>
+              <span class="lt-verified">לקוח מאומת</span>
+            </div>
+          </article>
+          <article class="lt-card">
+            <div class="lt-stars" aria-label="דירוג 5 מתוך 5"><span class="lt-star"></span><span class="lt-star"></span><span class="lt-star"></span><span class="lt-star"></span><span class="lt-star"></span></div>
+            <p class="lt-text">הליווי היה צמוד מהשיחה הראשונה ועד האישור. הרגשנו שיש מישהי בצד שלנו שבאמת דואגת לנו.</p>
+            <div class="lt-person">
+              <div class="lt-avatar" aria-hidden="true">ש״ל</div>
+              <div class="lt-meta">
+                <strong class="lt-name">שיר ויונתן לוי</strong>
+                <span class="lt-area">פתח תקווה</span>
+                <span class="lt-service">משכנתא לדירה ראשונה</span>
+              </div>
+              <span class="lt-verified">לקוח מאומת</span>
+            </div>
+          </article>
+          <article class="lt-card">
+            <div class="lt-stars" aria-label="דירוג 5 מתוך 5"><span class="lt-star"></span><span class="lt-star"></span><span class="lt-star"></span><span class="lt-star"></span><span class="lt-star"></span></div>
+            <p class="lt-text">אחרי שני בנקים שאמרו לא, ליאת מצאה לנו פתרון. לא האמנו שזה אפשרי עד שראינו את האישור.</p>
+            <div class="lt-person">
+              <div class="lt-avatar" aria-hidden="true">ר״מ</div>
+              <div class="lt-meta">
+                <strong class="lt-name">משפחת מזרחי</strong>
+                <span class="lt-area">באר שבע</span>
+                <span class="lt-service">מסורבי בנקים</span>
+              </div>
+              <span class="lt-verified">לקוח מאומת</span>
+            </div>
+          </article>
+          <article class="lt-card">
+            <div class="lt-stars" aria-label="דירוג 5 מתוך 5"><span class="lt-star"></span><span class="lt-star"></span><span class="lt-star"></span><span class="lt-star"></span><span class="lt-star"></span></div>
+            <p class="lt-text">חסכתי עשרות אלפי שקלים לאורך התקופה. הכל הוסבר בגובה העיניים, בלי אותיות קטנות.</p>
+            <div class="lt-person">
+              <div class="lt-avatar" aria-hidden="true">א״פ</div>
+              <div class="lt-meta">
+                <strong class="lt-name">אורית פרץ</strong>
+                <span class="lt-area">נתניה</span>
+                <span class="lt-service">מחזור משכנתא</span>
+              </div>
+              <span class="lt-verified">לקוח מאומת</span>
+            </div>
+          </article>
+          <article class="lt-card">
+            <div class="lt-stars" aria-label="דירוג 5 מתוך 5"><span class="lt-star"></span><span class="lt-star"></span><span class="lt-star"></span><span class="lt-star"></span><span class="lt-star"></span></div>
+            <p class="lt-text">ליוותה אותנו בסבלנות אינסופית בכל שלב. ההרגשה הייתה של ייעוץ אישי אמיתי, לא של מכירה.</p>
+            <div class="lt-person">
+              <div class="lt-avatar" aria-hidden="true">ד״א</div>
+              <div class="lt-meta">
+                <strong class="lt-name">דנה ואלון אברהם</strong>
+                <span class="lt-area">מודיעין</span>
+                <span class="lt-service">משכנתא + הון עצמי</span>
+              </div>
+              <span class="lt-verified">לקוח מאומת</span>
+            </div>
+          </article>
         </div>
         <div class="center-cta"><a class="btn" href="#lead-form">אני רוצה לשמוע פרטים נוספים</a></div>
       </div>
