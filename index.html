@@ -871,6 +871,155 @@
     }
     /* end-liat-why-proof-section-2026 */
 
+  
+    /* liat-bank-refusal-banner-2026 */
+    .bank-refusal-banner{
+      position:relative !important;
+      background:#07101D !important;
+      padding:76px 0 !important;
+      overflow:hidden !important;
+      border-top:1px solid rgba(227,196,104,.24) !important;
+      border-bottom:1px solid rgba(227,196,104,.24) !important;
+    }
+    .bank-refusal-banner::before{
+      content:'' !important;
+      position:absolute !important;
+      inset:0 !important;
+      background:radial-gradient(circle at 18% 50%,rgba(227,196,104,.18),transparent 260px),linear-gradient(90deg,rgba(12,22,36,.16),rgba(12,22,36,.94) 54%,#07101D 100%) !important;
+      z-index:0 !important;
+    }
+    .bank-refusal-inner{
+      display:grid !important;
+      grid-template-columns:48% 52% !important;
+      grid-template-areas:'image text' !important;
+      direction:ltr !important;
+      align-items:center !important;
+      min-height:500px !important;
+      border:1px solid rgba(227,196,104,.36) !important;
+      background:rgba(12,22,36,.72) !important;
+      box-shadow:0 22px 60px rgba(0,0,0,.26) !important;
+      overflow:hidden !important;
+    }
+    .bank-refusal-image{
+      grid-area:image !important;
+      min-height:500px !important;
+      align-self:stretch !important;
+      background:url('https://base44.app/api/apps/6a25515e659bfc7a4f34bba2/files/mp/public/6a25515e659bfc7a4f34bba2/736d3a066_liat_hero_1600_q82.webp') 20% top/cover no-repeat !important;
+      position:relative !important;
+    }
+    .bank-refusal-image::before{
+      content:'' !important;
+      position:absolute !important;
+      inset:0 !important;
+      background:linear-gradient(90deg,rgba(7,16,29,.04) 0%,rgba(7,16,29,.22) 58%,rgba(7,16,29,.92) 100%) !important;
+    }
+    .bank-refusal-image::after{
+      content:'' !important;
+      position:absolute !important;
+      right:-62px !important;
+      bottom:52px !important;
+      width:250px !important;
+      height:250px !important;
+      border:14px solid rgba(227,196,104,.72) !important;
+      border-radius:28px !important;
+      transform:rotate(45deg) !important;
+      opacity:.75 !important;
+    }
+    .bank-refusal-copy{
+      grid-area:text !important;
+      direction:rtl !important;
+      text-align:right !important;
+      padding:58px 56px 58px 28px !important;
+      max-width:670px !important;
+      justify-self:end !important;
+      z-index:2 !important;
+    }
+    .bank-refusal-tag{
+      display:inline-flex !important;
+      align-items:center !important;
+      justify-content:center !important;
+      background:rgba(227,196,104,.13) !important;
+      border:1px solid rgba(227,196,104,.62) !important;
+      color:#E3C468 !important;
+      padding:8px 18px !important;
+      border-radius:999px !important;
+      font-size:1.08rem !important;
+      line-height:1 !important;
+      font-weight:800 !important;
+      margin-bottom:18px !important;
+    }
+    .bank-refusal-copy h2{
+      margin:0 0 20px !important;
+      color:#fff !important;
+      font-size:clamp(2.2rem,3.9vw,4.25rem) !important;
+      line-height:1.03 !important;
+      font-weight:800 !important;
+      letter-spacing:-.02em !important;
+    }
+    .bank-refusal-copy p{
+      margin:0 0 24px !important;
+      color:rgba(255,255,255,.84) !important;
+      font-size:1.22rem !important;
+      line-height:1.68 !important;
+      font-weight:500 !important;
+    }
+    .bank-refusal-points{
+      display:flex !important;
+      flex-wrap:wrap !important;
+      gap:12px !important;
+      margin:0 0 28px !important;
+      justify-content:flex-start !important;
+    }
+    .bank-refusal-points span{
+      display:inline-flex !important;
+      align-items:center !important;
+      gap:8px !important;
+      border:1px solid rgba(227,196,104,.44) !important;
+      background:rgba(227,196,104,.08) !important;
+      color:#fff !important;
+      border-radius:999px !important;
+      padding:10px 15px !important;
+      font-size:1rem !important;
+      font-weight:700 !important;
+      line-height:1 !important;
+    }
+    .bank-refusal-points span::before{
+      content:'✓' !important;
+      color:#E3C468 !important;
+      font-weight:800 !important;
+    }
+    .bank-refusal-cta{
+      min-width:275px !important;
+    }
+    @media(max-width:980px){
+      .bank-refusal-banner{padding:48px 0 !important;}
+      .bank-refusal-inner{
+        grid-template-columns:1fr !important;
+        grid-template-areas:'image' 'text' !important;
+        min-height:0 !important;
+      }
+      .bank-refusal-image{
+        min-height:300px !important;
+        background-position:15% top !important;
+      }
+      .bank-refusal-image::before{
+        background:linear-gradient(180deg,rgba(7,16,29,.02) 0%,rgba(7,16,29,.18) 50%,rgba(7,16,29,.92) 100%) !important;
+      }
+      .bank-refusal-copy{
+        padding:34px 24px 36px !important;
+      }
+      .bank-refusal-copy h2{
+        font-size:clamp(2rem,9vw,3rem) !important;
+      }
+      .bank-refusal-copy p{
+        font-size:1.08rem !important;
+      }
+      .bank-refusal-points{gap:9px !important;}
+      .bank-refusal-points span{font-size:.94rem !important;}
+      .bank-refusal-cta{width:100% !important;min-width:0 !important;}
+    }
+    /* end-liat-bank-refusal-banner-2026 */
+
   </style>
 </head>
 <body>
@@ -920,6 +1069,24 @@
               <p>אני מנהלת עבורכם את התהליך, בודקת אפשרויות ודואגת שתגיעו מוכנים לכל שלב.</p>
             </article>
           </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="bank-refusal-banner" id="bank-refusal" aria-label="פתרונות למסורבי בנקים">
+      <div class="container bank-refusal-inner">
+        <div class="bank-refusal-image" aria-hidden="true"></div>
+        <div class="bank-refusal-copy">
+          <span class="bank-refusal-tag">מסורבי בנקים</span>
+          <h2>קיבלתם סירוב מהבנק? זה לא אומר שהדרך נגמרה</h2>
+          <p>לפעמים הסירוב מגיע בגלל הצגת תיק לא נכונה, נתונים חסרים או תמהיל שלא מתאים לבנק. בליווי מקצועי אפשר לבדוק מחדש את התמונה, להבין מה חסם את האישור ולבנות מסלול פעולה ברור יותר.</p>
+          <div class="bank-refusal-points">
+            <span>בדיקת סיבת הסירוב</span>
+            <span>בניית תיק מסודר יותר</span>
+            <span>בחינת פתרונות מימון אפשריים</span>
+          </div>
+          <a class="btn bank-refusal-cta" href="#lead-form">בדיקה ראשונית למסורבי בנקים</a>
         </div>
       </div>
     </section>
