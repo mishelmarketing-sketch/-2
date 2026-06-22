@@ -730,6 +730,147 @@
     }
     /* end-liat-competitor-scroll-tree-2026 */
 
+  
+    /* liat-why-proof-section-2026 */
+    .why-proof-section{
+      position:relative !important;
+      background:#0C1624 !important;
+      padding:34px 0 0 !important;
+      border-top:1px solid rgba(227,196,104,.30) !important;
+      overflow:visible !important;
+      z-index:4 !important;
+    }
+    .why-proof-wrap{
+      width:min(1180px,calc(100% - 32px)) !important;
+      margin:0 auto !important;
+      text-align:center !important;
+      z-index:6 !important;
+    }
+    .why-proof-heading{
+      position:relative !important;
+      z-index:8 !important;
+      display:flex !important;
+      flex-direction:column !important;
+      align-items:center !important;
+      justify-content:center !important;
+      margin:0 0 -34px !important;
+      padding:0 !important;
+    }
+    .why-proof-heading h2{
+      margin:0 !important;
+      color:#fff !important;
+      font-size:clamp(1.75rem,2.6vw,2.45rem) !important;
+      line-height:1.05 !important;
+      font-weight:800 !important;
+      letter-spacing:-.01em !important;
+    }
+    .why-proof-heading span{
+      display:inline-flex !important;
+      align-items:center !important;
+      justify-content:center !important;
+      min-width:150px !important;
+      min-height:42px !important;
+      margin-top:15px !important;
+      padding:5px 18px 7px !important;
+      background:#E3C468 !important;
+      color:#000 !important;
+      border-radius:7px !important;
+      font-size:clamp(1.7rem,2.2vw,2.2rem) !important;
+      line-height:1 !important;
+      font-weight:800 !important;
+      transform:rotate(-3deg) !important;
+      box-shadow:0 12px 24px rgba(0,0,0,.16) !important;
+    }
+    .why-proof-panel{
+      position:relative !important;
+      background:#fff !important;
+      color:#111 !important;
+      border-radius:28px !important;
+      min-height:276px !important;
+      padding:66px 64px 54px !important;
+      box-shadow:0 18px 50px rgba(0,0,0,.18) !important;
+      overflow:visible !important;
+      z-index:5 !important;
+    }
+    .why-proof-intro{
+      max-width:470px !important;
+      margin:0 auto 34px !important;
+      color:#111 !important;
+      font-weight:500 !important;
+      line-height:1.55 !important;
+      font-size:1.02rem !important;
+    }
+    .why-proof-intro p{
+      margin:0 0 4px !important;
+      color:#111 !important;
+    }
+    .why-proof-cards{
+      display:grid !important;
+      grid-template-columns:repeat(3,1fr) !important;
+      gap:32px !important;
+      direction:rtl !important;
+      align-items:stretch !important;
+    }
+    .why-proof-card{
+      position:relative !important;
+      background:#fff !important;
+      border:1px solid rgba(0,0,0,.07) !important;
+      border-radius:16px !important;
+      min-height:128px !important;
+      padding:27px 28px 23px !important;
+      text-align:center !important;
+      color:#111 !important;
+      box-shadow:0 8px 22px rgba(0,0,0,.12) !important;
+    }
+    .proof-badge{
+      position:absolute !important;
+      top:-21px !important;
+      left:50% !important;
+      transform:translateX(-50%) !important;
+      width:38px !important;
+      height:38px !important;
+      background:#E3C468 !important;
+      clip-path:polygon(50% 0%,60% 12%,75% 7%,82% 22%,98% 24%,93% 40%,100% 50%,88% 60%,93% 76%,78% 78%,75% 93%,60% 88%,50% 100%,40% 88%,25% 93%,22% 78%,7% 76%,12% 60%,0% 50%,12% 40%,7% 24%,22% 22%,25% 7%,40% 12%) !important;
+      box-shadow:0 6px 14px rgba(0,0,0,.14) !important;
+    }
+    .proof-badge::after{
+      content:'✓' !important;
+      position:absolute !important;
+      inset:0 !important;
+      display:flex !important;
+      align-items:center !important;
+      justify-content:center !important;
+      color:#fff !important;
+      font-size:1.45rem !important;
+      font-weight:800 !important;
+      line-height:1 !important;
+      text-shadow:0 1px 1px rgba(0,0,0,.10) !important;
+    }
+    .why-proof-card h3{
+      margin:0 0 9px !important;
+      color:#111 !important;
+      font-size:1.05rem !important;
+      line-height:1.2 !important;
+      font-weight:800 !important;
+    }
+    .why-proof-card p{
+      margin:0 !important;
+      color:#111 !important;
+      font-size:.98rem !important;
+      line-height:1.48 !important;
+      font-weight:500 !important;
+    }
+    @media(max-width:900px){
+      .why-proof-section{padding:28px 0 0 !important;}
+      .why-proof-wrap{width:min(100% - 24px,1180px) !important;}
+      .why-proof-heading{margin-bottom:-30px !important;}
+      .why-proof-panel{border-radius:24px !important;padding:62px 18px 34px !important;}
+      .why-proof-cards{grid-template-columns:1fr !important;gap:28px !important;max-width:420px !important;margin:0 auto !important;}
+      .why-proof-card{min-height:118px !important;}
+      .why-proof-intro{font-size:.98rem !important;margin-bottom:32px !important;}
+    }
+    /* end-liat-why-proof-section-2026 */
+
   </style>
 </head>
 <body>
@@ -748,22 +889,38 @@
       </div>
     </section>
 
-    <section class="split-banner" id="why">
-      <div class="container split-inner">
-        <div class="split-img" aria-hidden="true"></div>
-        <div class="split-copy">
-          <h2>למה אתם צריכים אותי בצד שלכם?</h2>
-          <div class="gold-rule"></div>
-          <p>במציאות של היום, הבנק דואג קודם כל לעצמו. כדי לקבל החלטה נכונה באמת, אתם צריכים יועצת שמכירה את המערכת, יודעת לקרוא את האותיות הקטנות ונלחמת על האינטרס שלכם.</p>
+    <section class="why-proof-section" id="why" aria-label="למה אתם צריכים אותי בצד שלכם">
+      <div class="container why-proof-wrap">
+        <div class="why-proof-heading">
+          <h2>למה אתם צריכים אותי</h2>
+          <span>בצד שלכם?</span>
         </div>
-      </div>
-    </section>
 
-    <section class="section dark" id="advantages">
-      <div class="container cards">
-        <article class="card"><h3>הסתכלות כלכלית מלאה</h3><p>אני לא מסתכלת רק על ריביות, אלא על כלכלת המשפחה שלכם, ההתחייבויות, ההכנסות והיכולת האמיתית לעמוד בהחזר.</p></article>
-        <article class="card"><h3>מקצועיות ללא פשרות</h3><p>בדיקה מדויקת, השוואה בין מסלולים וניהול תהליך מסודר מול הבנקים עד לקבלת החלטה בטוחה.</p></article>
-        <article class="card"><h3>אמון ויחס אישי</h3><p>אתם לא עוד תיק במערכת. אתם מקבלים ליווי אישי, ברור ומקצועי לאורך כל הדרך.</p></article>
+        <div class="why-proof-panel">
+          <div class="why-proof-intro">
+            <p>במציאות של היום, הבנק דואג קודם כל לעצמו.</p>
+            <p>כדי לנצח אותו,</p>
+            <p>אתם צריכים מישהי שמכירה את המערכת מבפנים.</p>
+          </div>
+
+          <div class="why-proof-cards">
+            <article class="why-proof-card">
+              <div class="proof-badge" aria-hidden="true"></div>
+              <h3>הסתכלות כלכלית רב-ממדית</h3>
+              <p>אני לא מסתכלת רק על ריביות, אלא על כלכלת המשפחה שלכם.</p>
+            </article>
+            <article class="why-proof-card">
+              <div class="proof-badge" aria-hidden="true"></div>
+              <h3>מקצועיות ללא פשרות</h3>
+              <p>כמשכנתאות מורכבות לבחירה נבונה, אני יודעת לקרוא את האותיות הקטנות שהבנק מנסה להסתיר.</p>
+            </article>
+            <article class="why-proof-card">
+              <div class="proof-badge" aria-hidden="true"></div>
+              <h3>אמון ויחס אישי</h3>
+              <p>אתם לא עוד תיק במערכת, אני נלחמת על המשכנתא שלכם כאילו מדובר בכסף הפרטי שלי.</p>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
 
