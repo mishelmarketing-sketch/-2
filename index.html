@@ -1731,34 +1731,32 @@
     }
   </style>
 
-
-  <style id="liat-about-photo-replacement">
-    html body #about .split-img{
-      background-image:url('https://media.base44.com/images/public/6a25515e659bfc7a4f34bba2/c7b4aac75_WhatsAppImage2026-06-22at1236331.jpg') !important;
-      background-position:center top !important;
-      background-size:cover !important;
+  <style id="liat-hero-photo-replacement-final">
+    /* Single source of truth for Liat photo: use the latest user-provided image. */
+    html body section.hero#top .hero-image,
+    html body .hero-main-bg,
+    html body section#about .split-img{
+      background-image:url('https://media.base44.com/images/public/6a25515e659bfc7a4f34bba2/2bd4e5f4e_WhatsAppImage2026-06-22at1236331.jpg') !important;
       background-repeat:no-repeat !important;
+      background-color:#0C1624 !important;
       filter:none !important;
     }
-    html body #about .split-img::before{
+
+    /* Desktop/tablet: keep professional banner composition, text right / image left. */
+    html body section.hero#top .hero-image,
+    html body .hero-main-bg{
+      background-size:cover !important;
+      background-position:center center !important;
+    }
+    html body section#about .split-img{
+      background-size:cover !important;
+      background-position:center center !important;
+    }
+    html body section#about .split-img::before{
       background:linear-gradient(90deg,rgba(12,22,36,.03) 0%,rgba(12,22,36,.18) 60%,#0C1624 100%) !important;
     }
-    @media(max-width:980px){
-      html body #about .split-img{
-        min-height:390px !important;
-        background-position:center top !important;
-      }
-    }
-    @media(max-width:520px){
-      html body #about .split-img{
-        min-height:340px !important;
-        background-position:center top !important;
-      }
-    }
-  </style>
 
-  <style id="liat-mobile-full-hero-image-final">
-    /* Final mobile fix: show Liat fully in BOTH first visual banners. No cover cropping. */
+    /* Mobile: show the new square portrait cleanly and fully, no head crop. */
     @media(max-width:980px){
       html body section.hero#top .hero-shell{
         grid-template-areas:'image' 'text' !important;
@@ -1766,12 +1764,10 @@
       html body section.hero#top .hero-image,
       html body .hero-main-bg,
       html body section#about .split-img{
-        min-height:640px !important;
-        height:640px !important;
+        min-height:590px !important;
+        height:590px !important;
         background-size:contain !important;
         background-position:center bottom !important;
-        background-repeat:no-repeat !important;
-        background-color:#0C1624 !important;
       }
       html body section#about .split-inner{
         min-height:auto !important;
@@ -1781,8 +1777,8 @@
       html body section.hero#top .hero-image,
       html body .hero-main-bg,
       html body section#about .split-img{
-        min-height:590px !important;
-        height:590px !important;
+        min-height:540px !important;
+        height:540px !important;
         background-size:contain !important;
         background-position:center bottom !important;
       }
@@ -1791,8 +1787,8 @@
       html body section.hero#top .hero-image,
       html body .hero-main-bg,
       html body section#about .split-img{
-        min-height:560px !important;
-        height:560px !important;
+        min-height:510px !important;
+        height:510px !important;
       }
     }
   </style>
