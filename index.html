@@ -719,9 +719,9 @@
     .visual-banner:last-child{margin-bottom:0 !important;}
     .visual-banner::before{content:'' !important;position:absolute !important;inset:0 !important;background:linear-gradient(90deg,rgba(12,22,36,.06) 0%,rgba(12,22,36,.36) 43%,#0C1624 55%,#0C1624 100%) !important;z-index:1 !important;pointer-events:none !important;}
     .visual-img{grid-area:image !important;min-height:390px !important;background-size:cover !important;background-position:center !important;z-index:0 !important;}
-    .service-contractor .visual-img{background-image:url('https://media.base44.com/images/public/6a25515e659bfc7a4f34bba2/f414d0e50_generated_image.png') !important;}
-    .service-refinance .visual-img{background-image:url('https://media.base44.com/images/public/6a25515e659bfc7a4f34bba2/a0333f4b2_generated_image.png') !important;}
-    .service-loans .visual-img{background-image:url('https://media.base44.com/images/public/6a25515e659bfc7a4f34bba2/e05dc3819_generated_image.png') !important;}
+    .service-contractor .visual-img{background-image:url('https://media.base44.com/images/public/6a25515e659bfc7a4f34bba2/f5835f686_generated_image.png') !important;}
+    .service-refinance .visual-img{background-image:url('https://media.base44.com/images/public/6a25515e659bfc7a4f34bba2/6d8a90939_generated_image.png') !important;}
+    .service-loans .visual-img{background-image:url('https://media.base44.com/images/public/6a25515e659bfc7a4f34bba2/06f588da7_generated_image.png') !important;}
     .visual-copy{grid-area:text !important;direction:rtl !important;text-align:right !important;align-self:center !important;justify-self:end !important;max-width:610px !important;padding:54px 58px 54px 30px !important;z-index:2 !important;}
     .eyebrow{display:inline-block !important;color:#E3C468 !important;font-weight:800 !important;font-size:1.08rem !important;letter-spacing:.02em !important;margin-bottom:14px !important;border-bottom:1px solid rgba(227,196,104,.55) !important;padding-bottom:8px !important;}
     .visual-copy h3{margin:0 0 18px !important;color:#FFFFFF !important;font-weight:800 !important;font-size:clamp(2rem,3vw,3.35rem) !important;line-height:1.08 !important;letter-spacing:-.015em !important;}
@@ -774,6 +774,40 @@
     }
     /* end-liat-service-images-fill-final-2026 */
 
+  
+    /* liat-service-crop-no-stock-final-2026 */
+    .visual-img{
+      background-size:cover !important;
+      filter:saturate(.92) contrast(1.03) brightness(.88) !important;
+    }
+    .service-contractor .visual-img{
+      background-position:center 58% !important;
+      background-size:118% auto !important;
+    }
+    .service-refinance .visual-img{
+      background-position:center 54% !important;
+      background-size:116% auto !important;
+    }
+    .service-loans .visual-img{
+      background-position:center center !important;
+      background-size:cover !important;
+    }
+    .visual-banner::after{
+      content:'' !important;
+      position:absolute !important;
+      inset:0 !important;
+      border-right:4px solid rgba(227,196,104,.65) !important;
+      pointer-events:none !important;
+      z-index:3 !important;
+    }
+    @media(max-width:980px){
+      .service-contractor .visual-img,.service-refinance .visual-img,.service-loans .visual-img{
+        background-size:cover !important;
+        background-position:center center !important;
+      }
+    }
+    /* end-liat-service-crop-no-stock-final-2026 */
+
   </style>
 </head>
 <body>
@@ -820,9 +854,9 @@
         <article class="visual-banner service-refinance">
           <div class="visual-img" aria-hidden="true"></div>
           <div class="visual-copy">
-            <span class="eyebrow">מחזור משכנתא</span>
-            <h3>בודקים אם אפשר לשפר את התנאים הקיימים</h3>
-            <p>לא כל מחזור משתלם. בודקים ריביות, קנסות, יתרה, מסלולים והחזר חודשי — ורק אם יש יתרון אמיתי מתקדמים מול הבנקים.</p>
+            <span class="eyebrow">משכנתא לבית חדש</span>
+            <h3>מתאימים את ההחזר לבית ולחיים שאחריו</h3>
+            <p>בונים תמהיל שמסתכל לא רק על אישור הבנק, אלא על החיים בבית החדש: הכנסות, הוצאות, שינויים עתידיים ויכולת החזר אמיתית.</p>
           </div>
         </article>
 
