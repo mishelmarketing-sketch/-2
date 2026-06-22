@@ -1495,6 +1495,97 @@
     }
   </style>
 
+
+  <style id="liat-why-photo-replacement">
+    html body #why .why-proof-panel{
+      padding-top:84px !important;
+    }
+    html body #why .why-proof-main{
+      display:grid !important;
+      grid-template-columns:minmax(320px,46%) minmax(320px,54%) !important;
+      grid-template-areas:'image text' !important;
+      gap:34px !important;
+      align-items:center !important;
+      direction:ltr !important;
+      margin:0 auto 38px !important;
+      max-width:1060px !important;
+    }
+    html body #why .why-proof-photo{
+      grid-area:image !important;
+      min-height:430px !important;
+      border-radius:26px !important;
+      background:url('https://media.base44.com/images/public/6a25515e659bfc7a4f34bba2/882448d13_WhatsAppImage2026-06-22at1236331.jpg') center center/cover no-repeat !important;
+      border:1px solid rgba(227,196,104,.42) !important;
+      box-shadow:0 28px 70px rgba(0,0,0,.25) !important;
+      position:relative !important;
+      overflow:hidden !important;
+    }
+    html body #why .why-proof-photo::before{
+      content:'' !important;
+      position:absolute !important;
+      inset:0 !important;
+      background:linear-gradient(180deg, transparent 58%, rgba(12,22,36,.32) 100%) !important;
+      pointer-events:none !important;
+    }
+    html body #why .why-proof-photo::after{
+      content:'' !important;
+      position:absolute !important;
+      right:-54px !important;
+      bottom:-54px !important;
+      width:150px !important;
+      height:150px !important;
+      border:18px solid rgba(227,196,104,.22) !important;
+      border-radius:24px !important;
+      transform:rotate(45deg) !important;
+      pointer-events:none !important;
+    }
+    html body #why .why-proof-main .why-proof-intro{
+      grid-area:text !important;
+      direction:rtl !important;
+      text-align:right !important;
+      margin:0 !important;
+      padding:34px 30px !important;
+      background:rgba(12,22,36,.42) !important;
+      border:1px solid rgba(227,196,104,.22) !important;
+      border-radius:24px !important;
+    }
+    html body #why .why-proof-main .why-proof-intro p{
+      text-align:right !important;
+    }
+    @media(max-width:900px){
+      html body #why .why-proof-panel{
+        padding-top:66px !important;
+      }
+      html body #why .why-proof-main{
+        display:flex !important;
+        flex-direction:column !important;
+        gap:22px !important;
+        margin-bottom:32px !important;
+      }
+      html body #why .why-proof-photo{
+        width:100% !important;
+        min-height:360px !important;
+        background-position:center top !important;
+        border-radius:22px !important;
+      }
+      html body #why .why-proof-main .why-proof-intro{
+        width:100% !important;
+        padding:24px 20px !important;
+        text-align:center !important;
+      }
+      html body #why .why-proof-main .why-proof-intro p{
+        text-align:center !important;
+      }
+    }
+    @media(max-width:520px){
+      html body #why .why-proof-photo{
+        min-height:315px !important;
+        background-size:cover !important;
+        background-position:center top !important;
+      }
+    }
+  </style>
+
 </head>
 <body>
   <main>
@@ -1515,15 +1606,18 @@
     <section class="why-proof-section" id="why" aria-label="למה לבחור בליווי משכנתא אישי">
       <div class="container why-proof-wrap">
         <div class="why-proof-heading">
-          <h2>למה לא עוברים את זה לבד</h2>
-          <span>כשמדובר במשכנתא?</span>
+          <h2>למה לבחור בי?</h2>
+          <span>כשמדובר במשכנתא</span>
         </div>
 
         <div class="why-proof-panel">
-          <div class="why-proof-intro">
-            <p>משכנתא היא לא רק ריבית או אישור מהבנק.</p>
-            <p>זו החלטה שמשפיעה על הבית, על ההחזר החודשי ועל השקט הכלכלי שלכם.</p>
-            <p>בליווי נכון, אתם מבינים את המספרים לפני שחותמים.</p>
+          <div class="why-proof-main">
+            <div class="why-proof-photo" aria-label="ליאת מלכה יועצת משכנתאות"></div>
+            <div class="why-proof-intro">
+              <p>משכנתא היא לא רק ריבית או אישור מהבנק.</p>
+              <p>זו החלטה שמשפיעה על הבית, על ההחזר החודשי ועל השקט הכלכלי שלכם.</p>
+              <p>בליווי נכון, אתם מבינים את המספרים לפני שחותמים.</p>
+            </div>
           </div>
 
           <div class="why-proof-cards">
