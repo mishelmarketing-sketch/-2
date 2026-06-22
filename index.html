@@ -1791,15 +1791,21 @@
   </style>
 
   <style id="liat-mobile-hero-head-safe-lower">
-    /* Mobile-only hero portrait adjustment: stronger pixel downshift to prevent head cropping. */
+    /* Strong mobile-only portrait downshift: prevents head cropping in the first visual banners. */
     @media(max-width:980px){
       html body .hero .hero-image{
-        background-position:18% 58px !important;
+        background-position:18% 118px !important;
+      }
+      html body #about .split-img{
+        background-position:center 72px !important;
       }
     }
     @media(max-width:520px){
       html body .hero .hero-image{
-        background-position:18% 76px !important;
+        background-position:18% 152px !important;
+      }
+      html body #about .split-img{
+        background-position:center 104px !important;
       }
     }
   </style>
