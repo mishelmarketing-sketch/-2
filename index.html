@@ -1790,24 +1790,36 @@
     }
   </style>
 
-  <style id="liat-mobile-hero-force-down-final">
-    /* User requested: move the first hero image itself much further DOWN on mobile so the full head is visible. */
+  <style id="liat-mobile-full-hero-image-final">
+    /* Mobile final: show Liat's hero image in full. No cover cropping. */
     @media(max-width:980px){
-      html body section.hero#top .hero-image{
-        background-size:cover !important;
-        background-position:18% 190px !important;
-        background-position-x:18% !important;
-        background-position-y:190px !important;
+      html body section.hero#top .hero-shell{
+        grid-template-areas:'image' 'text' !important;
+      }
+      html body section.hero#top .hero-image,
+      html body .hero-main-bg{
+        min-height:620px !important;
+        height:620px !important;
+        background-size:contain !important;
+        background-position:center bottom !important;
         background-repeat:no-repeat !important;
         background-color:#0C1624 !important;
       }
     }
     @media(max-width:520px){
-      html body section.hero#top .hero-image{
-        background-size:cover !important;
-        background-position:18% 245px !important;
-        background-position-x:18% !important;
-        background-position-y:245px !important;
+      html body section.hero#top .hero-image,
+      html body .hero-main-bg{
+        min-height:560px !important;
+        height:560px !important;
+        background-size:contain !important;
+        background-position:center bottom !important;
+      }
+    }
+    @media(max-width:390px){
+      html body section.hero#top .hero-image,
+      html body .hero-main-bg{
+        min-height:530px !important;
+        height:530px !important;
       }
     }
   </style>
