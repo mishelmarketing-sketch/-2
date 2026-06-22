@@ -594,6 +594,120 @@
     }
     /* end-liat-hero-cta-visible-final-2026 */
 
+  
+    /* liat-user-banner-icons-final-2026 */
+    /* No artificial LM mark anywhere. */
+    .mini-mark,
+    [class*="mini-mark"]{
+      display:none !important;
+      visibility:hidden !important;
+      opacity:0 !important;
+    }
+
+    /* Integrated client-supplied brand banner. */
+    .brand-banner-section{
+      background:linear-gradient(180deg,#07101D 0%,#0C1624 100%) !important;
+      padding:34px 0 48px !important;
+      border-bottom:1px solid rgba(227,196,104,.22) !important;
+    }
+    .brand-banner-frame{
+      width:min(100%,1020px) !important;
+      margin:0 auto !important;
+      padding:10px !important;
+      background:linear-gradient(135deg,rgba(227,196,104,.34),rgba(255,233,1,.10),rgba(227,196,104,.30)) !important;
+      border:1px solid rgba(227,196,104,.48) !important;
+      box-shadow:0 22px 60px rgba(0,0,0,.34) !important;
+    }
+    .brand-banner-frame img{
+      width:100% !important;
+      height:auto !important;
+      display:block !important;
+      border:1px solid rgba(255,255,255,.10) !important;
+      filter:saturate(.98) contrast(1.02) !important;
+    }
+
+    /* Floating utility icons: closer to the reference — simple, anchored, not over the headline. */
+    .wa,
+    .wa-float{
+      position:fixed !important;
+      right:24px !important;
+      left:auto !important;
+      bottom:22px !important;
+      width:58px !important;
+      height:58px !important;
+      border-radius:50% !important;
+      background:#25D366 !important;
+      border:3px solid #FFFFFF !important;
+      color:#FFFFFF !important;
+      display:grid !important;
+      place-items:center !important;
+      z-index:80 !important;
+      box-shadow:0 10px 26px rgba(0,0,0,.30) !important;
+    }
+    .access,
+    .accessibility{
+      position:fixed !important;
+      left:24px !important;
+      right:auto !important;
+      bottom:22px !important;
+      width:54px !important;
+      height:54px !important;
+      border-radius:50% !important;
+      background:#1E7AB9 !important;
+      border:3px solid #FFFFFF !important;
+      color:#FFFFFF !important;
+      display:grid !important;
+      place-items:center !important;
+      z-index:80 !important;
+      box-shadow:0 10px 26px rgba(0,0,0,.28) !important;
+    }
+    .wa svg,.wa-float svg{
+      width:28px !important;
+      height:28px !important;
+      stroke:currentColor !important;
+      fill:none !important;
+      stroke-width:1.9 !important;
+    }
+    .access svg,.accessibility svg{
+      width:29px !important;
+      height:29px !important;
+      stroke:currentColor !important;
+      fill:none !important;
+      stroke-width:2 !important;
+    }
+
+    /* Keep social rail fully removed; social links can be reintroduced later in footer only, not floating over hero. */
+    .social,
+    .social-rail{
+      display:none !important;
+      visibility:hidden !important;
+      pointer-events:none !important;
+    }
+
+    @media(max-width:980px){
+      .brand-banner-section{
+        padding:22px 0 32px !important;
+      }
+      .brand-banner-frame{
+        padding:6px !important;
+      }
+      .wa,.wa-float{
+        right:16px !important;
+        bottom:16px !important;
+        width:50px !important;
+        height:50px !important;
+      }
+      .access,.accessibility{
+        left:16px !important;
+        bottom:16px !important;
+        width:48px !important;
+        height:48px !important;
+      }
+      .wa svg,.wa-float svg{width:24px !important;height:24px !important;}
+      .access svg,.accessibility svg{width:25px !important;height:25px !important;}
+    }
+    /* end-liat-user-banner-icons-final-2026 */
+
   </style>
 </head>
 <body>
@@ -608,6 +722,14 @@
           <h1>הבטיחו את העתיד הכלכלי של משפחתכם <span class="gold">עם ייעוץ משכנתא חכמה</span></h1>
           <p class="hero-text">ייעוץ וליווי משכנתאות מותאם אישית שחוסך לכם כסף, מפחית את ההחזר החודשי ומחזיר לכם את <strong>השליטה על הכסף שלכם</strong>.</p>
           <a class="btn" href="#lead-form">בדיקת כדאיות ראשונית ללא עלות לחצו כאן</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="brand-banner-section" aria-label="באנר שירותי ליאת מלכה">
+      <div class="container">
+        <div class="brand-banner-frame">
+          <img src="https://media.base44.com/images/public/6a25515e659bfc7a4f34bba2/0b6157628_WhatsAppImage2026-06-22at123633.jpg" alt="ליאת מלכה - החממה לייעוץ משכנתאות ושירותי מימון" loading="lazy">
         </div>
       </div>
     </section>
