@@ -2095,6 +2095,39 @@
     }
   </style>
 
+
+  <style id="liat-avatar-blur-style">
+    html body #testimonials .lt-avatar{
+      position:relative !important;
+      overflow:hidden !important;
+      color:transparent !important;
+      background:radial-gradient(circle at 50% 32%, #d9dee6 0 30%, #c4ccd6 31% 100%) !important;
+      border:1px solid rgba(0,0,0,.06) !important;
+    }
+    /* blurred "head" */
+    html body #testimonials .lt-avatar::before{
+      content:'' !important;
+      position:absolute !important;
+      left:50% !important;top:24% !important;
+      width:42% !important;height:42% !important;
+      transform:translateX(-50%) !important;
+      border-radius:50% !important;
+      background:#9aa3af !important;
+      filter:blur(4px) !important;
+    }
+    /* blurred "shoulders" */
+    html body #testimonials .lt-avatar::after{
+      content:'' !important;
+      position:absolute !important;
+      left:50% !important;bottom:-22% !important;
+      width:86% !important;height:62% !important;
+      transform:translateX(-50%) !important;
+      border-radius:50% !important;
+      background:#8b94a1 !important;
+      filter:blur(5px) !important;
+    }
+  </style>
+
 </head>
 <body>
   <main>
