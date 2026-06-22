@@ -34,6 +34,187 @@
     .social-rail{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:12px}.social-rail a,.wa-float{width:54px;height:54px;border-radius:50%;background:#000;border:2px solid var(--gold2);display:grid;place-items:center;color:var(--gold2);box-shadow:0 8px 22px rgba(0,0,0,.35)}.social-rail svg,.wa-float svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.8}.wa-float{position:fixed;left:24px;bottom:24px;z-index:40;background:#061221}.accessibility{position:fixed;right:20px;bottom:22px;z-index:40;width:54px;height:54px;border-radius:50%;background:#0B65C2;border:2px solid #fff;color:#fff;display:grid;place-items:center}.accessibility svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:2}
     @media(max-width:980px){.top-strip{display:none}.site-header{height:auto;position:relative}.head-inner{grid-template-columns:1fr;gap:12px;padding:16px 0;text-align:center}.logo,.header-cta{justify-self:center}.nav{flex-wrap:wrap;gap:16px 24px;font-size:.9rem}.hero{min-height:800px}.hero-bg{background-position:15% top}.hero-content{min-height:800px;padding:320px 0 46px;align-items:flex-start}.hero::before{background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.58) 42%,rgba(0,0,0,.98) 100%)}.gold-line.one{top:104px}.gold-line.two{top:166px}.kicker{margin-bottom:42px}.cards3,.testimonials,.steps,.banner-inner{grid-template-columns:1fr}.banner-photo,.banner-inner{min-height:auto}.banner-inner{padding:62px 0}.banner-copy h2{text-align:center}.social-rail{right:10px;gap:8px}.social-rail a{width:45px;height:45px}}
     @media(max-width:540px){.container{width:min(100% - 28px,1180px)}.hero{min-height:800px}.hero-content{padding-top:330px}h1{font-size:clamp(2rem,10vw,3rem)}.hero-text{font-size:1rem;line-height:1.72}.btn{width:100%;padding:0 18px}.form-wrap{padding:26px 20px}.social-rail{display:none}}
+  
+    /* liat-banner-right-text-left-image-2026 */
+    /* Professional banner rule: text always on the RIGHT, Liat image always on the LEFT. */
+    .banner-photo{
+      min-height:560px !important;
+      background:linear-gradient(90deg,#071425 0%,#02060B 50%,#000 50%,#000 100%) !important;
+      border-top:1px solid var(--line) !important;
+      border-bottom:8px solid var(--gold) !important;
+    }
+    .banner-photo .photo-bg{
+      position:absolute !important;
+      top:0 !important;
+      bottom:0 !important;
+      left:0 !important;
+      right:auto !important;
+      width:50% !important;
+      background:url('https://base44.app/api/apps/6a25515e659bfc7a4f34bba2/files/mp/public/6a25515e659bfc7a4f34bba2/736d3a066_liat_hero_1600_q82.webp') 18% top/cover no-repeat !important;
+      filter:brightness(.82) contrast(1.04) saturate(.95) !important;
+      opacity:1 !important;
+      z-index:0 !important;
+    }
+    .banner-photo::before{
+      content:'' !important;
+      position:absolute !important;
+      inset:0 !important;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.06) 0%, rgba(0,0,0,.24) 39%, rgba(201,168,76,.18) 49.8%, rgba(0,0,0,.95) 50.2%, #000 100%),
+        radial-gradient(circle at 25% 45%, rgba(201,168,76,.12), transparent 18rem) !important;
+      z-index:1 !important;
+      pointer-events:none !important;
+    }
+    .banner-photo::after{
+      background-image:
+        linear-gradient(135deg, transparent 0 59%, rgba(201,168,76,.12) 59% 61%, transparent 61%),
+        radial-gradient(circle at 22% 50%, transparent 0 12rem, rgba(201,168,76,.10) 12.2rem 12.45rem, transparent 12.65rem) !important;
+      z-index:2 !important;
+    }
+    .banner-inner{
+      min-height:560px !important;
+      display:grid !important;
+      grid-template-columns:1fr 1fr !important;
+      grid-template-areas:'image text' !important;
+      align-items:center !important;
+      gap:54px !important;
+      direction:ltr !important;
+    }
+    .banner-inner > div:first-child{
+      grid-area:image !important;
+      min-height:1px !important;
+    }
+    .banner-copy{
+      grid-area:text !important;
+      direction:rtl !important;
+      text-align:right !important;
+      background:rgba(0,0,0,.62) !important;
+      border:1px solid rgba(201,168,76,.30) !important;
+      border-right:6px solid var(--gold) !important;
+      border-left:0 !important;
+      padding:42px 40px !important;
+      border-radius:12px !important;
+      box-shadow:0 26px 70px rgba(0,0,0,.52) !important;
+      backdrop-filter:blur(8px) !important;
+    }
+    .banner-copy h2,
+    .banner-copy .eyebrow,
+    .banner-copy p{
+      text-align:right !important;
+    }
+    .banner-copy .divider{
+      margin:20px 0 24px auto !important;
+      width:min(320px,80%) !important;
+    }
+
+    /* CTA and bonus banners also follow the same professional split language. */
+    .bonus-banner,
+    .cta-banner{
+      background:#000 !important;
+      border-bottom:8px solid var(--gold) !important;
+      overflow:hidden !important;
+    }
+    .bonus-banner::before,
+    .cta-banner::before{
+      content:'' !important;
+      position:absolute !important;
+      top:0 !important;
+      bottom:0 !important;
+      left:0 !important;
+      right:auto !important;
+      width:50% !important;
+      background:url('https://base44.app/api/apps/6a25515e659bfc7a4f34bba2/files/mp/public/6a25515e659bfc7a4f34bba2/736d3a066_liat_hero_1600_q82.webp') 18% top/cover no-repeat !important;
+      opacity:.72 !important;
+      filter:brightness(.72) contrast(1.05) saturate(.95) !important;
+      z-index:0 !important;
+    }
+    .bonus-banner::after,
+    .cta-banner::after{
+      content:'' !important;
+      position:absolute !important;
+      inset:0 !important;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.12) 0%, rgba(0,0,0,.36) 40%, rgba(201,168,76,.16) 49.8%, rgba(0,0,0,.94) 50.2%, #000 100%),
+        radial-gradient(circle at 22% 48%, transparent 0 12rem, rgba(201,168,76,.10) 12.2rem 12.45rem, transparent 12.65rem) !important;
+      z-index:1 !important;
+      pointer-events:none !important;
+    }
+    .bonus-banner .container,
+    .cta-banner .container{
+      display:grid !important;
+      grid-template-columns:1fr 1fr !important;
+      grid-template-areas:'image text' !important;
+      align-items:center !important;
+      min-height:330px !important;
+      gap:54px !important;
+      direction:ltr !important;
+    }
+    .bonus-banner .title,
+    .cta-content{
+      grid-area:text !important;
+      direction:rtl !important;
+      text-align:right !important;
+      margin:0 !important;
+      background:rgba(0,0,0,.54) !important;
+      border:1px solid rgba(201,168,76,.28) !important;
+      border-right:6px solid var(--gold) !important;
+      border-radius:12px !important;
+      padding:34px 36px !important;
+      box-shadow:0 24px 62px rgba(0,0,0,.45) !important;
+    }
+    .bonus-banner .title h2,
+    .bonus-banner .title .eyebrow,
+    .bonus-banner .title .lead,
+    .cta-content h2,
+    .cta-content .lead{
+      text-align:right !important;
+      margin-right:0 !important;
+    }
+    .bonus-banner .title .divider,
+    .cta-content .divider{
+      margin:20px 0 24px auto !important;
+    }
+    .bonus-banner .cards3{
+      grid-column:1 / -1 !important;
+      direction:rtl !important;
+      margin-top:34px !important;
+    }
+
+    @media(max-width:980px){
+      .banner-photo .photo-bg,
+      .bonus-banner::before,
+      .cta-banner::before{
+        width:100% !important;
+        height:46% !important;
+        top:0 !important;
+        bottom:auto !important;
+        left:0 !important;
+        right:0 !important;
+        background-position:15% top !important;
+      }
+      .banner-photo::before,
+      .bonus-banner::after,
+      .cta-banner::after{
+        background:linear-gradient(180deg, rgba(0,0,0,.08) 0%, rgba(0,0,0,.42) 38%, rgba(0,0,0,.96) 48%, #000 100%) !important;
+      }
+      .banner-inner,
+      .bonus-banner .container,
+      .cta-banner .container{
+        grid-template-columns:1fr !important;
+        grid-template-areas:'image' 'text' !important;
+        gap:0 !important;
+        min-height:680px !important;
+        padding-top:300px !important;
+      }
+      .banner-copy,
+      .bonus-banner .title,
+      .cta-content{
+        text-align:right !important;
+        padding:28px 24px !important;
+      }
+    }
+    /* end-liat-banner-right-text-left-image-2026 */
+
   </style>
 </head>
 <body>
