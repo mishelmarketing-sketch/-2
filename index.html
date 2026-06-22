@@ -1790,32 +1790,24 @@
     }
   </style>
 
-  <style id="liat-mobile-no-head-crop-final">
-    /* Final mobile fix: no vertical cropping. The image is fitted inside the banner and aligned bottom. */
+  <style id="liat-mobile-hero-force-down-final">
+    /* User requested: move the first hero image itself much further DOWN on mobile so the full head is visible. */
     @media(max-width:980px){
-      html body .hero .hero-image,
-      html body .hero-main-bg{
-        background-size:auto 76% !important;
-        background-position:18% bottom !important;
-        background-repeat:no-repeat !important;
-        background-color:#0C1624 !important;
-      }
-      html body #about .split-img{
-        background-size:auto 82% !important;
-        background-position:center bottom !important;
+      html body section.hero#top .hero-image{
+        background-size:cover !important;
+        background-position:18% 190px !important;
+        background-position-x:18% !important;
+        background-position-y:190px !important;
         background-repeat:no-repeat !important;
         background-color:#0C1624 !important;
       }
     }
     @media(max-width:520px){
-      html body .hero .hero-image,
-      html body .hero-main-bg{
-        background-size:auto 68% !important;
-        background-position:18% bottom !important;
-      }
-      html body #about .split-img{
-        background-size:auto 76% !important;
-        background-position:center bottom !important;
+      html body section.hero#top .hero-image{
+        background-size:cover !important;
+        background-position:18% 245px !important;
+        background-position-x:18% !important;
+        background-position-y:245px !important;
       }
     }
   </style>
