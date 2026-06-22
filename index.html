@@ -1984,6 +1984,53 @@
     }
   </style>
 
+
+  <style id="liat-form-rtl-fix">
+    /* Final form fix: keep all Hebrew placeholders and user text aligned right, including telephone fields. */
+    html body .form-section .form-box{
+      direction:rtl !important;
+    }
+    html body .form-section .form-grid input,
+    html body .form-section .form-grid textarea,
+    html body .form-section .form-grid input[type="tel"],
+    html body .form-section .form-grid input[type="email"],
+    html body .form-section .form-grid input[type="text"]{
+      direction:rtl !important;
+      text-align:right !important;
+      unicode-bidi:plaintext !important;
+      box-sizing:border-box !important;
+    }
+    html body .form-section .form-grid input::placeholder,
+    html body .form-section .form-grid textarea::placeholder,
+    html body .form-section .form-grid input[type="tel"]::placeholder,
+    html body .form-section .form-grid input[type="email"]::placeholder,
+    html body .form-section .form-grid input[type="text"]::placeholder{
+      direction:rtl !important;
+      text-align:right !important;
+      color:rgba(17,17,17,.58) !important;
+      opacity:1 !important;
+    }
+    html body .form-section .consent{
+      direction:rtl !important;
+      text-align:right !important;
+      align-items:flex-start !important;
+    }
+    html body .form-section .consent input{
+      flex:0 0 auto !important;
+      margin:5px 0 0 8px !important;
+    }
+    @media(max-width:520px){
+      html body .form-section .form-box{
+        padding:34px 22px !important;
+      }
+      html body .form-section .form-grid input,
+      html body .form-section .form-grid textarea{
+        padding-right:18px !important;
+        padding-left:18px !important;
+      }
+    }
+  </style>
+
 </head>
 <body>
   <main>
