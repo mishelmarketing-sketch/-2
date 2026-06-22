@@ -1717,6 +1717,94 @@
     }
   </style>
 
+
+  <style id="liat-bonus-authentic-photos">
+    html body #bonus-list .bonus-grid{
+      gap:30px !important;
+      align-items:stretch !important;
+    }
+    html body #bonus-list article.visual-bonus{
+      padding:0 0 32px !important;
+      min-height:380px !important;
+      overflow:hidden !important;
+      border-radius:26px !important;
+      background:linear-gradient(180deg,rgba(43,52,64,.56),rgba(12,22,36,.88)) !important;
+      text-align:center !important;
+    }
+    html body #bonus-list article.visual-bonus::before{
+      inset:14px !important;
+      border-radius:22px !important;
+      z-index:2 !important;
+    }
+    html body #bonus-list .bonus-photo{
+      position:relative !important;
+      display:block !important;
+      width:100% !important;
+      height:190px !important;
+      margin:0 0 26px !important;
+      background-size:cover !important;
+      background-position:center center !important;
+      background-repeat:no-repeat !important;
+      border-bottom:1px solid rgba(227,196,104,.34) !important;
+      box-shadow:0 18px 46px rgba(0,0,0,.28) !important;
+      z-index:1 !important;
+    }
+    html body #bonus-list .bonus-photo::after{
+      content:'' !important;
+      position:absolute !important;
+      inset:0 !important;
+      background:linear-gradient(180deg,rgba(12,22,36,.02) 0%,rgba(12,22,36,.18) 52%,rgba(12,22,36,.64) 100%) !important;
+      pointer-events:none !important;
+    }
+    html body #bonus-list .bonus-photo::before{
+      content:'' !important;
+      position:absolute !important;
+      right:20px !important;
+      bottom:-24px !important;
+      width:56px !important;
+      height:56px !important;
+      border-radius:50% !important;
+      background:linear-gradient(145deg,#FFE901 0%,#E3C468 50%,#B89335 100%) !important;
+      border:5px solid #0C1624 !important;
+      box-shadow:0 12px 28px rgba(0,0,0,.32),0 0 24px rgba(255,233,1,.20) !important;
+      z-index:3 !important;
+    }
+    html body #bonus-list .bonus-photo-feasibility{background-image:url('https://base44.app/api/apps/6a25515e659bfc7a4f34bba2/files/mp/public/6a25515e659bfc7a4f34bba2/1401d815a_feasibility.jpg') !important;}
+    html body #bonus-list .bonus-photo-loans{background-image:url('https://base44.app/api/apps/6a25515e659bfc7a4f34bba2/files/mp/public/6a25515e659bfc7a4f34bba2/8c43d59ff_loans.jpg') !important;}
+    html body #bonus-list .bonus-photo-planning{background-image:url('https://base44.app/api/apps/6a25515e659bfc7a4f34bba2/files/mp/public/6a25515e659bfc7a4f34bba2/07f9864a3_planning.jpg') !important;}
+    html body #bonus-list .visual-bonus .label{
+      position:relative !important;
+      z-index:3 !important;
+      margin:0 auto 14px !important;
+      border-color:rgba(227,196,104,.46) !important;
+    }
+    html body #bonus-list .visual-bonus h3,
+    html body #bonus-list .visual-bonus p{
+      position:relative !important;
+      z-index:3 !important;
+      padding-left:24px !important;
+      padding-right:24px !important;
+    }
+    html body #bonus-list .visual-bonus p{
+      max-width:285px !important;
+    }
+    @media(max-width:900px){
+      html body #bonus-list article.visual-bonus{
+        min-height:auto !important;
+        padding-bottom:30px !important;
+      }
+      html body #bonus-list .bonus-photo{
+        height:210px !important;
+        margin-bottom:26px !important;
+      }
+    }
+    @media(max-width:520px){
+      html body #bonus-list .bonus-photo{
+        height:190px !important;
+      }
+    }
+  </style>
+
 </head>
 <body>
   <main>
@@ -1880,25 +1968,19 @@
     <section class="section dark" id="bonus-list">
       <div class="container bonus-grid">
         <article class="bonus visual-bonus">
-          <div class="bonus-icon" aria-hidden="true">
-            <svg viewBox="0 0 64 64" role="img" focusable="false"><path d="M18 8h24l8 8v40H18z"/><path d="M42 8v10h10"/><path d="M25 31l5 5 11-13"/><path d="M24 45h17"/></svg>
-          </div>
+          <div class="bonus-photo bonus-photo-feasibility" aria-hidden="true"></div>
           <div class="label">בונוס #1</div>
           <h3>בדיקת כדאיות</h3>
           <p>תמונה כלכלית מסודרת לפני שמקבלים החלטה.</p>
         </article>
         <article class="bonus visual-bonus">
-          <div class="bonus-icon" aria-hidden="true">
-            <svg viewBox="0 0 64 64" role="img" focusable="false"><path d="M12 22h40"/><path d="M18 14h28l6 8-20 28L12 22z"/><path d="M22 31h20"/><path d="M18 39h28"/><path d="M32 22v28"/></svg>
-          </div>
+          <div class="bonus-photo bonus-photo-loans" aria-hidden="true"></div>
           <div class="label">בונוס #2</div>
           <h3>סדר בהלוואות</h3>
           <p>בדיקה האם ניתן להפחית החזר ולרכז התחייבויות.</p>
         </article>
         <article class="bonus visual-bonus">
-          <div class="bonus-icon" aria-hidden="true">
-            <svg viewBox="0 0 64 64" role="img" focusable="false"><path d="M14 50h38"/><path d="M18 44V24"/><path d="M30 44V16"/><path d="M42 44V30"/><path d="M18 24l12-8 12 14 10-12"/><path d="M48 18h4v4"/></svg>
-          </div>
+          <div class="bonus-photo bonus-photo-planning" aria-hidden="true"></div>
           <div class="label">בונוס #3</div>
           <h3>תכנון קדימה</h3>
           <p>משכנתא שמתאימה לחיים שלכם ולא רק לבנק.</p>
