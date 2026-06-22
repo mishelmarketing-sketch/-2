@@ -1735,7 +1735,7 @@
   <style id="liat-about-photo-replacement">
     html body #about .split-img{
       background-image:url('https://media.base44.com/images/public/6a25515e659bfc7a4f34bba2/c7b4aac75_WhatsAppImage2026-06-22at1236331.jpg') !important;
-      background-position:center center !important;
+      background-position:center top !important;
       background-size:cover !important;
       background-repeat:no-repeat !important;
       filter:none !important;
@@ -1752,6 +1752,39 @@
     @media(max-width:520px){
       html body #about .split-img{
         min-height:340px !important;
+        background-position:center top !important;
+      }
+    }
+  </style>
+
+
+  <style id="liat-photo-head-safe-positioning">
+    /* Head-safe image positioning: keeps portrait faces visible without changing layout size. */
+    html body #about .split-img{
+      background-position:center top !important;
+    }
+    html body #about .split-img::before{
+      background:linear-gradient(90deg,rgba(12,22,36,.02) 0%,rgba(12,22,36,.16) 58%,#0C1624 100%) !important;
+    }
+    html body #bonus-list .bonus-photo{
+      background-position:center center !important;
+    }
+    html body #bonus-list .bonus-photo-feasibility{
+      background-position:center 34% !important;
+    }
+    html body #bonus-list .bonus-photo-loans{
+      background-position:center 42% !important;
+    }
+    html body #bonus-list .bonus-photo-planning{
+      background-position:center 30% !important;
+    }
+    @media(max-width:980px){
+      html body #about .split-img{
+        background-position:center top !important;
+      }
+      html body #bonus-list .bonus-photo-feasibility,
+      html body #bonus-list .bonus-photo-loans,
+      html body #bonus-list .bonus-photo-planning{
         background-position:center top !important;
       }
     }
