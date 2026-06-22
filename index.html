@@ -4849,6 +4849,312 @@ body {
 }
 </style>
 
+
+<style id="shapo-wordpress-professional-polish-2026">
+/* WordPress-style professional polish: cleaner hierarchy, boxed content, business-site feel. Black/gold brand preserved. */
+:root {
+  --wp-black: #000000;
+  --wp-deep: #070707;
+  --wp-card: rgba(12,12,12,0.92);
+  --wp-card-soft: rgba(18,18,18,0.88);
+  --wp-gold: #C9A84C;
+  --wp-gold-bright: #FFD700;
+  --wp-text: #F5F0E8;
+  --wp-muted: rgba(245,240,232,0.74);
+  --wp-border: rgba(201,168,76,0.26);
+}
+
+html { scroll-behavior: smooth !important; }
+body {
+  background: var(--wp-black) !important;
+  color: var(--wp-text) !important;
+}
+
+/* Classic WordPress-like top shell */
+.header {
+  background: rgba(0,0,0,0.72) !important;
+  border-bottom: 1px solid rgba(201,168,76,0.22) !important;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.38) !important;
+  backdrop-filter: blur(16px) saturate(130%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(130%) !important;
+}
+.header-topbar {
+  background: linear-gradient(90deg, rgba(201,168,76,0.10), rgba(255,215,0,0.04), rgba(201,168,76,0.10)) !important;
+  border-bottom: 1px solid rgba(201,168,76,0.18) !important;
+  color: rgba(245,240,232,0.82) !important;
+}
+.nav-link {
+  position: relative !important;
+  color: rgba(245,240,232,0.84) !important;
+  font-weight: 700 !important;
+  padding-bottom: 8px !important;
+}
+.nav-link::after {
+  content: '' !important;
+  position: absolute !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 0 !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, var(--wp-gold), var(--wp-gold-bright)) !important;
+  transition: width .24s ease !important;
+}
+.nav-link:hover::after { width: 100% !important; }
+.header-cta, .cta-btn, .form-submit {
+  border-radius: 8px !important;
+  background: linear-gradient(135deg, var(--wp-gold), var(--wp-gold-bright)) !important;
+  color: #000 !important;
+  box-shadow: 0 10px 24px rgba(201,168,76,0.24) !important;
+  font-weight: 900 !important;
+}
+
+/* Hero: premium WordPress business theme instead of flashy landing-page feel */
+.hero-main-html-banner {
+  min-height: 740px !important;
+  padding: 130px 0 90px !important;
+  border-bottom: 1px solid var(--wp-border) !important;
+  background: #000 !important;
+}
+.hero-premium-animated-layers,
+.hero-gold-line,
+.hero-orbit,
+.hero-spark {
+  display: none !important;
+}
+.hero-main-bg {
+  animation: none !important;
+  transform: none !important;
+  filter: contrast(1.02) saturate(0.96) !important;
+}
+.hero-main-html-banner::before {
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.20) 38%, rgba(0,0,0,0.88) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.08) 36%, rgba(0,0,0,0.72) 100%) !important;
+}
+.hero-main-content {
+  width: min(640px, 100%) !important;
+  padding: 44px 42px 40px !important;
+  border-radius: 14px !important;
+  background: rgba(0,0,0,0.78) !important;
+  border: 1px solid var(--wp-border) !important;
+  border-right: 5px solid var(--wp-gold) !important;
+  box-shadow: 0 26px 70px rgba(0,0,0,0.58) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+.hero-main-content::before,
+.hero-main-content::after {
+  display: none !important;
+}
+.hero-main-kicker {
+  display: inline-block !important;
+  border-radius: 4px !important;
+  padding: 8px 12px !important;
+  background: rgba(201,168,76,0.12) !important;
+  border: 1px solid rgba(201,168,76,0.36) !important;
+  color: var(--wp-gold-bright) !important;
+  letter-spacing: 0 !important;
+}
+.hero-main-content h1 {
+  margin-bottom: 20px !important;
+  letter-spacing: -0.035em !important;
+}
+.hero-main-content h1 span,
+.hero-main-content h1 strong {
+  font-size: clamp(2.05rem, 4.25vw, 4.25rem) !important;
+  line-height: 1.08 !important;
+}
+.hero-main-content p {
+  color: rgba(245,240,232,0.86) !important;
+  font-size: clamp(1rem, 1.18vw, 1.18rem) !important;
+  line-height: 1.9 !important;
+  max-width: 610px !important;
+}
+.hero-main-points span {
+  border-radius: 6px !important;
+  background: rgba(255,255,255,0.035) !important;
+  border: 1px solid rgba(201,168,76,0.26) !important;
+  color: rgba(245,240,232,0.86) !important;
+}
+
+/* Full-width professional section bands */
+main > section:not(.hero-main-html-banner) {
+  position: relative !important;
+  padding: 86px 0 !important;
+  background: linear-gradient(180deg, #030303 0%, #0A0A0A 100%) !important;
+  border-top: 1px solid rgba(201,168,76,0.12) !important;
+  border-bottom: 1px solid rgba(201,168,76,0.10) !important;
+}
+main > section:not(.hero-main-html-banner):nth-of-type(even) {
+  background: linear-gradient(180deg, #0B0B0B 0%, #000000 100%) !important;
+}
+main > section:not(.hero-main-html-banner)::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  background: radial-gradient(circle at 80% 10%, rgba(201,168,76,0.08), transparent 28rem) !important;
+}
+.container {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* WordPress card language */
+.lead-box,
+.service-card,
+.stat-card,
+.faq-item,
+.testimonial-card,
+.problem-card,
+.solution-card,
+.knowledge-card,
+.mortgage-knowledge-card,
+.value-card,
+.why-card,
+.card {
+  background: var(--wp-card) !important;
+  border: 1px solid var(--wp-border) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 18px 44px rgba(0,0,0,0.34) !important;
+  overflow: hidden !important;
+}
+.service-card:hover,
+.stat-card:hover,
+.faq-item:hover,
+.testimonial-card:hover,
+.knowledge-card:hover,
+.mortgage-knowledge-card:hover {
+  transform: translateY(-4px) !important;
+  border-color: rgba(255,215,0,0.42) !important;
+  box-shadow: 0 24px 58px rgba(0,0,0,0.44), 0 0 22px rgba(201,168,76,0.12) !important;
+}
+
+/* Typography: WP editorial clarity */
+section h2,
+section h3,
+.section-title,
+.services-title,
+.faq-title {
+  color: var(--wp-text) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.035em !important;
+}
+section h2::after,
+.section-title::after,
+.services-title::after,
+.faq-title::after {
+  content: '' !important;
+  display: block !important;
+  width: 78px !important;
+  height: 3px !important;
+  margin: 14px 0 0 auto !important;
+  background: linear-gradient(90deg, var(--wp-gold), var(--wp-gold-bright)) !important;
+  border-radius: 20px !important;
+}
+section p,
+section li,
+.faq-answer,
+.service-card p,
+.testimonial-card p {
+  color: var(--wp-muted) !important;
+  line-height: 1.85 !important;
+}
+
+/* Forms as familiar WordPress lead widget */
+#lead-form {
+  background: #050505 !important;
+}
+.lead-box {
+  padding: 34px !important;
+  border-top: 4px solid var(--wp-gold) !important;
+}
+.form-input,
+input,
+textarea,
+select {
+  background: rgba(0,0,0,0.58) !important;
+  border: 1px solid rgba(201,168,76,0.24) !important;
+  color: var(--wp-text) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+.form-input:focus,
+input:focus,
+textarea:focus {
+  border-color: var(--wp-gold-bright) !important;
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.14) !important;
+  outline: none !important;
+}
+.form-input::placeholder,
+textarea::placeholder { color: rgba(245,240,232,0.48) !important; }
+
+/* FAQ should feel like a clean WordPress accordion */
+#faq .faq-item,
+.faq-item {
+  margin-bottom: 14px !important;
+  border-radius: 10px !important;
+}
+.faq-question,
+.faq-item button,
+.faq-item h3 {
+  color: var(--wp-text) !important;
+  font-weight: 850 !important;
+}
+
+/* Footer classic business-site finish */
+.footer {
+  background: #000 !important;
+  border-top: 1px solid rgba(201,168,76,0.24) !important;
+}
+.footer a { color: rgba(245,240,232,0.78) !important; }
+.footer a:hover { color: var(--wp-gold-bright) !important; }
+
+/* Remove legacy non-brand color traces without changing layout */
+[style*="rgba(26, 35, 126"],
+[style*="rgba(124, 58, 237"],
+[style*="#1A237E"],
+[style*="#7C3AED"] {
+  background: #050505 !important;
+  color: inherit !important;
+}
+
+@media (max-width: 900px) {
+  .hero-main-html-banner {
+    min-height: 760px !important;
+    padding-top: 360px !important;
+    padding-bottom: 58px !important;
+  }
+  .hero-main-content {
+    width: 100% !important;
+    padding: 28px 22px !important;
+    border-radius: 12px !important;
+  }
+  .hero-main-content h1 span,
+  .hero-main-content h1 strong {
+    font-size: clamp(1.82rem, 8vw, 2.8rem) !important;
+  }
+  main > section:not(.hero-main-html-banner) {
+    padding: 62px 0 !important;
+  }
+}
+@media (max-width: 520px) {
+  .hero-main-html-banner {
+    min-height: 780px !important;
+    padding-top: 372px !important;
+  }
+  .hero-main-points {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+  .hero-main-cta,
+  .cta-btn.hero-main-cta {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
