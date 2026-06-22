@@ -136,6 +136,158 @@
       .social{display:none}
       .btn{width:100%;padding:0 18px}
     }
+  
+    /* liat-logo-floating-icons-polish-2026 */
+    /* Logo: official transparent PNG only, no glow/burn/filter, clean sizing. */
+    .brand-row{
+      justify-content:flex-start !important;
+      align-items:flex-start !important;
+      direction:rtl !important;
+    }
+    .brand-row img,
+    .logo img,
+    header img[src*="logo"],
+    img[src*="liat_logo_transparent"]{
+      width:clamp(118px,12vw,158px) !important;
+      height:auto !important;
+      max-height:118px !important;
+      object-fit:contain !important;
+      filter:none !important;
+      opacity:1 !important;
+      mix-blend-mode:normal !important;
+      image-rendering:auto !important;
+      transform:none !important;
+      background:transparent !important;
+    }
+    .mini-mark{
+      display:none !important;
+    }
+
+    /* Floating icons: clean, small, aligned, no visual clutter over the banner text. */
+    .social,
+    .social-rail{
+      position:fixed !important;
+      right:22px !important;
+      top:56% !important;
+      transform:translateY(-50%) !important;
+      z-index:50 !important;
+      display:flex !important;
+      flex-direction:column !important;
+      gap:10px !important;
+      pointer-events:auto !important;
+    }
+    .social a,
+    .social-rail a{
+      width:46px !important;
+      height:46px !important;
+      border-radius:50% !important;
+      background:rgba(12,22,36,.92) !important;
+      border:1.7px solid #FFE901 !important;
+      color:#FFE901 !important;
+      display:grid !important;
+      place-items:center !important;
+      box-shadow:0 10px 28px rgba(0,0,0,.26) !important;
+      backdrop-filter:blur(6px) !important;
+      text-indent:0 !important;
+      font-size:0 !important;
+      line-height:1 !important;
+    }
+    .social a:hover,
+    .social-rail a:hover{
+      background:#0C1624 !important;
+      border-color:#E3C468 !important;
+      color:#E3C468 !important;
+      transform:translateX(-2px) !important;
+    }
+    .social svg,
+    .social-rail svg{
+      width:21px !important;
+      height:21px !important;
+      stroke:currentColor !important;
+      fill:none !important;
+      stroke-width:1.9 !important;
+      display:block !important;
+    }
+    .wa,
+    .wa-float{
+      position:fixed !important;
+      left:24px !important;
+      bottom:24px !important;
+      z-index:51 !important;
+      width:52px !important;
+      height:52px !important;
+      border-radius:50% !important;
+      display:grid !important;
+      place-items:center !important;
+      background:#25D366 !important;
+      color:#FFFFFF !important;
+      border:2px solid #FFFFFF !important;
+      box-shadow:0 12px 30px rgba(0,0,0,.32) !important;
+      font-size:0 !important;
+    }
+    .wa svg,
+    .wa-float svg{
+      width:25px !important;
+      height:25px !important;
+      stroke:currentColor !important;
+      fill:none !important;
+      stroke-width:1.9 !important;
+    }
+    .access,
+    .accessibility{
+      position:fixed !important;
+      right:22px !important;
+      bottom:22px !important;
+      width:48px !important;
+      height:48px !important;
+      border-radius:50% !important;
+      display:grid !important;
+      place-items:center !important;
+      z-index:51 !important;
+      background:#1E7AB9 !important;
+      color:#FFFFFF !important;
+      border:2px solid #FFFFFF !important;
+      box-shadow:0 10px 26px rgba(0,0,0,.28) !important;
+      font-size:0 !important;
+    }
+    .access svg,
+    .accessibility svg{
+      width:25px !important;
+      height:25px !important;
+      stroke:currentColor !important;
+      fill:none !important;
+      stroke-width:2 !important;
+    }
+
+    @media(max-width:980px){
+      .brand-row img,
+      .logo img,
+      header img[src*="logo"],
+      img[src*="liat_logo_transparent"]{
+        width:118px !important;
+        max-height:92px !important;
+      }
+      .social,
+      .social-rail{
+        display:none !important;
+      }
+      .wa,
+      .wa-float{
+        left:16px !important;
+        bottom:16px !important;
+        width:48px !important;
+        height:48px !important;
+      }
+      .access,
+      .accessibility{
+        right:16px !important;
+        bottom:16px !important;
+        width:44px !important;
+        height:44px !important;
+      }
+    }
+    /* end-liat-logo-floating-icons-polish-2026 */
+
   </style>
 </head>
 <body>
