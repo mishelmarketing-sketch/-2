@@ -1586,6 +1586,106 @@
     }
   </style>
 
+
+  <style id="liat-bonus-banner-no-photo">
+    html body #bonus .bonus-banner-visual{
+      background:
+        radial-gradient(circle at 42% 38%, rgba(255,233,1,.24), transparent 0 88px, transparent 180px),
+        radial-gradient(circle at 22% 72%, rgba(227,196,104,.18), transparent 0 120px, transparent 260px),
+        linear-gradient(135deg,#07101D 0%,#0C1624 46%,#2B3440 100%) !important;
+      border-left:1px solid rgba(227,196,104,.20) !important;
+      overflow:hidden !important;
+      isolation:isolate !important;
+    }
+    html body #bonus .bonus-banner-visual::before{
+      content:'' !important;
+      position:absolute !important;
+      inset:9% 12% !important;
+      border:1px solid rgba(227,196,104,.22) !important;
+      border-radius:30px !important;
+      background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.01)) !important;
+      box-shadow:inset 0 0 50px rgba(227,196,104,.08),0 28px 70px rgba(0,0,0,.25) !important;
+      z-index:1 !important;
+    }
+    html body #bonus .bonus-banner-visual::after{
+      content:'' !important;
+      position:absolute !important;
+      left:8% !important;
+      bottom:-72px !important;
+      width:260px !important;
+      height:260px !important;
+      border:24px solid rgba(227,196,104,.18) !important;
+      border-radius:38px !important;
+      transform:rotate(45deg) !important;
+      z-index:0 !important;
+    }
+    html body #bonus .bonus-orbit{
+      position:absolute !important;
+      width:310px !important;
+      height:310px !important;
+      left:50% !important;
+      top:50% !important;
+      transform:translate(-50%,-50%) !important;
+      border-radius:50% !important;
+      border:1px solid rgba(227,196,104,.30) !important;
+      box-shadow:0 0 0 34px rgba(227,196,104,.035),0 0 0 70px rgba(227,196,104,.022) !important;
+      z-index:2 !important;
+    }
+    html body #bonus .bonus-seal{
+      position:absolute !important;
+      width:132px !important;
+      height:132px !important;
+      left:50% !important;
+      top:50% !important;
+      transform:translate(-50%,-50%) !important;
+      border-radius:50% !important;
+      background:linear-gradient(145deg,#FFE901 0%,#E3C468 48%,#B89335 100%) !important;
+      border:8px solid #0C1624 !important;
+      box-shadow:0 0 0 1px rgba(227,196,104,.62),0 22px 54px rgba(0,0,0,.35),0 0 42px rgba(255,233,1,.25) !important;
+      z-index:4 !important;
+    }
+    html body #bonus .bonus-seal::before{
+      content:'' !important;
+      position:absolute !important;
+      width:52px !important;
+      height:28px !important;
+      left:50% !important;
+      top:48% !important;
+      transform:translate(-50%,-50%) rotate(-45deg) !important;
+      border-left:8px solid #0C1624 !important;
+      border-bottom:8px solid #0C1624 !important;
+      border-radius:3px !important;
+    }
+    html body #bonus .bonus-line{
+      position:absolute !important;
+      height:12px !important;
+      border-radius:999px !important;
+      background:linear-gradient(90deg,transparent,rgba(255,233,1,.92),rgba(192,161,87,.58),transparent) !important;
+      filter:drop-shadow(0 0 16px rgba(255,233,1,.25)) !important;
+      z-index:3 !important;
+    }
+    html body #bonus .bonus-line.one{width:250px !important;left:16% !important;top:28% !important;transform:rotate(-10deg) !important;}
+    html body #bonus .bonus-line.two{width:310px !important;left:37% !important;top:50% !important;transform:rotate(8deg) !important;}
+    html body #bonus .bonus-line.three{width:220px !important;left:20% !important;top:72% !important;transform:rotate(-6deg) !important;}
+    @media(max-width:980px){
+      html body #bonus .bonus-banner-visual{
+        min-height:330px !important;
+        margin-left:0 !important;
+      }
+      html body #bonus .bonus-orbit{
+        width:235px !important;
+        height:235px !important;
+      }
+      html body #bonus .bonus-seal{
+        width:108px !important;
+        height:108px !important;
+      }
+      html body #bonus .bonus-line.one{left:10% !important;top:25% !important;width:210px !important;}
+      html body #bonus .bonus-line.two{left:32% !important;top:52% !important;width:230px !important;}
+      html body #bonus .bonus-line.three{left:12% !important;top:75% !important;width:190px !important;}
+    }
+  </style>
+
 </head>
 <body>
   <main>
@@ -1731,7 +1831,13 @@
 
     <section class="split-banner" id="bonus">
       <div class="container split-inner">
-        <div class="split-img" aria-hidden="true"></div>
+        <div class="split-img bonus-banner-visual" aria-hidden="true">
+          <span class="bonus-orbit"></span>
+          <span class="bonus-seal"></span>
+          <span class="bonus-line one"></span>
+          <span class="bonus-line two"></span>
+          <span class="bonus-line three"></span>
+        </div>
         <div class="split-copy">
           <h2>הבונוסים שלי אליכם</h2>
           <div class="gold-rule"></div>
