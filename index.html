@@ -1140,6 +1140,102 @@
     }
     /* end-liat-progress-process-2026 */
 
+  
+    /* liat-visual-bonus-icons-2026 */
+    #bonus-list .bonus-grid{
+      align-items:stretch !important;
+    }
+    #bonus-list .visual-bonus{
+      position:relative !important;
+      overflow:hidden !important;
+      min-height:310px !important;
+      padding:38px 28px 32px !important;
+      border-radius:24px !important;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(255,233,1,.16), transparent 38%),
+        linear-gradient(180deg, rgba(43,52,64,.50), rgba(12,22,36,.78)) !important;
+      border:1px solid rgba(227,196,104,.34) !important;
+      box-shadow:0 24px 60px rgba(0,0,0,.22) !important;
+      isolation:isolate !important;
+    }
+    #bonus-list .visual-bonus::before{
+      content:'' !important;
+      position:absolute !important;
+      inset:12px !important;
+      border:1px solid rgba(227,196,104,.14) !important;
+      border-radius:18px !important;
+      pointer-events:none !important;
+      z-index:-1 !important;
+    }
+    #bonus-list .visual-bonus::after{
+      content:'' !important;
+      position:absolute !important;
+      width:130px !important;
+      height:130px !important;
+      left:-48px !important;
+      bottom:-48px !important;
+      border:22px solid rgba(227,196,104,.08) !important;
+      transform:rotate(45deg) !important;
+      pointer-events:none !important;
+      z-index:-1 !important;
+    }
+    #bonus-list .bonus-icon{
+      width:88px !important;
+      height:88px !important;
+      margin:0 auto 22px !important;
+      border-radius:50% !important;
+      display:flex !important;
+      align-items:center !important;
+      justify-content:center !important;
+      background:linear-gradient(145deg, rgba(255,233,1,.96), rgba(192,161,87,.94)) !important;
+      box-shadow:0 16px 34px rgba(0,0,0,.30),0 0 28px rgba(255,233,1,.22) !important;
+      border:5px solid rgba(12,22,36,.82) !important;
+    }
+    #bonus-list .bonus-icon svg{
+      width:48px !important;
+      height:48px !important;
+      fill:none !important;
+      stroke:#0C1624 !important;
+      stroke-width:3.2 !important;
+      stroke-linecap:round !important;
+      stroke-linejoin:round !important;
+    }
+    #bonus-list .visual-bonus .label{
+      display:inline-block !important;
+      margin:0 auto 14px !important;
+      padding:7px 18px !important;
+      border:1px solid rgba(227,196,104,.42) !important;
+      border-radius:999px !important;
+      color:#FFE901 !important;
+      background:rgba(0,0,0,.18) !important;
+      font-size:1rem !important;
+      letter-spacing:.01em !important;
+    }
+    #bonus-list .visual-bonus h3{
+      font-size:1.72rem !important;
+      margin-bottom:14px !important;
+    }
+    #bonus-list .visual-bonus p{
+      max-width:260px !important;
+      margin:0 auto !important;
+      color:rgba(255,255,255,.80) !important;
+    }
+    @media(max-width:900px){
+      #bonus-list .visual-bonus{
+        min-height:auto !important;
+        padding:34px 24px 30px !important;
+      }
+      #bonus-list .bonus-icon{
+        width:78px !important;
+        height:78px !important;
+      }
+      #bonus-list .bonus-icon svg{
+        width:42px !important;
+        height:42px !important;
+      }
+    }
+    /* end-liat-visual-bonus-icons-2026 */
+
   </style>
 </head>
 <body>
@@ -1294,9 +1390,30 @@
 
     <section class="section dark" id="bonus-list">
       <div class="container bonus-grid">
-        <article class="bonus"><div class="label">בונוס #1</div><h3>בדיקת כדאיות</h3><p>תמונה כלכלית מסודרת לפני שמקבלים החלטה.</p></article>
-        <article class="bonus"><div class="label">בונוס #2</div><h3>סדר בהלוואות</h3><p>בדיקה האם ניתן להפחית החזר ולרכז התחייבויות.</p></article>
-        <article class="bonus"><div class="label">בונוס #3</div><h3>תכנון קדימה</h3><p>משכנתא שמתאימה לחיים שלכם ולא רק לבנק.</p></article>
+        <article class="bonus visual-bonus">
+          <div class="bonus-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img" focusable="false"><path d="M18 8h24l8 8v40H18z"/><path d="M42 8v10h10"/><path d="M25 31l5 5 11-13"/><path d="M24 45h17"/></svg>
+          </div>
+          <div class="label">בונוס #1</div>
+          <h3>בדיקת כדאיות</h3>
+          <p>תמונה כלכלית מסודרת לפני שמקבלים החלטה.</p>
+        </article>
+        <article class="bonus visual-bonus">
+          <div class="bonus-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img" focusable="false"><path d="M12 22h40"/><path d="M18 14h28l6 8-20 28L12 22z"/><path d="M22 31h20"/><path d="M18 39h28"/><path d="M32 22v28"/></svg>
+          </div>
+          <div class="label">בונוס #2</div>
+          <h3>סדר בהלוואות</h3>
+          <p>בדיקה האם ניתן להפחית החזר ולרכז התחייבויות.</p>
+        </article>
+        <article class="bonus visual-bonus">
+          <div class="bonus-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img" focusable="false"><path d="M14 50h38"/><path d="M18 44V24"/><path d="M30 44V16"/><path d="M42 44V30"/><path d="M18 24l12-8 12 14 10-12"/><path d="M48 18h4v4"/></svg>
+          </div>
+          <div class="label">בונוס #3</div>
+          <h3>תכנון קדימה</h3>
+          <p>משכנתא שמתאימה לחיים שלכם ולא רק לבנק.</p>
+        </article>
       </div>
     </section>
 
