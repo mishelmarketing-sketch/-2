@@ -808,6 +808,42 @@
     }
     /* end-liat-service-crop-no-stock-final-2026 */
 
+  
+    /* liat-white-edge-crop-fix-2026 */
+    .visual-img{
+      position:relative !important;
+      overflow:hidden !important;
+    }
+    .service-contractor .visual-img{
+      background-size:128% auto !important;
+      background-position:center 52% !important;
+      box-shadow:inset 0 0 0 18px #0C1624 !important;
+    }
+    .service-refinance .visual-img{
+      background-size:124% auto !important;
+      background-position:center 50% !important;
+      box-shadow:inset 0 0 0 18px #0C1624 !important;
+    }
+    .service-loans .visual-img{
+      background-size:118% auto !important;
+      background-position:center center !important;
+      box-shadow:inset 0 0 0 18px #0C1624 !important;
+    }
+    .visual-img::after{
+      content:'' !important;
+      position:absolute !important;
+      inset:0 !important;
+      background:linear-gradient(90deg,rgba(12,22,36,.04),rgba(12,22,36,.18) 65%,rgba(12,22,36,.52)) !important;
+      pointer-events:none !important;
+    }
+    @media(max-width:980px){
+      .service-contractor .visual-img,.service-refinance .visual-img,.service-loans .visual-img{
+        background-size:128% auto !important;
+        box-shadow:inset 0 0 0 10px #0C1624 !important;
+      }
+    }
+    /* end-liat-white-edge-crop-fix-2026 */
+
   </style>
 </head>
 <body>
