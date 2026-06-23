@@ -2532,9 +2532,9 @@
       <div class="container">
         <div class="section-title"><h2>לקוחות ממליצים</h2><div class="gold-rule"></div></div>
         <div class="lt-trust-row">
-          <div class="lt-trust-item"><strong>4.9</strong><span>דירוג ממוצע</span></div>
-          <div class="lt-trust-item"><strong>+300</strong><span>משפחות מלוות</span></div>
-          <div class="lt-trust-item"><strong>100%</strong><span>ליווי אישי עד האישור</span></div>
+          <div class="lt-trust-item"><strong class="lt-count" data-target="4.9" data-decimals="1">0</strong><span>דירוג ממוצע</span></div>
+          <div class="lt-trust-item"><strong class="lt-count" data-target="300" data-prefix="+">0</strong><span>משפחות מלוות</span></div>
+          <div class="lt-trust-item"><strong class="lt-count" data-target="100" data-suffix="%">0</strong><span>ליווי אישי עד האישור</span></div>
         </div>
         <div class="lt-grid">
           <article class="lt-card">
@@ -2653,5 +2653,37 @@
 <a class="wa" href="https://wa.me/972509250486" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5z"/><path d="M8.8 8.5c.3 2.9 2 4.7 5 5.6l1.2-1.1 2 1.1c-.2 1.1-1 1.8-2.2 2-4.4-.8-7-3.4-8-7.7.2-1.2.9-1.9 2-2.1l1.1 2.1-1.1.1z"/></svg></a>
   <a class="access" href="accessibility.html" aria-label="הצהרת נגישות"><svg viewBox="0 0 24 24"><circle cx="12" cy="4" r="2"/><path d="M4 8h16M12 8v12M8 13l-2 7M16 13l2 7"/></svg></a>
   <footer><div class="container footer-inner"><div>ליאת מלכה - החממה לייעוץ משכנתאות</div><div class="footer-links"><a href="privacy.html">מדיניות פרטיות</a><a href="terms.html">תנאי שימוש</a><a href="accessibility.html">הצהרת נגישות</a></div><div class="footer-credit">אתר זה נבנה על ידי shapo digital mishel zvigi</div></div></footer>
+
+  <script id="lt-countup">
+  (function(){
+    function fmt(v,dec){return dec>0? v.toFixed(dec): Math.round(v).toString();}
+    function run(el){
+      var target=parseFloat(el.getAttribute('data-target'));
+      var dec=parseInt(el.getAttribute('data-decimals')||'0',10);
+      var pre=el.getAttribute('data-prefix')||'';
+      var suf=el.getAttribute('data-suffix')||'';
+      var dur=1400, start=null;
+      function step(ts){
+        if(!start) start=ts;
+        var p=Math.min((ts-start)/dur,1);
+        var eased=1-Math.pow(1-p,3);
+        el.textContent=pre+fmt(target*eased,dec)+suf;
+        if(p<1) requestAnimationFrame(step);
+        else el.textContent=pre+fmt(target,dec)+suf;
+      }
+      requestAnimationFrame(step);
+    }
+    var els=[].slice.call(document.querySelectorAll('.lt-count'));
+    if(!els.length) return;
+    if(!('IntersectionObserver' in window)){els.forEach(run);return;}
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting && !e.target.dataset.done){e.target.dataset.done='1';run(e.target);}
+      });
+    },{threshold:0.4});
+    els.forEach(function(el){io.observe(el);});
+  })();
+  </script>
+
 </body>
 </html>
