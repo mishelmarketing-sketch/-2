@@ -2218,6 +2218,22 @@
     }
   </style>
 
+
+  <style id="liat-lighter-overlay">
+    html body .hero-image::before{
+      background:linear-gradient(90deg, rgba(12,22,36,0) 0%, rgba(12,22,36,0) 55%, rgba(12,22,36,.55) 100%) !important;
+    }
+    html body .split-img::before{
+      background:linear-gradient(90deg, rgba(12,22,36,0) 0%, rgba(12,22,36,0) 58%, rgba(12,22,36,.55) 100%) !important;
+    }
+    @media(max-width:980px){
+      html body .hero-image::before,
+      html body .split-img::before{
+        background:linear-gradient(180deg, rgba(12,22,36,0) 0%, rgba(12,22,36,0) 70%, rgba(12,22,36,.45) 100%) !important;
+      }
+    }
+  </style>
+
 </head>
 <body>
   <main>
