@@ -1331,6 +1331,30 @@ html body a.call-float svg{
   html body a.call-float svg{ width:25px !important; height:25px !important; }
 }
 
+
+/* footer-social — אייקוני רשתות חברתיות קלאסיים בצבעי האתר (זהב), ללא לייבלים */
+.footer-social{ display:flex; gap:14px; justify-content:center; align-items:center; margin-top:14px; }
+.footer-social a{
+  width:40px; height:40px; border-radius:50%;
+  display:grid; place-items:center;
+  border:1px solid rgba(227,196,104,.45);
+  background:rgba(227,196,104,.06);
+  color:#E3C468;
+  transition:all .25s ease;
+}
+.footer-social a:hover{
+  background:#E3C468; color:#0C1624;
+  border-color:#E3C468;
+  transform:translateY(-2px);
+  box-shadow:0 6px 16px rgba(227,196,104,.25);
+}
+.footer-social svg{ width:20px; height:20px; fill:currentColor; }
+@media(max-width:520px){
+  .footer-social{ gap:12px; margin-top:12px; }
+  .footer-social a{ width:38px; height:38px; }
+  .footer-social svg{ width:19px; height:19px; }
+}
+
 </style>
 
   <style id="liat-bonus-icons-hard-final">
@@ -2693,7 +2717,7 @@ html body a.call-float svg{
 <a class="call-float" href="tel:+972509250486" aria-label="התקשרו לליאת"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg></a>
   <a class="wa" href="https://wa.me/972509250486" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5z"/><path d="M8.8 8.5c.3 2.9 2 4.7 5 5.6l1.2-1.1 2 1.1c-.2 1.1-1 1.8-2.2 2-4.4-.8-7-3.4-8-7.7.2-1.2.9-1.9 2-2.1l1.1 2.1-1.1.1z"/></svg></a>
   <a class="access" href="accessibility.html" aria-label="הצהרת נגישות"><svg viewBox="0 0 24 24"><circle cx="12" cy="4" r="2"/><path d="M4 8h16M12 8v12M8 13l-2 7M16 13l2 7"/></svg></a>
-  <footer><div class="container footer-inner"><div>ליאת מלכה - החממה לייעוץ משכנתאות</div><div class="footer-links"><a href="privacy.html">מדיניות פרטיות</a><a href="terms.html">תנאי שימוש</a><a href="accessibility.html">הצהרת נגישות</a></div><div class="footer-credit">אתר זה נבנה על ידי shapo digital mishel zvigi</div></div></footer>
+  <footer><div class="container footer-inner"><div>ליאת מלכה - החממה לייעוץ משכנתאות</div><div class="footer-links"><a href="privacy.html">מדיניות פרטיות</a><a href="terms.html">תנאי שימוש</a><a href="accessibility.html">הצהרת נגישות</a></div><div class="footer-credit">אתר זה נבנה על ידי shapo digital mishel zvigi</div><div class="footer-social" aria-label="רשתות חברתיות"><a href="https://www.facebook.com/share/14dckS9X2Ej/" target="_blank" rel="noopener" aria-label="פייסבוק"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9h2.5l.5-3H14V4.5c0-.9.3-1.5 1.6-1.5H17V.3C16.7.2 15.8.1 14.7.1 12.3.1 10.8 1.6 10.8 4.2V6H8.2v3h2.6v8h3.2V9z"/></svg></a><a href="https://www.instagram.com/liatmalka11?igsh=MWMzeGhnNnNobGU4dw==" target="_blank" rel="noopener" aria-label="אינסטגרם"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.17.4.37 1 .42 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.17-1 .37-2.2.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.17-.4-.37-1-.42-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.17 1-.37 2.2-.42C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.07-1.1.05-1.7.24-2.1.4-.5.2-.9.43-1.3.83-.4.4-.63.8-.83 1.3-.16.4-.35 1-.4 2.1C2.6 9.7 2.6 10.1 2.6 12s0 2.3.07 3.5c.05 1.1.24 1.7.4 2.1.2.5.43.9.83 1.3.4.4.8.63 1.3.83.4.16 1 .35 2.1.4 1.2.07 1.6.07 4.7.07s3.5 0 4.7-.07c1.1-.05 1.7-.24 2.1-.4.5-.2.9-.43 1.3-.83.4-.4.63-.8.83-1.3.16-.4.35-1 .4-2.1.07-1.2.07-1.6.07-3.5s0-2.3-.07-3.5c-.05-1.1-.24-1.7-.4-2.1-.2-.5-.43-.9-.83-1.3-.4-.4-.8-.63-1.3-.83-.4-.16-1-.35-2.1-.4C15.5 4 15.1 4 12 4zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.3-8.3a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0z"/></svg></a><a href="https://www.tiktok.com/@liatmalka?_r=1&_t=ZS-96u4uHvDqDA" target="_blank" rel="noopener" aria-label="טיקטוק"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 5.8c-.9-.6-1.5-1.5-1.7-2.6-.04-.24-.06-.48-.06-.72h-2.9v11.9c0 1.5-1.2 2.7-2.7 2.7a2.7 2.7 0 0 1 0-5.4c.28 0 .55.04.8.12v-3a5.7 5.7 0 0 0-.8-.06 5.7 5.7 0 1 0 5.7 5.7V9.3a7 7 0 0 0 4.1 1.3V7.7a4.1 4.1 0 0 1-2.5-.85c-.02-.01-.03-.03-.05-.04z"/></svg></a></div></div></footer>
 
   <script id="lt-countup">
   (function(){
