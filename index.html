@@ -1358,18 +1358,20 @@ html body a.call-float svg{
 
 
 
-/* services-cats — תחומי השירות (גרסה קלאסית, תחתית הדף) */
-#services-cats .catz-eyebrow{display:inline-block;color:#C9A84C;letter-spacing:3px;font-size:.82rem;
-  font-weight:700;border:1px solid rgba(201,168,76,.35);padding:6px 18px;border-radius:50px;margin-bottom:16px}
-#services-cats .catz-intro{color:#cbb98a;max-width:640px;margin:16px auto 0;font-size:1.06rem;line-height:1.7}
+/* services-cats — תחומי השירות (רקע לבן, כותרות זהב, טקסט שחור) */
+#services-cats{background:#ffffff}
+#services-cats .section-title h2{color:#1a1a1a}
+#services-cats .catz-eyebrow{display:inline-block;color:#C0A157;letter-spacing:3px;font-size:.82rem;
+  font-weight:700;border:1px solid rgba(192,161,87,.45);padding:6px 18px;border-radius:50px;margin-bottom:16px;background:rgba(201,168,76,.06)}
+#services-cats .catz-intro{color:#3a3a3a;max-width:640px;margin:16px auto 0;font-size:1.06rem;line-height:1.7}
 #services-cats .catz-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
-#services-cats .catz-card{background:#0a0a0a;padding:34px 30px;border:1px solid rgba(201,168,76,.20);
+#services-cats .catz-card{background:#ffffff;padding:34px 30px;border:1px solid rgba(201,168,76,.40);
   border-radius:14px;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
-#services-cats .catz-card:hover{transform:translateY(-5px);border-color:rgba(201,168,76,.55);box-shadow:0 16px 38px rgba(0,0,0,.45)}
+#services-cats .catz-card:hover{transform:translateY(-5px);border-color:#C9A84C;box-shadow:0 16px 38px rgba(201,168,76,.22)}
 #services-cats .catz-top{display:flex;align-items:center;gap:14px;margin-bottom:14px}
-#services-cats .catz-ico{width:38px;height:38px;color:#E3C468;flex-shrink:0}
-#services-cats .catz-card h3{color:#FFD700;font-size:1.28rem;margin:0;font-weight:700}
-#services-cats .catz-card p{color:#b9b9b9;font-size:1.02rem;line-height:1.65;margin:0}
+#services-cats .catz-ico{width:38px;height:38px;color:#C9A84C;flex-shrink:0}
+#services-cats .catz-card h3{color:#C0A157;font-size:1.28rem;margin:0;font-weight:700}
+#services-cats .catz-card p{color:#222222;font-size:1.02rem;line-height:1.65;margin:0}
 @media(max-width:980px){#services-cats .catz-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){#services-cats .catz-grid{grid-template-columns:1fr}#services-cats .catz-card{padding:28px 24px}}
 
@@ -2711,7 +2713,7 @@ html body a.call-float svg{
       </div>
     </section>
 
-    <section class="section dark" id="services-cats" aria-label="תחומי השירות של ליאת מלכה">
+    <section class="section" id="services-cats" aria-label="תחומי השירות של ליאת מלכה">
 <div class="container">
 <div class="section-title"><span class="catz-eyebrow">תחומי ההתמחות שלי</span><h2>השירותים שאני מעניקה</h2><div class="gold-rule"></div>
 <p class="catz-intro">לא משנה באיזה שלב אתם – יש פתרון משכנתא שמתאים בדיוק לכם. אלו התחומים שאני מלווה בהם מ-א׳ ועד ת׳, באישיות, במקצועיות ובשקיפות מלאה.</p></div>
